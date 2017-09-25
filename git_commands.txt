@@ -9,3 +9,5 @@ git diff - show difference between two files
 .gitignore - file with git exclusions
 
 1. Create new repository with same name on GitHub in the Internet
+2. git remote add origin https://github.com/OlegPlatonenko/Virtualizing
+3. git push -u origin master
