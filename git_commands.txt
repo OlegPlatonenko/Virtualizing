@@ -1,0 +1,6 @@
+git init - Start mamaging folder
+git add - add file to git
+git commit -m "commit message" - commit
+git config --global user.email "oleg.platonenko@outlook.com" - Add info
+git config --global user.name "Oleg Platonenko" - - Add info
+git log - list of commits
