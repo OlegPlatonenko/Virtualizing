@@ -8,6 +8,12 @@ git log - list of commits
 git diff - show difference between two files
 .gitignore - file with git exclusions
 
+PUSH REPOSITORY
 1. Create new repository with same name on GitHub in the Internet
 2. git remote add origin https://github.com/OlegPlatonenko/Virtualizing
 3. git push -u origin master
+
+PULL REPOSITORY
+1. Create folder with the repository name
+2. git remote add origin https://github.com/OlegPlatonenko/Virtualizing
+3. git pull -u origin master
