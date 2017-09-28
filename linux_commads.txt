@@ -1,0 +1,13 @@
+SSH:
+ssh public key file location - /etc/ssh/ssh_host_rsa_key.pub
+
+APACHE2:
+service apache2 status - Apache2 service status 
+
+COMMON:
+service --status-all - get status list
+if config -a - get list of network adapters
+lshw -class network - ----"----
+
+
+
