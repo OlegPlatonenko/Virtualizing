@@ -63,3 +63,68 @@ kubectl run nginx --image=nginx --replicas=3
 kubectl get pods -owide - status of deployment
 
 kubectl expose deployment nginx --port=80 --target-port=80 --type=LoadBalancer - expose NGINX cluster as external service
+kubectl get service nginx - get services list
+
+kubectl delete service nginx - delete service
+kubectl delete deployment nginx - delete deployment
+
+create a pod using kubectl, the Kubernetes CLI tool:
+kubectl create -f redis-pod.yaml
+
+kubectl get pods - get list of pods
+kubectl describe pod <pod-name> | grep Node - find the node the pod is running
+
+gcloud compute ssh <node-name> - ssh to node name
+sudo docker ps - see actual pod (list of containers)
+
+kubectl create -f redis-service.yaml - create a service
+kubectl get service - get list of services
+
+gcloud compute disks create mysql-disk --size 20GB - create disk
+
+deploy both the MySQL Pod and the Service with a single command:
+kubectl create -f mysql.yaml -f mysql-service.yaml
+
+deploy the <Name> Replication Controller:
+kubectl create -f helloworldservice-controller-v1.yaml
+
+kubectl logs -f helloworldservice-controller-v1-XXXXX - get pod logs
+
+create the Guestbook Service replication controller and service too!:
+kubectl create -f guestbookservice-controller.yaml -f guestbookservice-service.yaml
+
+login to pod:
+kubectl exec -ti mysql /bin/bash
+
+ps auwx - list of users and entered commands
+hostname -i - IP address
+
+Scaling the number of replicas of our <Name> controller is as simple as running :
+kubectl scale rc helloworldui-controller-v1 --replicas=12
+
+find the Compute Engine Instance Group that's managing the Kubernetes nodes (the name is prefixed with "gke-")
+gcloud compute instance-groups list
+
+resize the number of nodes by updating the Instance Group size:
+gcloud compute instance-groups managed resize gke-guestbook-a3e896df-group --size 5
+
+gcloud container clusters describe guestbook | egrep "password"
+kubectl cluster-info
+Wl4tFujd19er5P8W
+
+sudo wget -O - https://packages.icinga.com/icinga.key | apt-key add -
+
+
+# sudo echo 'deb https://packages.icinga.com/ubuntu icinga-xenial main' >/etc/apt/sources.list.d/icinga.list
+# apt-get update
+
+# mysql -u root -p
+
+mysql>  CREATE DATABASE icinga;
+mysql>  GRANT SELECT, INSERT, UPDATE, DELETE, DROP, CREATE VIEW, INDEX, EXECUTE ON icinga.* TO 'icinga'@'localhost' IDENTIFIED BY 'icinga';
+mysql> quit
+
+sudo passwd
+0bbd1393df096e01
+
+$1$ro.zRGzM$ZJ196FKH1x1wuX5lKmDIX0
