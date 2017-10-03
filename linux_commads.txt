@@ -9,5 +9,9 @@ service --status-all - get status list
 if config -a - get list of network adapters
 lshw -class network - ----"----
 
+DOWNLOAD FILE FROM INTERNET
+wget  -O /home/omio/Desktop/ "http://thecanadiantestbox.x10.mx/CC.zip"
 
+tar xvzf file.tar.gz
 
+$ cp -a /mnt/dvd/data/* /home/tom/data
