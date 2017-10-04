@@ -109,5 +109,3 @@ resize the number of nodes by updating the Instance Group size:
 gcloud compute instance-groups managed resize gke-guestbook-a3e896df-group --size 5
 
 gcloud container clusters describe guestbook | egrep "password"
-kubectl cluster-info
-Wl4tFujd19er5P8W
