@@ -9,3 +9,4 @@
 $VM | Get-Member
 $HDD = $VM.HardDrives | Select-Object -Property Path
 $HDD
+$HHD
