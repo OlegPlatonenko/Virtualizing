@@ -2,7 +2,7 @@
 [CmdletBinding(SupportsShouldProcess)]
 param
 (
-    [Parameter()]
+    [Parameter()]
     [ValidateNotNullOrEmpty()]
     [string[]]$ComputerName,
  
@@ -27,14 +27,15 @@ foreach ($c in $ComputerName) {
     if ($PSBoundParameters.ContainsKey('UserName')) {
         $whereFilter = [scriptblock]::Create("`$_ -match '$UserName'")
     }
-    if ($sessions = ((quser $compArgs | Where-Object $whereFilter))) {
-        $sessionIds = ($sessions -split ' +')[2]
+    if ($sessions = ((quser $compArgs | Where-Object $whereFilter))) {
+        $sessionIds = ($sessions -split ' +')[2]
         if ($PSCmdlet.ShouldProcess("UserName: $UserName", 'Logoff')) {
             $sessionIds | ForEach-Object {
                 logoff $_ $compArgs
             }
         }
-    } else {
-        Write-Verbose -Message 'No users found matching criteria found.'
-    }
+    } 
+    else {
+        Write-Verbose -Message 'No users found matching criteria found.' -Verbose
+    }
 }
