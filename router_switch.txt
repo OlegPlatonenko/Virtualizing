@@ -1,0 +1,15 @@
+? - show help
+<command> ? - show command help
+<command> <parameter> ? - show parameter help
+enable - enable priviledge mode
+
+PRIVILEDGE MODE COMMANDS
+-------------------------
+configure terminal - enter configurational mode
+show ip interface - get info about ip interfaces
+
+CONFIG MODE COMMANDS
+-------------------------
+interface <interface name> - select interface (f.e. interface gigabitethernet 0/0)
+shutdown/no shutdown - disable/enable port
+
