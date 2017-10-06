@@ -21,4 +21,4 @@ PULL REPOSITORY
 BRANCHING
 git branch - return list of branches
 git branch <branch name> - create new branch
-checkout <branch name> - swip to chosen branch
+git checkout <branch name> - swip to chosen branch
