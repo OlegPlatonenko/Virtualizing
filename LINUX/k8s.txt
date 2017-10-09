@@ -109,22 +109,3 @@ resize the number of nodes by updating the Instance Group size:
 gcloud compute instance-groups managed resize gke-guestbook-a3e896df-group --size 5
 
 gcloud container clusters describe guestbook | egrep "password"
-kubectl cluster-info
-Wl4tFujd19er5P8W
-
-sudo wget -O - https://packages.icinga.com/icinga.key | apt-key add -
-
-
-# sudo echo 'deb https://packages.icinga.com/ubuntu icinga-xenial main' >/etc/apt/sources.list.d/icinga.list
-# apt-get update
-
-# mysql -u root -p
-
-mysql>  CREATE DATABASE icinga;
-mysql>  GRANT SELECT, INSERT, UPDATE, DELETE, DROP, CREATE VIEW, INDEX, EXECUTE ON icinga.* TO 'icinga'@'localhost' IDENTIFIED BY 'icinga';
-mysql> quit
-
-sudo passwd
-0bbd1393df096e01
-
-$1$ro.zRGzM$ZJ196FKH1x1wuX5lKmDIX0

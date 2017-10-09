@@ -17,3 +17,8 @@ PULL REPOSITORY
 1. Create folder with the repository name
 2. git remote add origin https://github.com/OlegPlatonenko/Virtualizing
 3. git pull -u origin master
+
+BRANCHING
+git branch - return list of branches
+git branch <branch name> - create new branch
+git checkout <branch name> - swip to chosen branch
