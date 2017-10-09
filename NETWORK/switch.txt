@@ -7,6 +7,7 @@ PRIVILEDGE MODE COMMANDS
 -------------------------
 configure terminal - enter configurational mode
 show ip interface - get info about ip interfaces
+show running-config
 
 CONFIG MODE COMMANDS
 -------------------------
@@ -23,6 +24,7 @@ switchport access VLAN <X> - assign VLAN X to port
 interface <interface name> - select interface (f.e. interface gigabitethernet 0/0)
 description - port description
 switchport mode <access/trunk> - set trunk or access port
+switchport trunk allowed vlan <VLAN numbers> - set VLANS to port
 
 VLAN CREATION
 -------------------------

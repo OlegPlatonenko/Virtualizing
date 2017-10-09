@@ -1,0 +1,13 @@
+GENERAL
+-------------------------
+Router#clock set hh:mm:ss dd mounth yy - set date
+Router(config)#hostname <Name> - set router Name
+
+Router(config)#interface X/X.<VLAN> - Create virual interface (subinterface)
+X.X - physical interface to which network is connected, <VLAN> - VLAN number 
+which is terminated by this interface
+
+Router(config-if)#encapsulation dot1Q <VLAN> - external frames from interface X/X.VLAN 
+will be tagged by <VLAN> VLAN and input frames with tag <VLAN> will be received by 
+interface X/X.<VLAN>
+
