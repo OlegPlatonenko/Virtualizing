@@ -13,6 +13,9 @@ CONFIG MODE COMMANDS
 -------------------------
 interface <interface name> - select interface (f.e. interface gigabitethernet 0/0)
 shutdown/no shutdown - disable/enable port
+do - run commands from other modes
+write memory - Save current configurational
+reload - reboot switch/router
 
 PORT SETUP
 -------------------------
@@ -39,3 +42,15 @@ Switch(config-if)# no shutdown - enable port
 Switch(config-if)# end
 Switch# copy running-config startup-config
 
+ACCESS CONFIGURATION
+-------------------------
+line vty 0 4 - Setup telnet/ssh connection (0 4 - five user virtual terminals/sessions)
+password <Password> - Setup password for access via telnet
+enable secret <Password> - Setup password for access via ssh
+
+aaa new-model - Another way to setup login/password
+username <username> password <Password> - Set login/password
+
+line console 0        |
+login                 | - set password for console port
+password <Password>   |
