@@ -54,10 +54,19 @@ interface FastEthernet0/19
 interface FastEthernet0/20
 !
 interface FastEthernet0/21
+ description to UA-LVI-AS01
+ switchport trunk allowed vlan 2,101,103
+ switchport mode trunk
 !
 interface FastEthernet0/22
+ description to UA-DON-AS03
+ switchport trunk allowed vlan 2,102-103
+ switchport mode trunk
 !
 interface FastEthernet0/23
+ description to UA-DON-AS01
+ switchport trunk allowed vlan 2-3,101
+ switchport mode trunk
 !
 interface FastEthernet0/24
  description to_UA-KYI-AS03
@@ -70,6 +79,9 @@ interface GigabitEthernet0/1
  switchport mode trunk
 !
 interface GigabitEthernet0/2
+ description to UA-KYI-AS01
+ switchport trunk allowed vlan 2-3,101
+ switchport mode trunk
 !
 interface Vlan1
  no ip address
