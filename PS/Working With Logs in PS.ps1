@@ -1,4 +1,7 @@
-﻿Get-WinEvent -ListLog * #Show all available logs
+﻿#LOG SEARCHING 
+#-----------------------------------------------------------------------------------------------------
+
+Get-WinEvent -ListLog * #Show all available logs
 Get-WinEvent -ListLog *powershell* #Find log with specific word
 Get-WinEvent -LogName 'System' #Display defined log
 Get-WinEvent -LogName 'Microsoft-Windows-PowerShell/Operational' #Request log from log tree
@@ -40,3 +43,19 @@ Get-WinEvent -FilterHashtable @{LogName='System'; StartTime=$StartTime; EndTime=
 Get-WinEvent -LogName 'System' -MaxEvents 10 | Format-List #Display events in list format
 Get-WinEvent -FilterHashtable @{LogName='Security'; Keywords = '4503599627370496'} | Format-Table -Property RecordId, TimeCreated, ID, LevelDisplayName, Message
 Get-WinEvent -FilterHashtable @{LogName ='Security'} | Where-Object -Property RecordId -eq 792140
+
+#LOG PARSING
+#-----------------------------------------------------------------------------------------------------
+
+Get-EventLog -LogName System -Newest 10000 > C:\Users\oleg.platonenko\Documents\test_log.log
+
+Get-Content -Path C:\Users\oleg.platonenko\Documents\test_log.log -Tail 10 #displaying last 10 lines from file
+Get-Content -Path C:\Users\oleg.platonenko\Documents\test_log.log -Tail 10 -Wait # ---"--- and waiting for future events
+
+Select-String -Path C:\Users\oleg.platonenko\Documents\test_log.log -Pattern 'disabled' #search for specific words in log
+Select-String -Path C:\Users\oleg.platonenko\Documents\test_log.log -Pattern 'disabled', 'log' | Format-List #multiple conditions
+
+#Look for 'err' word in log and return definately this fow, 5 before and 5 after
+Select-String -Path C:\Users\oleg.platonenko\Documents\test_log.log -Pattern ' Error ' -Context 5
+
+Get-Content -Path C:\Users\oleg.platonenko\Documents\test_log.log | Select-Object -First 10 -Skip 10 #Return rows from 10 to 20
