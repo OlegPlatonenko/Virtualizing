@@ -59,3 +59,28 @@ Select-String -Path C:\Users\oleg.platonenko\Documents\test_log.log -Pattern 'di
 Select-String -Path C:\Users\oleg.platonenko\Documents\test_log.log -Pattern ' Error ' -Context 5
 
 Get-Content -Path C:\Users\oleg.platonenko\Documents\test_log.log | Select-Object -First 10 -Skip 10 #Return rows from 10 to 20
+
+#FAST LOG EVENT SEARCH
+#-----------------------------------------------------------------------------------------------------
+
+Measure-Command -Expression {Get-WinEvent -FilterHashtable @{LogName = 'Security'} -Oldest | 
+Where-Object -Property Message -Match 'C:\Windows\System32\cscript.exe'} #Searching using Where-Object
+
+Measure-Command -Expression {Get-WinEvent -FilterHashtable @{LogName='Security'; Data='C:\Windows\system32\cscript.exe'}} #Searching using Data 
+
+#'VirtualBox NDIS6 Bridged Networking Service' - was taken from EventLog - XML view
+Get-WinEvent -FilterHashtable @{LogName='System'; Data='VirtualBox NDIS6 Bridged Networking Service'}
+
+#Quering log with user SID (Security Identifier)
+Get-WinEvent -FilterHashtable @{LogName='System'; Data='S-1-5-21-1233298724-2998406191-1411161284-806269'}
+Get-WinEvent -FilterHashtable @{LogName='Application'; Data='S-1-5-21-1233298724-2998406191-1411161284-806269'}
+
+#Quering log for both SID and SAM (Security Account Manager)
+Get-WinEvent -FilterHashtable @{LogName='Application'; Data='S-1-5-21-1233298724-2998406191-1411161284-806269', 'SYNAPSE\oleg.platonenko'}
+
+#Another way to query to log with Get-EventLog command
+Get-EventLog -LogName Application -UserName SYNAPSE\oleg.platonenko
+
+#Searching events dealing with IP 172.22.61.3 and Port 3389
+Get-WinEvent -FilterHashtable @{LogName='System'; Data='172.22.61.3'} | Where-Object -Property Message -Match '3389'
+Get-WinEvent -FilterHashtable @{LogName='System'; Data='3389'}
