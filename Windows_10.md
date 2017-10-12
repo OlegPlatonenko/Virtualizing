@@ -1,35 +1,45 @@
-#DEPLOYMENT
+# Supporting and Troubleshooting Windows 10
+
+## DEPLOYMENT
 ----------------------------------
 boot.wim - Windows PE 
 install.wim - Windows 10
 
-#PORTS
+## PORTS
 ----------------------------------
-20 - FTP Data
-21 - FTP Control
-22- SSH
-23 - Telnet
-80 - HTTP
-443 - HTTPS
-445 - Group Policy
-3389 - Remote Desktop
+- **20** - FTP Data
+- **21** - FTP Control
+- **22**- SSH
+- **23** - Telnet
+- **80** - HTTP
+- **443** - HTTPS
+- **445** - Group Policy
+- **3389** - Remote Desktop
 
-#DNS  
+## DNS  
 ----------------------------------
-**Resolve-DnsName**
-**Clear-DnsCache**
-ipconfig flushdns
+- **Resolve-DnsName**
+- **Clear-DnsCache**
+- ipconfig flushdns
 
-#EVENT VIEWER
+## EVENT VIEWER
 ----------------------------------
-! Read about views in EV 
-! Attach Task scheduler to Event in EV 
+- ! Read about views in EV 
+- ! Attach Task scheduler to Event in EV 
 
-! Message analizer
-! Reliability history
+- ! Message analizer
+- ! Reliability history
 
-! Event trays in Windows 10
+- ! Event trays in Windows 10
 
-#SYSINTERNAL
+## SYSINTERNAL
 ----------------------------------
+- Procmon
+- Process Explorer
 
+```
+DART --> MDOP <-- AGPM
+        ^   ^
+        |   |
+     APP-V UE-V
+```
