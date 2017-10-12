@@ -97,6 +97,9 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
 - **repadmin** - see pbject replication in AD
 - [**dfsdiag**](https://technet.microsoft.com/en-us/library/hh875626(v=ws.11).aspx) - provides diagnostic information for DFS Namespaces
 - [**dfsrdiag**](https://technet.microsoft.com/en-us/library/cc732006(v=ws.10).aspx) - Performs diagnostic tests of DFS Replication
+- **whoami** - request logon information (<domain>\<username>)
+- [**klist**](https://technet.microsoft.com/en-us/library/hh134826(v=ws.11).aspx) -  Displays a list of currently cached Kerberos tickets
+- **runas** - Allows a user to run specific tools and programs with different permissions than the user's current logon provides
 
 2. NETWORK
 - **ipconfig** - working with network settings
@@ -141,7 +144,8 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
  
 - GPO = GPC + GPT
 
-```      __________                ________
+``` 
+         __________                ________
 GPC --> |          | --> LDAP --> |        |
         | DATABASE |              |        |
 GPT --> |__________| <-- DFS <--  |________|
@@ -151,3 +155,14 @@ GPT --> |__________| <-- DFS <--  |________|
 ----------------------------------
 1. Authentication
 2. Authorization
+
+ntuser.dat (location: C:\users\username) - file maps HKEY\Current_user branch. 
+```
+1. Open regedit.exe.
+2. make sure HKEY_LOCAL_MACHINE is selected on the left panel.
+3. click File -> Load Hive in the main menu.
+4. open ntuser.dat file in common dialog.
+5. specify some temporary name, like USER1.
+6. make changes.
+7. make sure HKEY_LOCAL_MACHINE\USER1 is selected on the left panel and then unload hive from main menu.
+```
