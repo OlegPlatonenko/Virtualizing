@@ -1,9 +1,9 @@
-DEPLOYMENT
+#DEPLOYMENT
 ----------------------------------
 boot.wim - Windows PE 
 install.wim - Windows 10
 
-PORTS
+#PORTS
 ----------------------------------
 20 - FTP Data
 21 - FTP Control
@@ -14,13 +14,13 @@ PORTS
 445 - Group Policy
 3389 - Remote Desktop
 
-DNS  
+#DNS  
 ----------------------------------
-Resolve-DnsName
-Clear-DnsCache
+**Resolve-DnsName**
+**Clear-DnsCache**
 ipconfig flushdns
 
-EVENT VIEWER
+#EVENT VIEWER
 ----------------------------------
 ! Read about views in EV 
 ! Attach Task scheduler to Event in EV 
@@ -30,6 +30,6 @@ EVENT VIEWER
 
 ! Event trays in Windows 10
 
-SYSINTERNAL
+#SYSINTERNAL
 ----------------------------------
 
