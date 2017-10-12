@@ -91,7 +91,10 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
 - **dism.exe** - working with images
 - **devcon.exe** - device manager in cmd
 - [**driverquery**](https://technet.microsoft.com/en-us/library/bb490896.aspx) - working with drivers in cmd
-- **nltest** 
+- **nltest** - working wirh GP
+- **gpresult** - return Group Policy result file
+- **gpupdate (Invoke-GPUpdate)** - update group policy
+- **repadmin** - see pbject replication in AD
 
 2. NETWORK
 - **ipconfig** - working with network settings
@@ -128,4 +131,17 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
 
  ## GROUP POLICY
  ----------------------------------
+
+1. Policy is AD member
+2. Policy is sysvol files
+
+- Domain GP --> Global GP --> Admin GP --> Users
  
+- GPO = GPC + GPT
+
+```      __________                ________
+GPC --> |          | --> LDAP --> |        |
+        | DATABASE |              |        |
+GPT --> |__________| <-- DFS <--  |________|
+```
+
