@@ -95,6 +95,8 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
 - **gpresult** - return Group Policy result file
 - **gpupdate (Invoke-GPUpdate)** - update group policy
 - **repadmin** - see pbject replication in AD
+- [**dfsdiag**](https://technet.microsoft.com/en-us/library/hh875626(v=ws.11).aspx) - provides diagnostic information for DFS Namespaces
+- [**dfsrdiag**](https://technet.microsoft.com/en-us/library/cc732006(v=ws.10).aspx) - Performs diagnostic tests of DFS Replication
 
 2. NETWORK
 - **ipconfig** - working with network settings
@@ -145,3 +147,7 @@ GPC --> |          | --> LDAP --> |        |
 GPT --> |__________| <-- DFS <--  |________|
 ```
 
+## USER SETTINGS
+----------------------------------
+1. Authentication
+2. Authorization
