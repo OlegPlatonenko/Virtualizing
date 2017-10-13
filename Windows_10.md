@@ -79,9 +79,11 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
 ----------------------------------
 - **gpmc.msc** - Group Policy manager (DC)
 - **dsa.msc** - Active Directory users and Computers
-- **certmger.msc** - Certificates management
+- **certmgr.msc** - Certificates management
 - **diskmagmt.msc** - Disk management
 - **rsop.msc** - result of group policy
+- **dsa.msc** - Active Directory users and Computers
+- **wf.msc** - Windows Firewall
 
 ## COMMAND LINE UTILITES
 ----------------------------------
@@ -100,6 +102,7 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
 - **whoami** - request logon information (<domain>\<username>)
 - [**klist**](https://technet.microsoft.com/en-us/library/hh134826(v=ws.11).aspx) -  Displays a list of currently cached Kerberos tickets
 - **runas** - Allows a user to run specific tools and programs with different permissions than the user's current logon provides
+- **dsget** - Displays the selected properties of a specific object in the directory (using for AD)
 
 2. NETWORK
 - **ipconfig** - working with network settings
@@ -166,3 +169,28 @@ ntuser.dat (location: C:\users\username) - file maps HKEY\Current_user branch.
 6. make changes.
 7. make sure HKEY_LOCAL_MACHINE\USER1 is selected on the left panel and then unload hive from main menu.
 ```
+
+## VPN
+----------------------------------
+- SSTP Protocol (Cisco VPN SSL)
+- MC-CHAPv2
+
+- EAP Framework - best desicion for corp. VPN 
+
+```
+ ___________
+|           | <--- VPN
+| NPS (IAS) |
+|___________| <--- VPN
+
+```
+- NPS - RADIUS Server
+- RADIUS Clients - Servers need for authentication
+- Using L2TP Ports
+
+**Direct Access** - On *Direct Access* server you need to install DNS64 and NAT64 for converting IPv4 to IPv6 and vise versa. 
+
+## WINDOWS IMAGING AND CONFIGURATION DESIGNER
+----------------------------------
+Use the Windows Configuration Designer tool to create provisioning packages to easily configure devices running Windows 10. 
+Windows Configuration Designer is primarily designed for use by IT departments for business and educational institutions who need to provision bring-your-own-device (BYOD) and business-supplied devices.
