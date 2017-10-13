@@ -1,8 +1,11 @@
 # Automating Administration with PowerShell
 
 ## TABLE OF CONTENTS
-[Common Aliases](#CommonAliases)
-[Define Powershell Version](#PSVersion)
+- [Common Aliases](#CommonAliases)
+- [Define Powershell Version](#PSVersion)
+- [Useful Shortcuts](#Shortcuts)
+- [Help Explanation](#Help)
+- []
 
 
 ## COMMON ALIASES <a name="CommonAliases"></a>
@@ -36,12 +39,12 @@ PSRemotingProtocolVersion      2.3
 SerializationVersion           1.1.0.1
 ```
 
-## USEFUL SHORTCUTS
+## USEFUL SHORTCUTS <a name="Shortcuts></a>
 -------------------------------
 - Ctrl+Home - Delete command entered
 - Ctrl - Jump throw command 
 
-## HELP EXPLANATION
+## HELP EXPLANATION <a name="Help></a>
 -------------------------------
 - parameter <value> - Mandatory Parameter
 - [parameter] <value> - Positional, Mandatory Parameter
