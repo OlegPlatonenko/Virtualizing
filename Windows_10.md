@@ -1,11 +1,28 @@
 # Supporting and Troubleshooting Windows 10
 
-## DEPLOYMENT
+## TABLE OF CONTENTS
+[Deployment](#Deployment)
+[Ports](#Ports)
+[DNS](#DNS)
+[Event Viewer](#EV)
+[Sysinternal](#Sysinternal)
+[Windows Startup](#Startup)
+[Access to Windows RE](#WinRE)
+[Windows Snapp-Ins](#SnappIns)
+[Command line utilites](#CMD)
+[Hardware and device drivers](#Drivers)
+[How DNS works](#DNS2)
+[Group policy](#GP)
+[User settings](#UserSettings)
+[VPN](#VPN)
+[Windows Imaging and Configuration Designer](#WinICD)
+
+## DEPLOYMENT <a name="Deployment"></a>
 ----------------------------------
 - boot.wim - Windows PE 
 - install.wim - Windows 10
 
-## PORTS
+## PORTS <a name="Ports"></a>
 ----------------------------------
 - **20** - FTP Data
 - **21** - FTP Control
@@ -21,13 +38,13 @@
 
 - [List of all TCP/UDP Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers) 
 
-## DNS  
+## DNS <a name="DNS"></a>
 ----------------------------------
 - **Resolve-DnsName**
 - **Clear-DnsCache**
 - **ipconfig flushdns**
 
-## EVENT VIEWER
+## EVENT VIEWER <a name="EV"></a>
 ----------------------------------
 - ! Read about views in EV 
 - ! Attach Task scheduler to Event in EV 
@@ -37,7 +54,7 @@
 
 - ! Event trays in Windows 10
 
-## SYSINTERNAL
+## SYSINTERNAL <a name="Sysinternal"></a>
 ----------------------------------
 - Procmon
 - Process Explorer
@@ -49,7 +66,7 @@ DART --> MDOP <-- AGPM
      APP-V  UE-V
 ```
 
-## WINDOWS STARTUP
+## WINDOWS STARTUP <a name="Startup"></a>
 ----------------------------------
 ```
 BIOS
@@ -64,7 +81,7 @@ BIOS
 - **winlogon** - if startup
 - **winresume** - if hybernation
 
-## ACCEESS TO WINDOWS RE
+## ACCEESS TO WINDOWS RE <a name="WinRE"></a>
 ----------------------------------
 - **reagentc.exe** - command line utility [REAgentC on TechNet](https://technet.microsoft.com/en-us/library/dd799242(v=ws.10).aspx)
 - **bootrec /scanos** |
@@ -75,7 +92,7 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
 2. restore mbr
 3. fix boot
 
-## WINDOWS SNAPP-INS
+## WINDOWS SNAPP-INS <a name="SnappIns"></a>
 ----------------------------------
 - **gpmc.msc** - Group Policy manager (DC)
 - **dsa.msc** - Active Directory users and Computers
@@ -85,7 +102,7 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
 - **dsa.msc** - Active Directory users and Computers
 - **wf.msc** - Windows Firewall
 
-## COMMAND LINE UTILITES
+## COMMAND LINE UTILITES <a name="CMD"></a>
 ----------------------------------
 
 1. WINDOWS
@@ -113,7 +130,7 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
 - [**nbtstat**](https://technet.microsoft.com/en-us/library/cc940106.aspx) - help to troubleshoot NetBIOS name resolution problems
 - **nslookup** (Resolve-DnsName) - resolve DNS name or IP
 
-## HARDWARE AND DEVICE DRIVERS
+## HARDWARE AND DEVICE DRIVERS <a name="Drivers"></a>
 ----------------------------------
 - **.inf - Class ID* - f.e for disable digital signature check via Gp
 - *bcdedit /set loadoptions disable_integrity_checks*
@@ -127,7 +144,7 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
 - **sigverif.exe** - GUI util for checking unsigned files
 - ! [PowerShell Remoting](https://github.com/OlegPlatonenko/Virtualizing/tree/master/PS)
 
- ## HOW **DNS** WORKS
+ ## HOW **DNS** WORKS <a name="DNS2"></a>
  ----------------------------------
  1. DNS Cache
  2. Request to DNS Server
@@ -137,7 +154,7 @@ C:\Windows\System32\LogFiles\srt\SrtTrail.txt
  6. wins server (optional)
  7. lmhosts (C:\Windows\System32\drivers\etc\lmhosts.sam)
 
- ## GROUP POLICY
+ ## GROUP POLICY <a name="GP"></a>
  ----------------------------------
 
 1. Policy is AD member
@@ -154,7 +171,7 @@ GPC --> |          | --> LDAP --> |        |
 GPT --> |__________| <-- DFS <--  |________|
 ```
 
-## USER SETTINGS
+## USER SETTINGS <a name="UserSettings></a>
 ----------------------------------
 1. Authentication
 2. Authorization
@@ -170,7 +187,7 @@ ntuser.dat (location: C:\users\username) - file maps HKEY\Current_user branch.
 7. make sure HKEY_LOCAL_MACHINE\USER1 is selected on the left panel and then unload hive from main menu.
 ```
 
-## VPN
+## VPN <a name="VPN"></a>
 ----------------------------------
 - SSTP Protocol (Cisco VPN SSL)
 - MC-CHAPv2
@@ -190,7 +207,7 @@ ntuser.dat (location: C:\users\username) - file maps HKEY\Current_user branch.
 
 **Direct Access** - On *Direct Access* server you need to install DNS64 and NAT64 for converting IPv4 to IPv6 and vise versa. 
 
-## WINDOWS IMAGING AND CONFIGURATION DESIGNER
+## WINDOWS IMAGING AND CONFIGURATION DESIGNER <a name="WinICD"></a>
 ----------------------------------
 Use the Windows Configuration Designer tool to create provisioning packages to easily configure devices running Windows 10. 
 Windows Configuration Designer is primarily designed for use by IT departments for business and educational institutions who need to provision bring-your-own-device (BYOD) and business-supplied devices.
