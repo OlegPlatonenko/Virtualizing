@@ -13,6 +13,8 @@
 - [WMI](#WMI)
 - [Formatting Output](#Output)
 - [Scripting Security](#Security)
+- [Scripting](#Scripting)
+- [Remoting](#Remoting)
 
 
 ## COMMON ALIASES <a name="CommonAliases"></a>

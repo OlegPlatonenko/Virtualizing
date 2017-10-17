@@ -17,8 +17,6 @@
 [VPN](#VPN)
 [Windows Imaging and Configuration Designer](#WinICD)
 [Configuring AD CS](#Certificates)
-[Scripting](#Scripting)
-[Remoting](#Remoting)
 
 ## DEPLOYMENT <a name="Deployment"></a>
 ----------------------------------
