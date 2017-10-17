@@ -16,6 +16,7 @@
 [User settings](#UserSettings)
 [VPN](#VPN)
 [Windows Imaging and Configuration Designer](#WinICD)
+[Configuring AD CS](#Certificates)
 
 ## DEPLOYMENT <a name="Deployment"></a>
 ----------------------------------
@@ -211,3 +212,22 @@ ntuser.dat (location: C:\users\username) - file maps HKEY\Current_user branch.
 ----------------------------------
 Use the Windows Configuration Designer tool to create provisioning packages to easily configure devices running Windows 10. 
 Windows Configuration Designer is primarily designed for use by IT departments for business and educational institutions who need to provision bring-your-own-device (BYOD) and business-supplied devices.
+
+## CONFIGURING AD CS <a name="Certificates"></a
+----------------------------------
+1. Add AD CS Role
+2. Configure AD CS
+3. Tools -> certsrv
+4. Browse...
+5. Cert. Templates
+6. RMB --> Manage
+7. Code signing
+8. Properties --> Security
+9. Enroll
+10. RMB --> New --> Certificate Template to issue --> Code signing
+11. certmgr.msc
+12. Personal
+13. All Tasks --> Request New cert. --> Active Directory --> Code signing
+14. RMB on Cert. --> Export --> PS.cer
+15. Server Management  
+16. Tool --> GP Manager --> Default Domain Policy --> CS Policy --> WS --> Secure --> Policy key --> Prusted Publishers --> Export
