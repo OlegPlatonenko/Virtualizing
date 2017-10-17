@@ -43,12 +43,12 @@ PSRemotingProtocolVersion      2.3
 SerializationVersion           1.1.0.1
 ```
 
-## USEFUL SHORTCUTS <a name="Shortcuts></a>
+## USEFUL SHORTCUTS <a name="Shortcuts"></a>
 -------------------------------
 - Ctrl+Home - Delete command entered
 - Ctrl - Jump throw command 
 
-## HELP EXPLANATION <a name="Help></a>
+## HELP EXPLANATION <a name="Help"></a>
 -------------------------------
 - parameter <value> - Mandatory Parameter
 - [parameter] <value> - Positional, Mandatory Parameter
@@ -62,7 +62,7 @@ SerializationVersion           1.1.0.1
 ## COMMENTS <a name="Comments"></a>
 -------------------------------
 - <# #> - multi row comment 
-- # - single row comment  
+- <sharp> - single row comment 
  
 ## COMMON PARAMETERS <a name="Parameters"></a>
 -------------------------------
@@ -75,7 +75,7 @@ SerializationVersion           1.1.0.1
 - Get-Variable - get list of PS Build-in variables
 - Get-Item -Path Env: - get list of Evironmental variables 
 
-## HASH TABLES <a name="HastTables"></a>
+## HASH TABLES <a name="HashTables"></a>
 -------------------------------
 - Syntax : @{ }
 - n - Name
