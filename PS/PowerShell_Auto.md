@@ -144,3 +144,18 @@ Format-Table -AutoSize
 |Authority (CA)| -->  (public + private)  | --> Signing script  -----------> Generating MD5 Hash  |  --> if same --> file didn't change.
 |______________|                          | --> User                                              |
 ```
+
+## SCRIPTING <a name="Scripting"></a>
+----------------------------------
+- ! About_Functions_Advanced
+- ! About_Functions_Advanced_Parameters
+- ! [Throw](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_throw?view=powershell-5.1)
+
+## PS REMOTING <a name="Remoting"></a>
+----------------------------------
+1. Open ports: 5985 - for WinRM / HTTP, 5986 - for WinPM / HTTPS
+2. Enable-PSRemoting (WinRM service - Enabled)
+
+- wsmprovhost.exe - service for WinRM
+
+- ! About_Session_Configuration_Files
