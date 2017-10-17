@@ -1,22 +1,22 @@
 # Supporting and Troubleshooting Windows 10
 
 ## TABLE OF CONTENTS
-[Deployment](#Deployment)
-[Ports](#Ports)
-[DNS](#DNS)
-[Event Viewer](#EV)
-[Sysinternal](#Sysinternal)
-[Windows Startup](#Startup)
-[Access to Windows RE](#WinRE)
-[Windows Snapp-Ins](#SnappIns)
-[Command line utilites](#CMD)
-[Hardware and device drivers](#Drivers)
-[How DNS works](#DNS2)
-[Group policy](#GP)
-[User settings](#UserSettings)
-[VPN](#VPN)
-[Windows Imaging and Configuration Designer](#WinICD)
-[Configuring AD CS](#Certificates)
+- [Deployment](#Deployment)
+- [Ports](#Ports)
+- [DNS](#DNS)
+- [Event Viewer](#EV)
+- [Sysinternal](#Sysinternal)
+- [Windows Startup](#Startup)
+- [Access to Windows RE](#WinRE)
+- [Windows Snapp-Ins](#SnappIns)
+- [Command line utilites](#CMD)
+- [Hardware and device drivers](#Drivers)
+- [How DNS works](#DNS2)
+- [Group policy](#GP)
+- [User settings](#UserSettings)
+- [VPN](#VPN)
+- [Windows Imaging and Configuration Designer](#WinICD)
+- [Configuring AD CS](#Certificates)
 
 ## DEPLOYMENT <a name="Deployment"></a>
 ----------------------------------
