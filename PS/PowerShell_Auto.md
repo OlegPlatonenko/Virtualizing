@@ -22,11 +22,11 @@
 - Set-Location --> cd
 - Get-ChildItem --> dir
 - New-Item --> mkdir
-
+```
                  | --> sed (in Linux)
 - Select-Object  |  
                  | --> awk (in Linux)
-
+```
 - Start-Transcript - use to record all made in console
 - *Start-Transcript -Path C:\Users\oleg.platonenko\Documents\Transcript.txt*
 
@@ -67,7 +67,7 @@ SerializationVersion           1.1.0.1
 ## COMMENTS <a name="Comments"></a>
 -------------------------------
 - <# #> - multi row comment 
-- <sharp> - single row comment 
+- sharp - single row comment 
  
 ## COMMON PARAMETERS <a name="Parameters"></a>
 -------------------------------
