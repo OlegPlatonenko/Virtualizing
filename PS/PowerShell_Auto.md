@@ -10,6 +10,9 @@
 - [Variables](#Variables)
 - [Hash tables](#HashTables)
 - [Execution Policy](#ExecPolicy)
+- [WMI](#WMI)
+- [Formatting Output](#Output)
+- [Scripting Security](#Security)
 
 
 ## COMMON ALIASES <a name="CommonAliases"></a>
@@ -75,6 +78,20 @@ SerializationVersion           1.1.0.1
 - Get-Variable - get list of PS Build-in variables
 - Get-Item -Path Env: - get list of Evironmental variables 
 
+**Constant** couldn't be deleted, but **Read-only** might be, using *-Force* parameter
+
+## Visibility
+- Private - may be transmitted to another script or function but don't seen from Console
+- Public - seen from everywhere
+
+## Scope
+- Module --> Function --> Script --> Global (by default variable is seen inside one block)  
+
+- **Example:**
+New-Variable -Name B -Value 10 -Scope Global
+New-Variable B 10 -Visibility Private -Scope Global
+$Global:B=10
+
 ## HASH TABLES <a name="HashTables"></a>
 -------------------------------
 - Syntax : @{ }
@@ -98,3 +115,32 @@ Format-Table -AutoSize
 - RemoteSigned
 - Unrestricted
 - Bypass
+
+## WMI <a name="WMI"></a>
+-------------------------------
+- To pre-setup environment to work with WMI hit **Enable-PSRemoting**
+
+- WMI (CIM) classes information may be found in MSDN or using [**WMI Explorer**](https://wmie.codeplex.com/releases/view/135794) 
+- **wbemtest.exe** - is build-in tool for working with WMI but not so convenient as WMI Explorer.
+
+## Managing WMI Access settings
+- mmc -> WMI Cintrol -> Properties -> Security
+
+## FORMATTING OUTPUT <a name="Output"></a>
+-------------------------------
+- All info about default output formatting is stored in **types.ps1xml** file which is located in [$pshome](C:\Windows\System32\WindowsPowerShell\v1.0)
+- You may create you own ***.ps1xml** file and upload it using **Update-TypeData cmdlet** 
+
+- Example:
+**Update-TypeData -PrependPath $pshome\MyTypes.ps1xml**
+
+- For more information use: **about_Types.ps1xml**
+
+## SCRIPTING SECURITY <a name="Security"></a>
+-------------------------------
+```
+ ______________                                                                                     CHECKING STAGE
+|Certification |       Certificate info   | --> Trusted Publisher (AD, GP)                        | Decrypt signature and calculating hash --> compare caches -->
+|Authority (CA)| -->  (public + private)  | --> Signing script  -----------> Generating MD5 Hash  |  --> if same --> file didn't change.
+|______________|                          | --> User                                              |
+```
