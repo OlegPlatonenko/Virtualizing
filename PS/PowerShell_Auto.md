@@ -5,7 +5,11 @@
 - [Define Powershell Version](#PSVersion)
 - [Useful Shortcuts](#Shortcuts)
 - [Help Explanation](#Help)
-- []
+- [Comments](#Comments)
+- [Common Parameters](#Parameters)
+- [Variables](#Variables)
+- [Hash tables](#HashTables)
+- [Execution Policy](#ExecPolicy)
 
 
 ## COMMON ALIASES <a name="CommonAliases"></a>
@@ -55,23 +59,23 @@ SerializationVersion           1.1.0.1
 - Get-Command
 - Get-Help About_*
 
-## COMMENTS
+## COMMENTS <a name="Comments"></a>
 -------------------------------
 - <# #> - multi row comment 
 - # - single row comment  
  
-## COMMON PARAMETERS
+## COMMON PARAMETERS <a name="Parameters"></a>
 -------------------------------
 - Passthru - write command execution to console
 - WhatIf - return possible command result
 - Confirm - Promt user for confirmation
 
-## VARIABLES
+## VARIABLES <a name="Variables"></a>
 -------------------------------
 - Get-Variable - get list of PS Build-in variables
 - Get-Item -Path Env: - get list of Evironmental variables 
 
-## HASH TABLES
+## HASH TABLES <a name="HastTables"></a>
 -------------------------------
 - Syntax : @{ }
 - n - Name
@@ -87,7 +91,7 @@ Where-Object -FilterScript {$_.CPU -gt 1000}
 Format-Table -AutoSize
 ```
 
-## EXECUTION POLICY TIPES
+## EXECUTION POLICY TIPES <a name="ExecPolicy"></a>
 -------------------------------
 - Restricted
 - AllSigned
