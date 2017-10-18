@@ -14,7 +14,6 @@ service --status-all - get status list
 if config -a - get list of network adapters
 lshw -class network - ----"----
 netstat -a - list of ports 
-/sbin/ifconfig - receive IP address
 
 3. INSTALLERS
 wget  -O /home/omio/Desktop/ "http://thecanadiantestbox.x10.mx/CC.zip" - download file from internet
