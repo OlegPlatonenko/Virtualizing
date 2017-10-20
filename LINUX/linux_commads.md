@@ -68,3 +68,6 @@ tar xvzf file.tar.gz - unzip file
 
 ## 6. APACHE2:
 service apache2 status - Apache2 service status 
+
+## 7. UPGRADE
+sudo do-release-upgrade -d
