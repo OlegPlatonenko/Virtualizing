@@ -4,7 +4,7 @@ no service timestamps log datetime msec
 no service timestamps debug datetime msec
 no service password-encryption
 !
-hostname SW04
+hostname PROV
 !
 !
 !
@@ -14,14 +14,11 @@ spanning-tree mode pvst
 spanning-tree extend system-id
 !
 interface FastEthernet0/1
- description PC04
- switchport access vlan 2
+ description MGMT3
+ switchport access vlan 5
  switchport mode access
 !
 interface FastEthernet0/2
- description SVR04
- switchport access vlan 3
- switchport mode access
 !
 interface FastEthernet0/3
 !
@@ -68,11 +65,14 @@ interface FastEthernet0/23
 interface FastEthernet0/24
 !
 interface GigabitEthernet0/1
- description GW02
- switchport trunk allowed vlan 2-3
- switchport mode trunk
+ description GW01
+ switchport access vlan 5
+ switchport mode access
 !
 interface GigabitEthernet0/2
+ description GW02
+ switchport access vlan 5
+ switchport mode access
 !
 interface Vlan1
  no ip address
