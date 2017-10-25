@@ -1,4 +1,7 @@
 # LAB02
+-------------------------------------
+
+# CONNECTIONS:
 
 - PC01  fa0   -->  SW01 fa0/1  VLAN 2
 - PC02  fa0   -->  SW01 fa0/2  VLAN 2
@@ -11,16 +14,20 @@
 - SW01  gi0/1 -->  GW01 gi0/1  VLAN 2,3,4
 - SW01  gi0/2 -->  SW02 gi0/2  VLAN 2,3,4
 
+# IP
+
 - PC01   IP 10.0.0.2  MASK: 255.255.255.0 GW 10.0.0.1 
 - PC02   IP 10.0.0.3  MASK: 255.255.255.0 GW 10.0.0.1 
 - PC03   IP 10.0.0.4  MASK: 255.255.255.0 GW 10.0.0.1 
-- SVR01  IP 10.0.1.2  MASK: 255.255.255.0 
-- SVR02  IP 10.0.1.3  MASK: 255.255.255.0  
-- SVR03  IP 10.0.1.4  MASK: 255.255.255.0 
+- SVR01  IP 10.0.1.2  MASK: 255.255.255.0 GW 10.0.1.1 
+- SVR02  IP 10.0.1.3  MASK: 255.255.255.0 GW 10.0.1.1 
+- SVR03  IP 10.0.1.4  MASK: 255.255.255.0 GW 10.0.1.1 
 - SW01   IP 10.0.2.2  MASK: 255.255.255.0
 - SW02   IP 10.0.2.3  MASK: 255.255.255.0
-- MGMT1  IP 10.0.2.4  MASK: 255.255.255.0 
-- MGMT2  IP 10.0.2.5  MASK: 255.255.255.0 
+- MGMT1  IP 10.0.2.4  MASK: 255.255.255.0 GW 10.0.2.1 
+- MGMT2  IP 10.0.2.5  MASK: 255.255.255.0 GW 10.0.2.1 
+
+# NETWORKS (SUBNETS)
 
 - 10.0.0.0/24 - PC
 - 10.0.1.0/24 - SVR
@@ -28,9 +35,9 @@
 
 ## VLANS
 
-2 - PC
-3 - SVR
-4 - MGMT
+- 2 - PC
+- 3 - SVR
+- 4 - MGMT
 
 ## SW01
 ```
@@ -129,11 +136,11 @@ Description PC
 ip 10.0.0.1 mask: 255.255.255.0
 
 interface gi0/1.3 
-Description PC
+Description SVR
 ip 10.0.2.1 mask: 255.255.255.0
 
 interface gi0/1.4 
-Description PC
+Description MGMT
 ip 10.0.3.1 mask: 255.255.255.0
 
 ```
