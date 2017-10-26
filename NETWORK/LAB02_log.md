@@ -220,7 +220,7 @@ Create VLAN 2 name PC and VLAN 3 name SVR
 interface gi0/1
 Description GW02
 trunk
-VLAN 2
+VLAN 2,3
 
 interface fa0/1
 Description PC04
