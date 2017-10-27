@@ -4,6 +4,8 @@
 
 # Commands
 - **vagrant box update** - update box version
+- **vagrant box list** - list of already created Vagrant boxes
+- **vagrant box remove _boxname_** - remove selected box
 
 # Creating new Box (in VirtualBox)
 1. Create new VM 
@@ -96,3 +98,4 @@ This will add an ISO image to the virtual CDROM running in your server. Run thes
 - vagrant box add ubuntu64 package.box
 - vagrant init ubuntu64
 - vagrant up
+- vagrant ssh
