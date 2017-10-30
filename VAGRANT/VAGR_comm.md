@@ -1,14 +1,18 @@
 # VAGRANT Commands
+
 -------------------------------
+
 - **/vagrant** - on guest machine is default shared folder
 
-# Commands
+## Commands
+
 - **vagrant box update** - update box version
 - **vagrant box list** - list of already created Vagrant boxes
 - **vagrant box remove _boxname_** - remove selected box
 
-# Creating new Box (in VirtualBox)
-1. Create new VM 
+## Creating new Box (in VirtualBox)
+
+1. Create new VM
 - Name
 - Version
 - Memory
