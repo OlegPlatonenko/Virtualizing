@@ -42,3 +42,12 @@ username <username> password <Password> - Set login/password
 line console 0        |
 login                 | - set password for console port
 password <Password>   |
+
+SETUP ACL
+-------------------------
+Router(config)#ip access-list extended <List name> 
+permin/deny <protocol (tcp/udp)> <ip from> host <ip to> eq <port or protocol>
+f.e. permin tcp any host 10.0.0.1 eq www
+
+Add to interface
+ip access-group <List name> in/out
