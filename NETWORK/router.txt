@@ -45,9 +45,23 @@ password <Password>   |
 
 SETUP ACL
 -------------------------
-Router(config)#ip access-list extended <List name> 
-permin/deny <protocol (tcp/udp)> <ip from> host <ip to> eq <port or protocol>
-f.e. permin tcp any host 10.0.0.1 eq www
+- Router(config)#ip access-list extended <List name> 
+- permin/deny <protocol (tcp/udp)> <ip from> host <ip to> eq <port or protocol>
+- f.e. permin tcp any host 10.0.0.1 eq www
 
-Add to interface
-ip access-group <List name> in/out
+- Add to interface
+- ip access-group <List name> in/out
+
+Setup object groups
+1. Set ports
+* object-group service <group name>
+* description <description>
+* tcp/udp eq <port>
+* ... 
+2. Set hosts
+object-group network <group name>
+* description <description>
+* host <host IP>
+* ...
+3. Set ACL
+* permit object-group <ports> object-group <hosts> any 
