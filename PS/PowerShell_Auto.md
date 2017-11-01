@@ -35,7 +35,7 @@
 ## DEFINE POWERSHELL VERSION <a name="PSVersion"></a>
 -------------------------------
 - $PSVersionTable
-```
+```powershell
 Name                           Value
 ----                           -----
 PSVersion                      5.1.15063.608
@@ -102,7 +102,7 @@ $Global:B=10
 - f - format
 
 - **Example:**
-```
+```powershell
 Get-Process | 
 Select-Object -Property ProcessName, CPU, @{n="Memory (MB)"; e={($_.PagedMemorySize)/1MB}} | 
 Sort-Object -Property "Memory (MB)" -Descending | 
