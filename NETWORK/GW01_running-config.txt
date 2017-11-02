@@ -48,6 +48,11 @@ interface GigabitEthernet0/0.5
  encapsulation dot1Q 5
  ip address 10.0.3.2 255.255.255.248
 !
+interface GigabitEthernet0/0.6
+ description INET
+ encapsulation dot1Q 6
+ ip address 198.0.0.2 255.255.255.240
+!
 interface GigabitEthernet0/1
  description SW01
  no ip address
@@ -83,6 +88,7 @@ interface Vlan1
 ip classless
 ip route 10.0.5.0 255.255.255.0 10.0.3.3 
 ip route 10.0.6.0 255.255.255.0 10.0.3.3 
+ip route 0.0.0.0 0.0.0.0 198.0.0.1
 !
 ip flow-export version 9
 !
