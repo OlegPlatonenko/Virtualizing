@@ -49,6 +49,9 @@ SETUP ACL
 - permin/deny <protocol (tcp/udp)> <ip from> host <ip to> eq <port or protocol>
 - f.e. permin tcp any host 10.0.0.1 eq www
 
+- Router(config)#ip access-list standard <List name (number)>
+- permin/deny <ip from>
+
 - Add to interface
 - ip access-group <List name> in/out
 
@@ -65,3 +68,19 @@ object-group network <group name>
 * ...
 3. Set ACL
 * permit object-group <ports> object-group <hosts> any 
+
+NAT
+-------------------------
+1. Setup IP address pool 
+- ip nat pool <pool name> <1st IP> <last IP> netmask <netmask>
+
+2. Create access list
+- ip access-list extended <list name>
+
+3. ip nat inside source list <list name> pool <pool name> overload
+
+4. For all internal interfaces
+- ip nat inside
+
+5. For all external interfaces
+- ip nat outside
