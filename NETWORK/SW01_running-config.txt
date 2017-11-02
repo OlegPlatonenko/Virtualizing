@@ -10,13 +10,8 @@ hostname SW01
 !
 !
 !
-spanning-tree mode rapid-pvst
+spanning-tree mode pvst
 spanning-tree extend system-id
-!
-interface Port-channel1
- description SW03
- switchport trunk allowed vlan 2-4
- switchport mode trunk
 !
 interface FastEthernet0/1
  description PC01
@@ -39,6 +34,9 @@ interface FastEthernet0/4
  switchport mode access
 !
 interface FastEthernet0/5
+ description PC05
+ switchport access vlan 2
+ switchport mode access
 !
 interface FastEthernet0/6
 !
@@ -49,6 +47,9 @@ interface FastEthernet0/8
 interface FastEthernet0/9
 !
 interface FastEthernet0/10
+ description ADMIN
+ switchport access vlan 2
+ switchport mode access
 !
 interface FastEthernet0/11
 !
@@ -65,34 +66,16 @@ interface FastEthernet0/16
 interface FastEthernet0/17
 !
 interface FastEthernet0/18
- switchport trunk allowed vlan 2-4
- switchport mode trunk
- channel-group 1 mode on
 !
 interface FastEthernet0/19
- switchport trunk allowed vlan 2-4
- switchport mode trunk
- channel-group 1 mode on
 !
 interface FastEthernet0/20
- switchport trunk allowed vlan 2-4
- switchport mode trunk
- channel-group 1 mode on
 !
 interface FastEthernet0/21
- switchport trunk allowed vlan 2-4
- switchport mode trunk
- channel-group 1 mode on
 !
 interface FastEthernet0/22
- switchport trunk allowed vlan 2-4
- switchport mode trunk
- channel-group 1 mode on
 !
 interface FastEthernet0/23
- switchport trunk allowed vlan 4
- switchport mode trunk
- shutdown
 !
 interface FastEthernet0/24
  description MGMT
