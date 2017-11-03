@@ -1,17 +1,20 @@
-# Common Linux commands
+# Common Linux command
+
 -----------------------------------------
 
-## 1. SERVICES:
+## 1. SERVICES
+
 service --status-all - get status list
 
-## 2. NETWORK:
+## 2. NETWORK
+
 ifconfig -a - get list of network adapters
 lshw -class network - ----"----
 netstat -a - list of ports
 ip route | grep default - get default gateway
 cat /etc/resolv.conf - DNS info
 
-```
+```bash
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
@@ -33,16 +36,20 @@ iface eth0 inet static
 ```
 
 ## 3. INSTALLERS
+
 wget  -O /home/omio/Desktop/ "http://thecanadiantestbox.x10.mx/CC.zip" - download file from internet
 tar xvzf file.tar.gz - unzip file
 
 ## 4. SETUP SSH
+
 - sudo apt-get install openssh-server
 - sudo  service ssh status - must be running
 - check port settings
 - *sudo lsof -i | grep ssh*
 - *netstat -l --numeric-ports | grep 22*
+
 -----------------------------------------
+
 - mkdir ~/.ssh
 - chmod 0700 ~/.ssh
 - touch ~/.ssh/authorized_keys
@@ -50,7 +57,9 @@ tar xvzf file.tar.gz - unzip file
 - paste ssh key in format **ssh-rsa SSH_KEY**
 
 ## 5. Install PowerShell (Ubuntu)
+
 -----------------------------------------
+
 - **Import the public repository GPG keys**
 - curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
@@ -66,8 +75,25 @@ tar xvzf file.tar.gz - unzip file
 - **Start PowerShell**
 - powershell
 
-## 6. APACHE2:
+## 6. APACHE2
+
 service apache2 status - Apache2 service status 
 
 ## 7. UPGRADE
+
 sudo do-release-upgrade -d
+
+## 8. INSTALL DESKTOP ENVIRONMENT
+
+- Unity (The Default Desktop)
+    * sudo apt-get install ubuntu-desktop
+- KDE
+    * sudo apt-get install kubuntu-desktop
+- LXDE (Lubuntu)
+    * sudo apt-get install lubuntu-desktop
+- MATE
+    * sudo apt-get install mate-desktop
+- Gnome
+    * sudo apt-get install ubuntu-gnome-desktop
+- XFCE (Xubuntu)
+    * sudo apt-get install xubuntu-desktop
