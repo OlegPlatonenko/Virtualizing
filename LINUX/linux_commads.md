@@ -42,6 +42,7 @@ tar xvzf file.tar.gz - unzip file
 
 ## 4. SETUP SSH
 
+```bash
 - sudo apt-get install openssh-server
 - sudo  service ssh status - must be running
 - check port settings
@@ -55,6 +56,7 @@ tar xvzf file.tar.gz - unzip file
 - touch ~/.ssh/authorized_keys
 - chmod 0644 ~/.ssh/authorized_keys
 - paste ssh key in format **ssh-rsa SSH_KEY**
+```
 
 ## 5. Install PowerShell (Ubuntu)
 
