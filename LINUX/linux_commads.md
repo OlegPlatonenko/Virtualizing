@@ -132,3 +132,8 @@ sudo do-release-upgrade -d
     * sudo apt-get install ubuntu-gnome-desktop
 - XFCE (Xubuntu)
     * sudo apt-get install xubuntu-desktop
+
+## 9. DEPLOY APPLICATION
+
+1. install python-pip
+    sudo apt-get install python pip
