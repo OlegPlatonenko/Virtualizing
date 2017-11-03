@@ -84,3 +84,7 @@ NAT
 
 5. For all external interfaces
 - ip nat outside
+
+Port forwarding
+-------------------------
+ip nat inside source static <protocol (tcp/udp)> <internal ip> <internal port> <external ip> <external port> 
