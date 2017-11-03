@@ -77,7 +77,42 @@ tar xvzf file.tar.gz - unzip file
 
 ## 6. APACHE2
 
-service apache2 status - Apache2 service status 
+- Install Apache2 package
+    sudo apt-get install apache2
+
+- Show Apache2 cache
+    apt-cache show apache2
+
+- Apache2 service status
+    service apache2 status
+
+- Create own simple site
+
+```bash
+    sudo mkdir -p /var/www/test.com
+    cd /var/www/test.com
+    sudo nano index.html
+```
+
+- Create virtual host file
+
+```bash
+    cd /etc/apache2/sites-available/
+    sudo nano test.com.conf
+
+Inside file:
+
+<VirtualHost *:80>
+    ServerAdmin carla@localhost
+    DocumentRoot /var/www/test.com
+    ServerName test.com
+    ServerAlias www.test.com
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+    sudo a2ensite test.com.conf
+```
 
 ## 7. UPGRADE
 
