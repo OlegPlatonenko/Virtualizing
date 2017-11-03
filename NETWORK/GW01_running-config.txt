@@ -91,6 +91,14 @@ interface Vlan1
 !
 ip nat pool main_pool 198.0.0.3 198.0.0.14 netmask 255.255.255.240
 ip nat inside source list nat-inet pool main_pool overload
+ip nat inside source static tcp 10.0.1.2 80 198.0.0.5 80 
+ip nat inside source static tcp 10.0.1.3 25 198.0.0.6 25 
+ip nat inside source static tcp 10.0.1.3 110 198.0.0.6 110 
+ip nat inside source static tcp 10.0.1.4 20 198.0.0.7 20 
+ip nat inside source static tcp 10.0.1.4 21 198.0.0.7 21 
+ip nat inside source static tcp 10.0.6.2 21 198.0.0.8 21 
+ip nat inside source static tcp 10.0.6.2 20 198.0.0.8 20 
+ip nat inside source static tcp 10.0.0.10 3389 198.0.0.9 3389 
 ip classless
 ip route 10.0.5.0 255.255.255.0 10.0.3.3 
 ip route 10.0.6.0 255.255.255.0 10.0.3.3 
