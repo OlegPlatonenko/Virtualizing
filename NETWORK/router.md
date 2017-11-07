@@ -1,15 +1,19 @@
+# CISCO ROUTER COMMANDS
+
 ? - show help
 <command> ? - show command help
 <command> <parameter> ? - show parameter help
 enable - enable priviledge mode
 
-PRIVILEDGE MODE COMMANDS
+## PRIVILEDGE MODE COMMANDS
+
 -------------------------
 configure terminal - enter configurational mode
 show ip interface - get info about ip interfaces
 show running-config
 
-CONFIG MODE COMMANDS
+## CONFIG MODE COMMANDS
+
 -------------------------
 interface <interface name> - select interface (f.e. interface gigabitethernet 0/0)
 shutdown/no shutdown - disable/enable port
@@ -17,7 +21,8 @@ do - run commands from other modes
 write memory - Save current configurational
 reload - reboot switch/router
 
-GENERAL
+## GENERAL
+
 -------------------------
 Router#clock set hh:mm:ss dd mounth yy - set date
 Router(config)#hostname <Name> - set router Name
@@ -30,7 +35,8 @@ Router(config-if)#encapsulation dot1Q <VLAN> - external frames from interface X/
 will be tagged by <VLAN> VLAN and input frames with tag <VLAN> will be received by 
 interface X/X.<VLAN>
 
-ACCESS CONFIGURATION
+## ACCESS CONFIGURATION
+
 -------------------------
 line vty 0 4 - Setup telnet/ssh connection (0 4 - five user virtual terminals/sessions)
 password <Password> - Setup password for access via telnet
@@ -43,7 +49,8 @@ line console 0        |
 login                 | - set password for console port
 password <Password>   |
 
-SETUP ACL
+## SETUP ACL
+
 -------------------------
 - Router(config)#ip access-list extended <List name> 
 - permin/deny <protocol (tcp/udp)> <ip from> host <ip to> eq <port or protocol>
@@ -95,4 +102,4 @@ DYNAMIC ROUTING
 interface loopback 0 
 ip address ... ... 
 
-2.  
+2. router ospf <ospf id> 
