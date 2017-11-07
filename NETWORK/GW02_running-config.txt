@@ -38,6 +38,9 @@ spanning-tree mode pvst
 !
 !
 !
+interface Loopback0
+ ip address 10.0.255.5 255.255.255.255
+!
 interface GigabitEthernet0/0
  no ip address
  duplex auto
@@ -72,6 +75,11 @@ interface GigabitEthernet0/2
 interface Vlan1
  no ip address
  shutdown
+!
+router ospf 1
+ router-id 10.0.255.5
+ log-adjacency-changes
+ network 10.0.0.0 0.0.255.255 area 0
 !
 ip classless
 ip route 10.0.0.0 255.255.252.0 10.0.3.2 

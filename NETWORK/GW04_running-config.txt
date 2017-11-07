@@ -49,7 +49,7 @@ interface GigabitEthernet0/0
 interface GigabitEthernet0/0.5
  description GW03
  encapsulation dot1Q 5
- ip address 10.0.3.17 255.255.255.252
+ ip address 10.0.3.14 255.255.255.252
 !
 interface GigabitEthernet0/1
  no ip address
@@ -59,7 +59,7 @@ interface GigabitEthernet0/1
 interface GigabitEthernet0/1.5
  description GW05
  encapsulation dot1Q 5
- ip address 10.0.3.21 255.255.255.252
+ ip address 10.0.3.17 255.255.255.252
 !
 interface GigabitEthernet0/2
  no ip address
