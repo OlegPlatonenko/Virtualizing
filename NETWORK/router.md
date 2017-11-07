@@ -62,7 +62,8 @@ password <Password>   |
 - Add to interface
 - ip access-group <List name> in/out
 
-Setup object groups
+### Setup object groups
+
 1. Set ports
 * object-group service <group name>
 * description <description>
@@ -76,7 +77,8 @@ object-group network <group name>
 3. Set ACL
 * permit object-group <ports> object-group <hosts> any 
 
-NAT
+## NAT
+
 -------------------------
 1. Setup IP address pool 
 - ip nat pool <pool name> <1st IP> <last IP> netmask <netmask>
@@ -96,10 +98,13 @@ Port forwarding
 -------------------------
 ip nat inside source static <protocol (tcp/udp)> <internal ip> <internal port> <external ip> <external port> 
 
-DYNAMIC ROUTING
+## DYNAMIC ROUTING
+
 -------------------------
 1. Loopback setup
 interface loopback 0 
 ip address ... ... 
 
-2. router ospf <ospf id> 
+2. router ospf <ospf id>
+3. router-id (usually the same as **loopback interface IP**)
+4. network <IP> <reverse subnet mask> area <area number>
