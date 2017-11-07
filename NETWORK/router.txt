@@ -88,3 +88,11 @@ NAT
 Port forwarding
 -------------------------
 ip nat inside source static <protocol (tcp/udp)> <internal ip> <internal port> <external ip> <external port> 
+
+DYNAMIC ROUTING
+-------------------------
+1. Loopback setup
+interface loopback 0 
+ip address ... ... 
+
+2. 
