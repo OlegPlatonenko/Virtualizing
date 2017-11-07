@@ -1,1 +1,1 @@
-![IIS-Scheme](/images/logo.png)
+![IIS-Scheme](https://github.com/OlegPlatonenko/Virtualizing/blob/master/IIS/images/iis_scheme.png)
