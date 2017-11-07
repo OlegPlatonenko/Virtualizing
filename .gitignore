@@ -1,4 +1,7 @@
 readme.md
+*.jpg
+*.jpeg
+*.png
 NETWORK/LAB_Cisco.docx
 VAGRANT/.vagrant
 NETWORK/PKT
