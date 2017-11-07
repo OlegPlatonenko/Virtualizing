@@ -19,7 +19,7 @@ no ipv6 cef
 !
 !
 !
-license udi pid CISCO2911/K9 sn FTX1524BVUA
+license udi pid CISCO2911/K9 sn FTX1524CSZ7
 !
 !
 !
@@ -39,7 +39,7 @@ spanning-tree mode pvst
 !
 !
 interface Loopback0
- ip address 10.0.255.3 255.255.255.255
+ ip address 10.0.255.6 255.255.255.255
 !
 interface GigabitEthernet0/0
  no ip address
@@ -47,9 +47,9 @@ interface GigabitEthernet0/0
  speed auto
 !
 interface GigabitEthernet0/0.5
- description GW03
+ description GW04
  encapsulation dot1Q 5
- ip address 10.0.3.21 255.255.255.252
+ ip address 10.0.3.18 255.255.255.252
 !
 interface GigabitEthernet0/1
  no ip address
@@ -57,44 +57,22 @@ interface GigabitEthernet0/1
  speed auto
 !
 interface GigabitEthernet0/1.5
- description GW06
+ description GW05
  encapsulation dot1Q 5
- ip address 10.0.3.26 255.255.255.252
+ ip address 10.0.3.25 255.255.255.252
 !
 interface GigabitEthernet0/2
  no ip address
  duplex auto
  speed auto
-!
-interface GigabitEthernet0/2.2
- description PC
- encapsulation dot1Q 2
- ip address 10.0.8.1 255.255.255.0
-!
-interface GigabitEthernet0/2.3
- description SVR
- encapsulation dot1Q 3
- ip address 10.0.9.1 255.255.255.0
-!
-interface FastEthernet0/3/0
- description GW06
- switchport mode access
-!
-interface FastEthernet0/3/1
- switchport mode access
-!
-interface FastEthernet0/3/2
- switchport mode access
-!
-interface FastEthernet0/3/3
- switchport mode access
+ shutdown
 !
 interface Vlan1
  no ip address
  shutdown
 !
-router ospf 2
- router-id 10.0.255.3
+router ospf 1
+ router-id 10.0.255.6
  log-adjacency-changes
  network 10.0.0.0 0.0.255.255 area 0
 !
