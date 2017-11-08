@@ -21,6 +21,7 @@ Export-IISConfiguration -PhysicalPath "C:\Users\Administrator\Desktop\IIS_Config
 
 Get-Service -Name AppHostSvc, W3SVC, WAS
 Get-Module -ListAvailable
+Get-Module -Name *WebAdministration*
 Get-Command -Module WebAdministration
 Get-ChildItem -Path IIS:
 
@@ -30,3 +31,16 @@ Get-ChildItem -Path IIS:\Sites
 Get-ChildItem -Path 'IIS:\Sites\Default Web Site'
 
 Add-Content -Path C:\inetpub\wwwroot\Default.htm -Value "Technet Rocks!"
+
+#____________________________________________________________________________
+
+Get-IISConfigSection -SectionPath system.webServer/defaultDocument | 
+Get-IISConfigCollection -CollectionName "files" |
+New-IISConfigCollectionElement -ConfigAttribute @{"Value" = "MyDefDoc.htm"}
+
+$ConfigSection = Get-IISConfigSection -SectionPath "system.applicationHost/sites"
+Get-IISConfigCollection $ConfigSection | 
+Get-IISConfigCollectionElement -ConfigAttribute @{"Name" = "Default Web Site"} | 
+Get-IISConfigAttributeValue -AttributeName "State"
+
+Get-IISAppPool
