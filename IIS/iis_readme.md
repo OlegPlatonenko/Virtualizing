@@ -69,4 +69,4 @@ When an application pool is in Classic mode, IIS handles requests in the same wa
 
 ![IIS-Scheme](https://github.com/OlegPlatonenko/Virtualizing/blob/master/IIS/images/iis_scheme.png)
 
-![IIS-Modules_scheme](https://github.com/OlegPlatonenko/Virtualizing/blob/master/IIS/images/IIS_modules_scheme.png)
+![IIS-Modules_scheme](https://github.com/OlegPlatonenko/Virtualizing/blob/master/IIS/images/IIS_Modules_scheme.png)
