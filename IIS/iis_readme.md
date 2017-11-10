@@ -70,3 +70,60 @@ When an application pool is in Classic mode, IIS handles requests in the same wa
 ![IIS-Scheme](https://github.com/OlegPlatonenko/Virtualizing/blob/master/IIS/images/iis_scheme.png)
 
 ![IIS-Modules_scheme](https://github.com/OlegPlatonenko/Virtualizing/blob/master/IIS/images/IIS_Modules_scheme.png)
+
+## IIS Benefits
+
+- Componentization
+- Extensibility
+- ASP.NET Integration
+
+## IIS Module setup
+
+- Install module on the server  
+- Enable the module in an application
+
+## Installation/Removing modules
+
+- Native Module
+    * *globalModule* - section in **applicationhost.config**
+    * add it to section *modules* in **web.config** file for current application
+
+- Managed module
+    * add it to section *modules* in **web.config** file for current application
+
+### Install/Remove module via AppCmd.exe
+
+```Batch 
+AppCmd.exe install module /name:MODULE_NAME /image:PATH_TO_DLL
+
+AppCmd.exe uninstall module MODULE_NAME
+```
+
+### Get modules list
+
+```Batch
+AppCmd.exe list modules [/app.name:APPLICATION_NAME]
+```
+
+### Enable/Disable module
+
+```Batch
+AppCmd.exe add module /name:MODULE_NAME /type:MGD_TYPE
+
+Appcmd.exe delete module MODULE_NAME [/app.name:APPLICATION_NAME]
+```
+
+### Install/Remove module via PowerShell
+
+```powershell
+Get-Command -Module WebAdministration -Name *module*
+```
+
+## IIS Config files
+
+- **ApplicationHost.config** - %windir%\system32\inetsrv\config
+    * system.pplicationHost - Contains config settings for sites, apps, virtual directories, and app pools. This settings can't be distributed
+    * system.webServer - Contains config for all other settings, including global defaults. This settings can be distributed
+
+- **Web.config** - stored directly within the code or in the content directories of a Web site
+- **Benefits** 

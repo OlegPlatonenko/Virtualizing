@@ -44,3 +44,9 @@ Get-IISConfigCollectionElement -ConfigAttribute @{"Name" = "Default Web Site"} |
 Get-IISConfigAttributeValue -AttributeName "State"
 
 Get-IISAppPool
+
+#Working with modules
+Get-Command -Module WebAdministration -Name *module*
+
+#Add application settings
+Get-Command -Module WebAdministration -Name *app*
