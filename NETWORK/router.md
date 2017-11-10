@@ -133,7 +133,51 @@ ip nat inside source static <protocol (tcp/udp)> <internal ip> <internal port> <
 * OSPF states
     1. **OSPF - DOWN**
     2. **OSPF - INIT** - router send Hello-packet to multicast 224.0.0.5 from all interfaces with OSPF-started. TTL=1
-        * Hello 
+        * Hello message packet
+            - RouterID
+            - Hello interval
+            - Dead interval
+            - Neighbors
+            - Subnet mask
+            - Area ID
+            - Router priority
+            - DR and BDR routers address
+            - Authentication password
+        * Other routers add RouterID to **neighbors** and send by unicast new Hello
+    3. **OSPF-TWO-WAY** - both routers know that they are heighbors
+    4. **OSPF-EXSTART** - routers decide who is DR (designated router) and BDR (backup designated router) - router with the biggest RouterID
+    5. **OSPF-EXCHANGE** - DBD (Data Base Description) messages exchange which contains LSDB (Link State Data Base) description - subnets description
+    6. **OSPF-LOADING** - router sends receiving DBD confirmation (LSAsk) and compares database info. if there are differences, send LSR (Link State Request) to request info                        about unknown subnets. Another router send LSU (Link State Update) which contains LSA (Link State Advertisement)
+    7. **OSPF-FULL STATE** - all info is up to date
+    8. Router use SPF (Shortest Path First) or Dijkstra's algoritm to calculate routes 
+
+### EIGRP
+
+- Each EIGRP process works with 3 tables:
+    1. Neighbor table (**show ip eigrp neighbors**)
+    2. Topology table (**show ip eigrp topology**)
+    3. Routing table (**show ip route**)
+
+- Metrics
+    EIGRP (K1 * bw + (K2 * bw) / (256 - load) + K3 * delay) * (K5 / (reliability + K4))
+        - **bw:** (10000000/the smallest bandwidth) * 256
+        - **delay:** delay sum for current route in 10's miliseconds * 256 (shown in microseconds in config)
+        - **K1 - K5** - coefficient
+
+    In practise 
+    - K1 = K3 = 1
+    - K2 = K4 = K5 = 0
+
+    !!! Metric is calculated for the worst bandwidth in a route
+
+- Each route in EIGRP is described by FD (Feasible Distance) and AD 9Advertised Distance) or RD (Reported Distance)
+    * FD - from me to destination
+    * AD - from neighbor to destination
+
+- There are **Sucecssor** for each subnet on each router - neighbor router with the best route to subnet
+- There are **Feasible Successor** router with backup route
+
+
 
 -------------------------
 1. Loopback setup
