@@ -133,3 +133,24 @@ Get-Command -Module WebAdministration -Name *module*
 - APPCMD (command) (object-type) <identifier> < /parameter1:value1 ... >*
 
 ### 3 Help types in AppCmd
+
+1. General Help - appcmd /?
+2. Object Help - appcmd (object) /?
+3. Command Help - appcmd (command) (object) /?
+
+### Backup
+
+- **appcmd add backup (Name)** - add backup 
+- **appcmd list backups** - display backup list
+- **appcmd restore backup (Name)** - restore backup
+
+ - **Backup-WebConfiguration** - add backup 
+ - **Get-WebConfigurationBackup** - display backup list
+ - **Remove-WebConfigurationBAckup** - remove backup
+ - **Restore-WebConfiguration** - restore backup
+
+ ```powershell
+$Date = Get-Date
+$Name = "MySiteBackup "+$Date.ToShortString()
+Backup-WebConfiguration -Name $Name -Verbose
+``` 
