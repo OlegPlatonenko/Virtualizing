@@ -127,3 +127,9 @@ Get-Command -Module WebAdministration -Name *module*
 
 - **Web.config** - stored directly within the code or in the content directories of a Web site
 - **Benefits** 
+
+## AppCmd
+
+- APPCMD (command) (object-type) <identifier> < /parameter1:value1 ... >*
+
+### 3 Help types in AppCmd
