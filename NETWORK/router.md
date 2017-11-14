@@ -170,7 +170,7 @@ ip nat inside source static <protocol (tcp/udp)> <internal ip> <internal port> <
 
     !!! Metric is calculated for the worst bandwidth in a route
 
-- Each route in EIGRP is described by FD (Feasible Distance) and AD 9Advertised Distance) or RD (Reported Distance)
+- Each route in EIGRP is described by FD (Feasible Distance) and AD (Advertised Distance) or RD (Reported Distance)
     * FD - from me to destination
     * AD - from neighbor to destination
 
