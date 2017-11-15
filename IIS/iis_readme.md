@@ -93,7 +93,7 @@ When an application pool is in Classic mode, IIS handles requests in the same wa
 
 ### Install/Remove module via AppCmd.exe
 
-```Batch 
+```Batch
 AppCmd.exe install module /name:MODULE_NAME /image:PATH_TO_DLL
 
 AppCmd.exe uninstall module MODULE_NAME
@@ -144,13 +144,62 @@ Get-Command -Module WebAdministration -Name *module*
 - **appcmd list backups** - display backup list
 - **appcmd restore backup (Name)** - restore backup
 
- - **Backup-WebConfiguration** - add backup 
- - **Get-WebConfigurationBackup** - display backup list
- - **Remove-WebConfigurationBAckup** - remove backup
- - **Restore-WebConfiguration** - restore backup
+- **Backup-WebConfiguration** - add backup 
+- **Get-WebConfigurationBackup** - display backup list
+- **Remove-WebConfigurationBAckup** - remove backup
+- **Restore-WebConfiguration** - restore backup
 
- ```powershell
+```powershell
 $Date = Get-Date
 $Name = "MySiteBackup "+$Date.ToShortString()
 Backup-WebConfiguration -Name $Name -Verbose
 ```
+
+### IIS Hierarchy
+
+- WebSite
+- Application
+- Virtual Directory
+
+### Working with Sites, Directories, AppPools
+
+- http://www.mysite.com:81 - site
+- http://www.mysite.com:81/app1 - app
+- http://www.mysite.com:81/app1/vdir1 - virtual dir
+
+App pool is outside this hierarchy. 
+
+**App pool defines**
+- number of worker proces settings (version of CLR loaded)
+- .NET integration mode
+- account under which the worker process runs
+- process cycle settings
+
+* **CLR** - Common language runtime
+
+```bat
+appcmd list sites
+appcmd list apps /site.name:"MySite"
+appcmd list vdirs /app.name:"MySite/"
+appcmd list apppolls
+```
+```powershell
+Get-Website - Name "MySite"
+Get-WebApplication -Site "MySite"
+Get-WebVirtualDirectory -Site "MySite" -Application "MyApp"
+Get-Childitem IIS:\AppPools
+```
+
+#### Create a WebSite
+
+binding format for HTTP: **IP:PORT:HOSTHEADER**
+```
+appcmd add site /name:MySite2 /id:4 /bindings:http/*:82: /physicalPath:C:\Git\Virtualizing\IIS\MySite2
+```
+```powershell
+New-Website -Name "MySite3" -Id 5 -Port 83 -PhysicalPath "C:\inetpub\MySite3"
+```
+
+#### Adding Application
+
+
