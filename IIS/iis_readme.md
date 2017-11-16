@@ -202,4 +202,64 @@ New-Website -Name "MySite3" -Id 5 -Port 83 -PhysicalPath "C:\inetpub\MySite3"
 
 #### Adding Application
 
+```bat
+appcmd add app /site.name:MySite /path:/app1 /physicalPath:C:\inetpub\mysite\app1
+```
+```powershell
+New-WebApplication -Site MySite3 -Name app2 -PhysicalPath C:\inetpub\MySite3\app2 -ApplicationPool DefaultApplicationPool
+```
+
+### Creating new Virtual Directory
+
+```bat
+appcmd add vdir /app.name:"MySite/app1" /path:/vdir1 /physicalPath:C:\inetpub\mysite\app1\vdir1
+```
+
+```powershell
+New-WebVirtualDirectory -Site MySite3 -Application app2 -Name vdir1 -PhysicalPath C:\inetpub\MySite3\app2\vdir1
+```
+
+### Creating AppPool
+
+```bat
+appcmd add apppool /name:MyAppPool
+```
+
+```powershell
+New-WebAppPool -Name MyAppPool
+```
+
+### Configuring sites, apps, virtual directories
+
+```bat
+appcmd <object> <id> [ /property:value ]*
+```
+
+Changing AppPool
+```bat
+appcmd set app "MySite/" /applicationPool:MyAppPool
+```
+
+```powershell
+Get-WebApplication | Where-Object -FilterScript {$_.path -eq "\app2"} | Format-List -Property *
+
+(Get-WebApplication | Where-Object -FilterScript {$_.path -eq "\app2"}).applicationPool = "MyAppPool"
+
+Get-WebApplication | Where-Object -FilterScript {$_.path -eq "\app2"} | Add-member -NotePropertyName applicationPool -NotePropertyValue "MyAppPool" -Force
+```
+
+get AppPlool current properties
+```
+appcmd list apppool "MyAppPool" /text:*
+```
+
+### Inspecting Configuration State
+
+View configuration
+```bat
+appcmd list config <URL> /section:SectionName
+
+appcmd list config "MySite"
+appcmd list config "MySite/" /section:asp
+```
 
