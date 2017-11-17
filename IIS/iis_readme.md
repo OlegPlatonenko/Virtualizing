@@ -261,5 +261,64 @@ appcmd list config <URL> /section:SectionName
 
 appcmd list config "MySite"
 appcmd list config "MySite/" /section:asp
+appcmd list config "MySite/" /section:asp /config:*
 ```
+
+### Editing Configuration Properties
+
+```bat
+appcmd set config <URL> /section:SectionName [ /property:value ]
+
+appcmd set config "http://localhost/app1" /section:asp /appAllowClientDebug:false
+APPCMD set config "http://localhost/app1" /section:asp /limits.requestQueueMax:4000
+```
+
+### Editing Configuration Collections
+
+```bat
+appcmd set config /section:system.webServer/modules /[name='FormsAuthentication'].type:System.Web.Security.FormsAuthenticationModule
+
+appcmd set config /section:system.webServer/modules /+[name='MyModule',type='MyType']
+```
+
+To delete a collection element, prefix the element path notation with a minus sign, -:
+
+```bat
+appcmd set config /section:system.webServer/modules /-[name='MyModule']
+```
+
+### Controlling Location of Configuration
+
+AppCmd provides this capability through its **commit** parameter.
+The **commit** parameter can be set to one of the following:
+
+- (omitted) — default; write configuration at the level for which it is set
+- url — same as default; write configuration at the level for which it is set
+- site — write configuration in the Web.config at the site root of the url for which it is set
+- app — write configuration in the Web.config at the app root of the url for which it is set
+- apphost — write configuration at the server level, in the applicationHost.config file
+- ```<PATH>``` — write configuration at the specified config path
+
+```bat
+appcmd set config http://localhost/app1/ /section:directoryBrowse /enabled:false /commit:site
+```
+
+### Locking and Unlocking Configuration
+
+```bat
+appcmd unlock config /section:asp
+
+appcmd lock config /section:asp
+```
+
+### Searching Configuration
+
+```bat
+appcmd search config
+appcmd search config "MySite3/"
+appcmd search config "MySite3/" /section:directoryBrowse
+appcmd search config "MySite3/" /section:directoryBrowse /enabled
+appcmd search config "MySite3/" /section:directoryBrowse /enabled:true
+```
+### Control Output
 
