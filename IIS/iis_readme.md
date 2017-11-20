@@ -333,4 +333,5 @@ appcmd list sites /xml
 
 ## IIS Hierarchy
 
-![IIS-Hierarchy_scheme](https://github.com/OlegPlatonenko/Virtualizing/blob/master/IIS/images/iis_hierarchy_scheme.png)
+![IIS-Hierarchy_scheme](https://github.com/OlegPlatonenko/Virtualizing/blob/master/IIS/images/iis_config-hierarchy.png)
+
