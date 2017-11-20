@@ -335,3 +335,14 @@ appcmd list sites /xml
 
 ![IIS-Hierarchy_scheme](https://github.com/OlegPlatonenko/Virtualizing/blob/master/IIS/images/iis_config-hierarchy.png)
 
+| Configuration unit       | XML Terminology | Description                                                                           |
+|--------------------------|-----------------|---------------------------------------------------------------------------------------|
+| Configuration element    | XML element     | Contains other child units; does not have a value                                     |
+| Configuration collection | XML element     | Private case of element: contains a group of elements in the form of add/remove/clear |
+| Configuration property   | XML attribute   | Contains only a value; does not contain child units                                   |
+
+Three files make up the unified schema of the web server platform:
+
+- IIS_schema.xml: covers the Windows Activation System and IIS web server settings and section groups.
+- ASPNET_schema.xml: covers the ASP.NET settings in the section group.
+- FX_schema.xml: covers other .NET framework settings in various section groups.
