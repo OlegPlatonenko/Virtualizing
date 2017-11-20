@@ -322,3 +322,15 @@ appcmd search config "MySite3/" /section:directoryBrowse /enabled:true
 ```
 ### Control Output
 
+```bat
+appcmd list site "MySite3" /text:*
+appcmd list site "MySite3" /config
+appcmd list vdirs /text:physicalPah
+```
+```
+appcmd list sites /xml
+```
+
+## IIS Hierarchy
+
+![IIS-Hierarchy_scheme](https://github.com/OlegPlatonenko/Virtualizing/blob/master/IIS/images/iis_hierarchy_scheme.png)
