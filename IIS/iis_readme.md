@@ -343,6 +343,6 @@ appcmd list sites /xml
 
 Three files make up the unified schema of the web server platform:
 
-- IIS_schema.xml: covers the Windows Activation System and IIS web server settings and section groups.
-- ASPNET_schema.xml: covers the ASP.NET settings in the section group.
-- FX_schema.xml: covers other .NET framework settings in various section groups.
+- **IIS_schema.xml**: covers the Windows Activation System and IIS web server settings and section groups.
+- **ASPNET_schema.xml**: covers the ASP.NET settings in the section group.
+- **FX_schema.xml**: covers other .NET framework settings in various section groups.
