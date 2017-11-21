@@ -346,3 +346,11 @@ Three files make up the unified schema of the web server platform:
 - **IIS_schema.xml**: covers the Windows Activation System and IIS web server settings and section groups.
 - **ASPNET_schema.xml**: covers the ASP.NET settings in the section group.
 - **FX_schema.xml**: covers other .NET framework settings in various section groups.
+
+### Config files
+
+- **system32\inetsrv\config\applicationHost.config**: Holds the global defaults for web server (IIS) settings
+- **windows\microsoft.net\framework\v2.0.50727\config\machine.config**: Holds the global defaults for the .NET framework settings, including some of the ASP.NET ones (the rest of them are in the **web.config** at the same folder, which is sometimes called the *root web.config*)
+
+
+## ApplicationHost.config
