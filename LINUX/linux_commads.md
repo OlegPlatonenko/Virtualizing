@@ -139,3 +139,15 @@ sudo do-release-upgrade -d
 
 1. install python-pip
     sudo apt-get install python pip
+
+## GREP
+
+- find string in file
+```bash
+grep <string> <file name> 
+```
+
+- find word in file
+```bash
+grep -i <string> <file name> 
+```
