@@ -58,7 +58,7 @@ tar xvzf file.tar.gz - unzip file
 - paste ssh key in format ssh-rsa SSH_KEY
 ```
 
-## 5. Install PowerShell (Ubuntu)
+## 5. INSTALL POWERSHELL (UBUNTU)
 
 -----------------------------------------
 
@@ -151,3 +151,31 @@ grep <string> <file name>
 ```bash
 grep -i <string> <file name> 
 ```
+
+## DNS
+
+```bash
+sudo vi /etc/network/interfaces
+```
+
+- Set IP to static
+
+```
+sudo apt-get -y update
+sudo apt-get -y install bind9 bind9utils bind9-doc
+```
+
+- Configure BIND9 to run in IPv4
+```
+$ sudo vi /etc/default/bind9
+
+# run resolvconf?
+RESOLVCONF=no
+
+# startup options for the server
+OPTIONS="-4 -u bind"  
+``` 
+
+The primary configuration file for the BIND DNS server named process is **/etc/bind/named.conf**. 
+
+It includes three additional configuration files: **named.conf.options, named.conf.local, and named.conf.default-zones**.
