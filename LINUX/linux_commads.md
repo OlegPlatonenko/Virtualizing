@@ -176,6 +176,13 @@ RESOLVCONF=no
 OPTIONS="-4 -u bind"  
 ``` 
 
+### DNS Configuration
+
 The primary configuration file for the BIND DNS server named process is **/etc/bind/named.conf**. 
 
 It includes three additional configuration files: **named.conf.options, named.conf.local, and named.conf.default-zones**.
+
+### DNS Server logs
+
+```
+
