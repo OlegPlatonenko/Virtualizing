@@ -46,7 +46,6 @@
 - :q! Quit (no warning)
 - :q Quit (a warning is printed if a modified file has not been saved)
 - ZZ Save workspace and quit the editor (same as :wq)
-- : 10,25 w temp
 
 write lines 10 through 25 into file named temp. Of course, other line
 
