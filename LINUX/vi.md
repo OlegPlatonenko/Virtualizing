@@ -11,8 +11,9 @@
 - :wq, ZZ - exit with saving
 - :w - save
 - i - start insert
--  
-
+- :set wm=50 - set wram mergin
+- 0,$ - move to beginning and end of the line
+- :set nu - display line numbers
 
 ------------------------------------------
 ## Changing mode from one to another
