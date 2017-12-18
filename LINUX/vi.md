@@ -5,6 +5,15 @@
 ### In the command mode, user can move around the file, delete text, etc.
 ### In the insert mode, user can insert text.
 
+## Fast useful commands
+
+- :q! - exit without saving
+- :wq, ZZ - exit with saving
+- :w - save
+- i - start insert
+-  
+
+
 ------------------------------------------
 ## Changing mode from one to another
 
