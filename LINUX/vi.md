@@ -14,6 +14,19 @@
 - :set wm=50 - set wram mergin
 - 0,$ - move to beginning and end of the line
 - :set nu - display line numbers
+- w - move cursor forward by word
+- b - move cursor backward by word
+- cw - replace a word or part of it
+
+
+### Editing
+
+- i - insert
+- c - change
+- a - append
+- d - delete
+- p - put
+- y - yank
 
 ------------------------------------------
 ## Changing mode from one to another
