@@ -22,11 +22,13 @@
 ### Editing
 
 - i - insert
-- c - change
 - a - append
+- c - change
 - d - delete
+- dd - delete line
 - p - put
 - y - yank
+- ~ - change uppercase to lowercase and vs
 
 ------------------------------------------
 ## Changing mode from one to another
