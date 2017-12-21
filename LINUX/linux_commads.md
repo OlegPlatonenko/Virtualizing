@@ -152,6 +152,20 @@ grep <string> <file name>
 grep -i <string> <file name> 
 ```
 
+- common egrep using
+```bash
+egrep --color -i -n -A <number> -B <number> <string to find> <file path>
+
+i.e.
+egrep --color -i -n -A 5 -B 5 "Error" /var/log/messages
+```
+
+- -i - return lines with string as whole word
+- -n - return line numbers
+- -A - print number of lines after match
+- -B - print number of lines before match
+- --color - mark with color string match
+
 ## DNS
 
 ```bash
