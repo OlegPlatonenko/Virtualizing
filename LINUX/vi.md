@@ -10,9 +10,33 @@
 - :q! - exit without saving
 - :wq, ZZ - exit with saving
 - :w - save
+- u - undo
 - i - start insert
--  
+- :set wm=50 - set wram mergin
+- 0,$ - move to beginning and end of the line
+- :set nu - display line numbers
+- w - move cursor forward by word
+- b - move cursor backward by word
+- cw - replace a word or part of it
 
+### Editing
+
+- i - insert
+- a - append
+- c - change
+- d - delete
+- dd - delete line
+- J - join two lines
+- p - put
+- y - yank
+- ~ - change uppercase to lowercase and vs
+
+### Scrolling
+
+- Ctrl + F - scroll full screen forward
+- Ctrl + B - scroll full screen backward
+- Ctrl + D - scroll half screen forward
+- Ctrl + U - scroll half screen backward
 
 ------------------------------------------
 ## Changing mode from one to another
@@ -93,44 +117,44 @@ A new page.
 ------------------------------------------
 ### Other Useful Commands
 
-Most commands can be repeated n times by typing a number, n, before
+- Most commands can be repeated n times by typing a number, n, before
 the command. For example 10dd means delete 10 lines.
-. Repeat last command
-cw Change current word to a new word
-r Replace one character at the cursor position
-R Begin overstrike or replace mode � use ESC key to exit
-:/ pattern Search forward for the pattern
-:? pattern Search backward for the pattern
-n (used after either of the 2 search commands above to
+- . Repeat last command
+- cw Change current word to a new word
+- r Replace one character at the cursor position
+- R Begin overstrike or replace mode � use ESC key to exit
+- :/ pattern Search forward for the pattern
+- :? pattern Search backward for the pattern
+- n (used after either of the 2 search commands above to
 continue to find next occurrence of the pattern.
-:g/pat1/s//pat2/g replace every occurrence of pattern1 (pat1) with pat2
-Example :g/tIO/s//Ada.Text_IO/g
-This will find and replace tIO by Ada.text_IO everywhere in the file.
-:g/a/s// /g replace the letter a, by blank
-:g/a/s///g replace a by nothing
+- :g/pat1/s//pat2/g replace every occurrence of pattern1 (pat1) with pat2
+- Example :g/tIO/s//Ada.Text_IO/g
+- This will find and replace tIO by Ada.text_IO everywhere in the file.
+- :g/a/s// /g replace the letter a, by blank
+- :g/a/s///g replace a by nothing
 note: Even this command be undone by u
 
 ------------------------------------------
-Examples
-Opening a New File
-Step 1	type	vim filename	(create a file named filename)
-Step 2	type	i	( switch to insert mode)
-Step 3	enter text	(enter your Ada program)
-Step 4	hit	Esc key	(switch back to command mode)
-Step 5	type	:wq	(write file and exit vim)
+* Examples
+* Opening a New File
+* Step 1	type	vim filename	(create a file named filename)
+* Step 2	type	i	( switch to insert mode)
+* Step 3	enter text	(enter your Ada program)
+* Step 4	hit	Esc key	(switch back to command mode)
+* Step 5	type	:wq	(write file and exit vim)
 
 ------------------------------------------
 Editing the Existing File
 
-Step 1	type	vim filename	(edit the existing file named filename)
-Step 2	move around the file using h/j/k/l key or any appropriate command
-h Moves the cursor one character to the left
-l Moves the cursor one character to the right
-k Moves the cursor up one line
-j Moves the cursor down one line
-nG or :n Cursor goes to the specified (n) line
+* Step 1	type	vim filename	(edit the existing file named filename)
+* Step 2	move around the file using h/j/k/l key or any appropriate command
+* h Moves the cursor one character to the left
+* l Moves the cursor one character to the right
+* k Moves the cursor up one line
+* j Moves the cursor down one line
+* nG or :n Cursor goes to the specified (n) line
 
-(ex. 10G goes to line 10)
-Step 3	edit required text (replace or delete or insert)
-Step 4	hit Esc key (exit from insert mode if you insert or replace text)
-Step 5	type	:wq
+* (ex. 10G goes to line 10)
+* Step 3	edit required text (replace or delete or insert)
+* Step 4	hit Esc key (exit from insert mode if you insert or replace text)
+* Step 5	type	:wq
