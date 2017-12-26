@@ -198,10 +198,13 @@ It includes three additional configuration files: **named.conf.options, named.co
 
 ### DNS Server logs
 
+<<<<<<< HEAD
 ```
 ```
 ### Folder permissions 
 
 ```
 sudo chown -R <username> <folder path>
+=======
+>>>>>>> b28a9b8cdc5ea599521e34faf3df9d46745e2950
 ```
