@@ -251,3 +251,7 @@ router eigrp <sybsystem number>
 3. Compare received K-coefficients with own
 4. Check AS (Autonomous System) number
 5. Optional: Checks keys correspondence if authentication is set up 
+
+## VPN
+
+### GRE (General Routing Encapsulation)
