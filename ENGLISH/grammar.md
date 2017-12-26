@@ -10,4 +10,3 @@
 
 ### Full verbs
 - All the other verbs in the language
-
