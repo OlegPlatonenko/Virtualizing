@@ -52,4 +52,10 @@
 - I **have locked** the door
 
 ### Past Perfect
+- Action was took part in the past before another action in the past which is presented by Past Simple
+- I told you I **had met** her
 
+### Future Perfect
+- Use for action which will finish before another action in the future
+- shall(will) + have + V (II)
+- I will have read the story by the time you come back.
