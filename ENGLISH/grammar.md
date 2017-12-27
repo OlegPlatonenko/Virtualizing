@@ -47,15 +47,19 @@
 - When action wqas future in regard to the past
 - He said that at sunset he **would be waiting** for you
 
-### Present Perfect 
+### 9. Present Perfect 
 - Action was took part before speaking moment and we are talking about result
 - I **have locked** the door
 
-### Past Perfect
+### 10. Past Perfect
 - Action was took part in the past before another action in the past which is presented by Past Simple
 - I told you I **had met** her
 
-### Future Perfect
+### 11. Future Perfect
 - Use for action which will finish before another action in the future
 - shall(will) + have + V (II)
-- I will have read the story by the time you come back.
+- I **will have read** the story by the time you come back.
+
+### 12. Future Perfect in-the-Past
+- Used to express an action completed before a definite future momment or before the beginning of another future action
+- I thought you **would have gone** by now.
