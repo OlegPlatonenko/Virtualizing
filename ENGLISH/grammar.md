@@ -43,3 +43,13 @@
 - shall(will) + be + V-ing
 - Meet me at two o'clock. I **shall be waiting** for you.
 
+### 8. Future Continuous in-the-Past
+- When action wqas future in regard to the past
+- He said that at sunset he **would be waiting** for you
+
+### Present Perfect 
+- Action was took part before speaking moment and we are talking about result
+- I **have locked** the door
+
+### Past Perfect
+
