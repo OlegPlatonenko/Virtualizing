@@ -63,3 +63,12 @@
 ### 12) Future Perfect in-the-Past
 - Used to express an action completed before a definite future momment or before the beginning of another future action
 - I thought you **would have gone** by now.
+
+### 13) Present Perfect Continuous
+- Used to express an action which took part in the past for a period of time before speaking moment
+- I **have been working** here for a year.
+
+### 14) Past Perfect Continuous
+- Describes continuous action in the past which was finished before some another action
+- I explained that I **had been looking** for it for the last two hours.
+
