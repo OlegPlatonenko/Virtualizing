@@ -268,7 +268,7 @@ ip route <current subnet IP> <current mask> <tunnel internal IP on the another e
 
 f.e.
 ```
-tunnel IPs           10.2.2.1   10.2.2.2  255.255.255.252
+tunnel IPs            10.2.2.1   10.2.2.2  255.255.255.252
 loopbacks             10.0.2.1   10.0.2.2  255.255.255.255
 external IP           100.0.0.1  200.0.0.1 255.255.255.252
 provider default GW   100.0.0.2  200.0.0.2 255.255.255.252
@@ -296,3 +296,9 @@ S*   0.0.0.0/0 [1/0] via 200.0.0.2
 ```
 
 ### IPSEC
+
+IPSec is standard with 3 protocols
+
+- ESP (Encapsulating Security Payload)
+- AH  (Authentication Heasder)
+- IKE (Internet Key Exchange protocol)
