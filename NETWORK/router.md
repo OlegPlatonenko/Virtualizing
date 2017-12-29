@@ -256,6 +256,8 @@ router eigrp <sybsystem number>
 
 ### GRE (General Routing Encapsulation)
 
+![GRE frame](https://github.com/OlegPlatonenko/Virtualizing/blob/master/NETWORK/images/gre.png)
+
 ```
 interface Tunnel 0
 ip address <tunnel IP> <tunnel mask>
