@@ -1,0 +1,1514 @@
+commit 54c5290d0a6a7af2666581cec1b7c7728aaa1adb
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Dec 29 09:55:58 2017 +0200
+
+    update file
+
+commit 44dcd33dec322b6d3a24b4b8ea0cdf815d7ed171
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Dec 29 09:55:45 2017 +0200
+
+    Add gre packet image
+
+commit fb24605fd651633a0d379f170a0cf8838d35ac46
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Dec 29 09:01:48 2017 +0200
+
+    Add section about GRE
+
+commit cb905d6d02328428a2f57bc71946a5c344d8baf4
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Dec 29 08:34:37 2017 +0200
+
+    Configs updated
+
+commit ad0178d4eba26c93b2c8621ba5c0cee545b3c3a3
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Dec 29 08:32:12 2017 +0200
+
+    Provider config
+
+commit 1d98064b46606df27c346300f6bffa5901e5154a
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Dec 28 09:56:33 2017 +0200
+
+    Update config GW02
+
+commit 6b0a11259842e422e4841a1f1817415a1c54a60f
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Dec 28 09:49:33 2017 +0200
+
+    updated config
+
+commit f1530c71376b247c3c135aaaf1e6b5206a720030
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Dec 28 09:38:04 2017 +0200
+
+    new configs
+
+commit 127df2e40e1a4295001b186075eb28750aa0e9af
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Dec 28 05:24:02 2017 +0200
+
+    Finish writing about tences
+
+commit 74fa5894c39bad6bead67a93bfc0a89c1ab4cf46
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Dec 27 09:16:55 2017 +0200
+
+    Fix mistakes
+
+commit bdd69a72a4bb52fb93c7847aa7c6e4632ec2a4c2
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Dec 27 09:15:11 2017 +0200
+
+    Update file
+
+commit c466c5795d364b490c341641ead3a6c832270bbb
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Dec 27 09:11:48 2017 +0200
+
+    File update
+
+commit 885ba6c074a1713e9b41cb12cd949b74299c8db2
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Dec 27 09:05:28 2017 +0200
+
+    Update file
+
+commit 7b0b25be1ab7aa8cc71c032776ce0cf4de6700f2
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Dec 27 08:37:54 2017 +0200
+
+    Add verb tences section
+
+commit 791c0001b6721b9cd308a455ad271ab217792544
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Dec 26 09:49:58 2017 +0200
+
+    Add GRE section (VPN)
+
+commit 3ccead66758a2e58bf543bfa3317656b8b5d9373
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Dec 26 08:01:53 2017 +0200
+
+    Delete empty spaces
+
+commit 26b6143e1de14c3cd8ef8d475578013a7a69f6e6
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Dec 26 06:35:48 2017 +0200
+
+    Fix mistakes
+
+commit 2b108aba2d2ee85689674ea0937e910be301a949
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Dec 26 04:37:10 2017 +0200
+
+    Update linux commands
+
+commit c219fd297a45137a985a0d72b39f09563df90a77
+Merge: c0b408b b28a9b8
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Dec 26 04:36:40 2017 +0200
+
+    Not good merge
+
+commit c0b408b466c99bbc69656eb6a1ec6e46a2bc6ad6
+Merge: 7f22969 1afb17e
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Dec 26 04:21:16 2017 +0200
+
+    Merge branch 'master' of https://github.com/OlegPlatonenko/Virtualizing
+    
+    Commit 1
+
+commit 7f22969043cfc0711a15ada258fa80c1091a74e4
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Dec 26 04:20:09 2017 +0200
+
+    English file update
+
+commit 6941ba7f551df37eb906511eba93e33ac75eadca
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Dec 26 04:19:43 2017 +0200
+
+    English study!
+
+commit 5392b56ec654b13bcbf39226f55381c6ced4d775
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Dec 26 04:19:29 2017 +0200
+
+    Add folder permission commands
+
+commit b28a9b8cdc5ea599521e34faf3df9d46745e2950
+Author: test <test@kbp1-V01-F55873.synapse.com>
+Date:   Fri Dec 22 11:00:38 2017 -0500
+
+    Delete spaces
+
+commit 1afb17e4b55462fe18e916ac92417494c601ed15
+Author: test <test@kbp1-V01-F55873.synapse.com>
+Date:   Thu Dec 21 10:54:32 2017 -0500
+
+    Update grep section
+
+commit b1dc41b661ee1ed1a5516016f0645928e58455e3
+Author: test <test@kbp1-V01-F55873.synapse.com>
+Date:   Wed Dec 20 10:50:38 2017 -0500
+
+    Update file
+
+commit 042e6bceed2c332ad59738a35341168a2a0d7e31
+Author: test <test@kbp1-V01-F55873.synapse.com>
+Date:   Tue Dec 19 08:02:31 2017 -0500
+
+    Update file
+
+commit 3200897cbedddc8b38907b027d924a5b521d4322
+Author: test <test@kbp1-V01-F55873.synapse.com>
+Date:   Tue Dec 19 05:27:41 2017 -0500
+
+    Update file
+
+commit e2406b734a4784853fdf7e906fdd4ce5d54a66ef
+Author: test <test@kbp1-V01-F55873.synapse.com>
+Date:   Mon Dec 18 10:43:06 2017 -0500
+
+    Add another vi commands
+
+commit 3fd0635036337e499cbd96c8ddee396353af2159
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Dec 18 16:58:00 2017 +0200
+
+    Add common commands
+
+commit be3cd9f5cc8b4646303bfab7987af41b9c11d86c
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Dec 13 09:54:30 2017 +0200
+
+    update file
+
+commit 84afd29ae6655c08f90bb069fbf2e01570220b32
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Dec 13 09:54:12 2017 +0200
+
+    update file
+
+commit 1fba90f475cddd287674b696cc0b32470283835b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Dec 12 12:51:05 2017 +0200
+
+    Continue file update
+
+commit 48105e5dd201b8f39a4b50aa63af1530fcf83dfa
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Dec 12 11:21:02 2017 +0200
+
+    File update
+
+commit 6b7b1dd7902354cd8081450c8e06ef72e6e2283b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Dec 11 14:37:20 2017 +0200
+
+    Rename and update vi manual
+
+commit b58f0e8c238eb28350ec471364d7d20ab1de192a
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Tue Nov 21 17:32:05 2017 +0200
+
+    update file
+
+commit d08f26585d5463a465b84209c669fca0c1bb4ff6
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Mon Nov 20 18:48:16 2017 +0200
+
+    update file
+
+commit 9b65576f462a658a51fde407e06c846a4433d783
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Nov 20 18:23:12 2017 +0200
+
+    file update
+
+commit af865efecaec6fa397c44f5aa3fd64e22bed858e
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Mon Nov 20 16:53:28 2017 +0200
+
+    update file
+
+commit cec28f1a2c453197d2284dbb1794cc3089a41ef2
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Mon Nov 20 16:41:28 2017 +0200
+
+    update file
+
+commit 5b6d7e1d7acbcde326eaec280a2543ab448b1921
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Mon Nov 20 16:41:13 2017 +0200
+
+    add image
+
+commit bb6a1bf5b1f6213a5192e9d81644d78dfd92bdc9
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Mon Nov 20 13:12:42 2017 +0200
+
+    Breakpoints in PS
+
+commit 463339e7a5baaf292098fe514496853a7a56dc7c
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 17 15:02:26 2017 +0200
+
+    update file
+
+commit 46831615eb56eeaa76c40dd86908a10765250b51
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Nov 16 18:52:45 2017 +0200
+
+    Update file
+
+commit e038041a38cdc66887d35323db898e0a4b949ffa
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Nov 16 17:15:11 2017 +0200
+
+    Update file
+
+commit 192118d729f8846fb6686ee40864901e4ef6abf9
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Nov 15 18:38:10 2017 +0200
+
+    Update file
+
+commit 7781bff76a6343e75180e37baa0b0f9bd8a7e329
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 14 18:39:53 2017 +0200
+
+    upd file
+
+commit bfe07144d73b931021985171ca5955d1a53c994a
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 14 18:30:50 2017 +0200
+
+    update file
+
+commit fdc15633d832e77b5904ec05bffc03906a1506e0
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 14 12:19:08 2017 +0200
+
+    update file
+
+commit 8339cd4fb46631117f08819922fe51cd4995357b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 14 12:18:58 2017 +0200
+
+    fix mistakes
+
+commit da832d30274d037a5aac2be06c340ccad99ac89c
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 14 12:18:40 2017 +0200
+
+    Add security PS tips files
+
+commit 08d1eec0e5ffc648b10da6527b3162a0c9411964
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 10 18:08:09 2017 +0200
+
+    file updated
+
+commit 883a8728594f845c3a53ff9d6e584c7632477bb7
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 10 06:09:02 2017 -0800
+
+    update site content
+
+commit 6c433fecc0ae26987cf7fdf4f3a26ef7daae55e8
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 10 06:08:46 2017 -0800
+
+    update docs
+
+commit 002138a9326134e69f7123f0bd035f8d7440e185
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Nov 9 18:59:56 2017 +0200
+
+    files updated
+
+commit fc99a82b1a7021107d2e2948dcf5405e712a4da8
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Nov 9 18:59:37 2017 +0200
+
+    Config updated
+
+commit 57aaead564316a0b30f65a42c05f96d4c23ed1b1
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Nov 9 16:14:33 2017 +0200
+
+    correct image name
+
+commit 86cd84504cf3eecfdf79ba8f484f656ba436444c
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Nov 9 05:01:41 2017 -0800
+
+    File updated
+
+commit e7993d18e4947fd49fbf94850607338e48058f8b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Nov 9 02:44:45 2017 -0800
+
+    file updated
+
+commit 5cca2ef9c695b9b3287e6b3e8f09b7fb5a15af90
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Nov 9 02:44:32 2017 -0800
+
+    info added
+
+commit c6ad71aa70f4e6a0c3af5bb2241263ece4ecfa1f
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Nov 8 18:55:41 2017 +0200
+
+    Update file
+
+commit 2c8b357c999088bf7d8320aed20d941c64532c84
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Nov 8 18:54:06 2017 +0200
+
+    update files
+
+commit 458449a563dbac91fd29621196b4d64067e19e44
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Nov 8 06:41:54 2017 -0800
+
+    Add PS script
+
+commit 97572eb6626d356997b295e6e3519f652d0ea8f0
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Nov 8 06:32:21 2017 -0800
+
+    Add C# script
+
+commit d8b49ebe2b255966368c2adfaaf3745775492bb9
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Nov 8 06:08:51 2017 -0800
+
+    Edit IIS PS file
+
+commit 1e489db8a8c567d3c4b1687491a20a20031a8fbc
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 19:20:47 2017 +0200
+
+    Update files
+
+commit 19118442a6635571dca3a8956499c5c5226b863c
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 19:20:21 2017 +0200
+
+    Update config
+
+commit c713883a6d5d1a724b2dc839eb79e41df68562e0
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 18:30:18 2017 +0200
+
+    Update config
+
+commit 101155195235c1aa6aac03136fe4b43026d9a883
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 17:54:11 2017 +0200
+
+    Rename file
+
+commit 78fee522d9462932304bf5ec01dbc020f33a4005
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 16:20:13 2017 +0200
+
+    Change to CRLF
+
+commit aed86c3d2498b5872b48bfb98c8e94f693719da5
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 06:16:24 2017 -0800
+
+    PS IIS commands
+
+commit ff0e1e128bdf304338b9e0e0e17ae3a498825b3d
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 06:15:56 2017 -0800
+
+    MySite IIS config
+
+commit 1d80f0b8a5e7e09a5c5f12e8fd02670b01f4d3c9
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 15:51:16 2017 +0200
+
+    update file
+
+commit 45e166af9c35d1227e1def3f6686842da6df0604
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 13:24:53 2017 +0200
+
+    Add IIS modules scheme image
+
+commit e5bd0f05912361d3d697b2636bec5eab5c1aa135
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 12:58:57 2017 +0200
+
+    update file
+
+commit 386663f55ef08a1873975cc1e0bcbcfd403786d3
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 12:57:26 2017 +0200
+
+    add image
+
+commit d547e55ed99b883f6e86ce13dd761dd257b1ccb8
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 12:57:16 2017 +0200
+
+    edit gitignore
+
+commit f67d5af5816b59825fc476277f4849ffc7b0d64b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 12:01:53 2017 +0200
+
+    exclude images from git
+
+commit 22ce23b50b671e4ba4753a9a4c4b8891779fab26
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 12:01:39 2017 +0200
+
+    Add iis readme file
+
+commit 5f59479a1e063eeb936e27939684e1b565ec071b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 11:58:12 2017 +0200
+
+    Add picture files to gitignore
+
+commit a01a735e76fb245728719acc2d696adc8fa63d74
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 11:57:26 2017 +0200
+
+    Start dynamic routing
+
+commit 14087d713ba7c84eafcc6a7023f6f338b94c168e
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 11:57:10 2017 +0200
+
+    Add new elements
+
+commit f6289cfc233894fc4bbeb006022438006e7216b8
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 11:55:33 2017 +0200
+
+    New IIS Part
+
+commit fedc9e9673b91869032464c030bfba038e607837
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Nov 7 11:55:09 2017 +0200
+
+    Update file config
+
+commit 15c4d82feb31cc89dab472b41bac69674b1da4ac
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 3 17:16:00 2017 +0200
+
+    update config (setup Port forwarding)
+
+commit d160343f727e8da8807f44601d29ad1c9a82e3d3
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 3 17:15:34 2017 +0200
+
+    Setup port forwarding
+
+commit 24a03f422a706dfafcf3f43a1304f351a4ae87a9
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 3 17:15:17 2017 +0200
+
+    add Port forwarding section
+
+commit dd01f0776dddf2f507198ea44a31714334caaa07
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 3 16:23:14 2017 +0200
+
+    upd file
+
+commit 9285a93de8c81260e489c366934c2be3aa094a6b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 3 16:21:54 2017 +0200
+
+    upd file
+
+commit 445041a7fdd94fc7645d77eed268ae3addfaf83c
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 3 16:19:14 2017 +0200
+
+    update file
+
+commit b860e9e48e06809baa4c0269005f10519285a6e4
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 3 14:36:08 2017 +0200
+
+    add apache2 setup ,manuals
+
+commit dff3dbb837ac7f25225e12f16a2d3b4616e98a58
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Nov 3 11:13:09 2017 +0200
+
+    update file
+
+commit e8166687f8fa78f9188faf76336f5153eaedf699
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Thu Nov 2 19:31:57 2017 +0200
+
+    update file
+
+commit 5d1603517ed18f3da54229b2a0792293650feb2a
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Thu Nov 2 19:31:40 2017 +0200
+
+    update log
+
+commit 72a64b5a4c87d0a050e2f125e64037bc911ae945
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Thu Nov 2 19:30:59 2017 +0200
+
+    update config
+
+commit 7b3126de282808fcf41a4bf5593d4c1c59a6da0e
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Thu Nov 2 19:13:06 2017 +0200
+
+    update config
+
+commit a3ec64accb6411a816239ac01faa9fe885453236
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Thu Nov 2 17:19:53 2017 +0200
+
+    Update config
+
+commit 8ccaa6e0683a445a12c0cdc36ccf8579d5978cd7
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Thu Nov 2 17:19:06 2017 +0200
+
+    Delete duplicated sections from log
+
+commit 315b226c2a101fb2a16493932bd10d6b94545893
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Thu Nov 2 17:18:17 2017 +0200
+
+    Add VBox setup commands
+
+commit 219271eb707344e3e252eaf33772b236d9454761
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Wed Nov 1 18:55:23 2017 +0200
+
+    Temporary disable using bootstrap.sh
+
+commit be4e09ca2b51a5794899e23809459dd6b955da96
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Wed Nov 1 11:27:26 2017 +0200
+
+    add language definition
+
+commit 4225cefe26c96022c29f2783b4f3faf36c3757ec
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Wed Nov 1 11:19:01 2017 +0200
+
+    add language
+
+commit e8d35461a57fe94fda15f1f864b2a5ce60163a5c
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Wed Nov 1 11:17:51 2017 +0200
+
+    define language
+
+commit 8afa3ac9f338e84556650d5f91ded458e306458b
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Wed Nov 1 11:15:30 2017 +0200
+
+    add language definition
+
+commit 29e38f4831b1a6a338f4e25d77732acf03620b4e
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Wed Nov 1 11:09:46 2017 +0200
+
+    add ACL's
+
+commit cd16737ff68017b4a69e1e911baaab4d20cb6365
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Wed Nov 1 11:09:22 2017 +0200
+
+    add ACL's
+
+commit ef3df206ce47a7242f418cf126ffda54b7e692ba
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Wed Nov 1 11:08:40 2017 +0200
+
+    Add commands
+
+commit 700967c91b1ba61e28c06b85c79ffa41d56325ad
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Tue Oct 31 18:21:16 2017 +0200
+
+    update config
+
+commit e0ac2465bb796ddcb71b80759e753315654dbcfa
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Tue Oct 31 18:02:12 2017 +0200
+
+    Update config
+
+commit 44435f3b18f823cda2192ec462da953db25ba807
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Tue Oct 31 18:01:57 2017 +0200
+
+    Add setup ACL section
+
+commit 755180c1b0ef894a00e3a967649b1a2b871d3d4a
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Mon Oct 30 17:59:45 2017 +0200
+
+    Add ACL for 80,443 TCP to SVR01
+
+commit 8f177163a3ccadea3b36123665832810b9ee65b1
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Mon Oct 30 17:57:07 2017 +0200
+
+    add ACL for ports 80,443
+
+commit e94f741a88507d1d7b1af4681e118f3581a441c2
+Author: Oleg Platonenko <oleg.platonenko@synapse.com>
+Date:   Mon Oct 30 14:04:03 2017 +0200
+
+    Add MY-UBUNTU64 to gitignore
+
+commit 445153a11d940e255a9fe5f257667690e5e75b86
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 27 19:32:49 2017 +0300
+
+    Update log
+
+commit e9ea37aa24aa69101f861c0308e7712b5d99b1a2
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 27 19:32:35 2017 +0300
+
+    New configs
+
+commit 48850a01113d246b4a7b2a8f6c3b45c25816ed39
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 27 17:53:44 2017 +0300
+
+    Manage content
+
+commit 53f56932399bacc0d364508ea8bfbf9480e2dae6
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 27 17:52:49 2017 +0300
+
+    Update folder content
+
+commit f13159f06134d064100772db6e11e7a492b4e32a
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 27 16:12:19 2017 +0300
+
+    Continue updating file
+
+commit c2fbe81ca6f33c135485be4abde47890dfe95eed
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 27 16:10:29 2017 +0300
+
+    Adding new commands
+
+commit b073e00cf38e4e5ea274c9d42d2dcba8e0afd8cf
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 26 18:17:10 2017 +0300
+
+    updating configs
+
+commit ebe0de99170c4eca4a2a9252ed1c77922d31e413
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 26 16:43:04 2017 +0300
+
+    Continue editing vagrant commands
+
+commit 42419d9f102191efecee879d21b3cfae385867a1
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 26 14:30:53 2017 +0300
+
+    Add SSH public key
+
+commit 36312370727596e050c08702fc0a60a224030c30
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 25 18:26:15 2017 +0300
+
+    Update file
+
+commit bd181ada059f82e413da17b54cb0fdaa01bddb40
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 25 18:26:01 2017 +0300
+
+    Update config
+
+commit 16d60cfe9c0f105ecd6ca24c98a6ccc2194f2f70
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 25 18:10:13 2017 +0300
+
+    Config update 10/25/2017 18:10
+
+commit 813356677326db5f3b14d50de73d30be565c6021
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 25 14:04:57 2017 +0300
+
+    Continue editing file
+
+commit b83c4029b274d7faeb8e42d24679b0f30e17a6c1
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 25 13:47:37 2017 +0300
+
+    add settings
+
+commit 626b05bad34bb323dc7e2e654801a919a9231547
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 25 13:47:23 2017 +0300
+
+    fix error
+
+commit ad07b7b0e62027266f0cfb19b94c8543169aed59
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 25 13:06:38 2017 +0300
+
+    Config update
+
+commit 4da9b37907fd1784e964fac0d8caa38400e70ade
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 25 13:06:00 2017 +0300
+
+    Fix errors
+
+commit 8923cfa13ec13106d41600a877364a10ed3dd31e
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 25 13:05:36 2017 +0300
+
+    Create file with vagrant common commands
+
+commit dc0775b62fda7c568f171f7d56ef5426028b1202
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 25 13:05:15 2017 +0300
+
+    Edit gitignore
+
+commit 737f6ed87e94c1af7a5c853d25293cdd385af015
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 24 18:23:36 2017 +0300
+
+    move file
+
+commit 79d032d9112546361a2a1f3fdaf38d2c0044ff0b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 24 18:23:23 2017 +0300
+
+    Add /NETWORK/PKT to gitignore
+
+commit 87b60a407e290a21098cb512a72d19f3414c8d07
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 24 18:23:02 2017 +0300
+
+    Add configs
+
+commit 8fe4af31b48a96e45906891fa788ddf12956795b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 24 18:19:52 2017 +0300
+
+    LAB02 log start
+
+commit 24f9273d3e98a4379d25b7d2399c6c25189b7f41
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 24 14:40:46 2017 +0300
+
+    Changes in NETWORK folder
+
+commit 09c6a6b777ff5a7265b1759ea0788199d37c18d9
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 23 17:40:56 2017 +0300
+
+    continue working with lab
+
+commit 79332f05bdea1621e8dd8a1595fb2a1ccbce30c6
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 23 17:38:39 2017 +0300
+
+    updated config
+
+commit c568fdef5b4e9759514ea008b012576658a2dd9f
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 23 17:38:01 2017 +0300
+
+    continue working
+
+commit 078c5c750eb14cfb62693e5f5986069306ae1f94
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 23 17:37:37 2017 +0300
+
+    rename file
+
+commit 8dd8ffdebccff5fba51afdacfba4d8f4f1da381b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 20 17:15:13 2017 +0300
+
+    create provisioning script
+
+commit 1c89b3a4e99022923703ace2f6cd98ccd9ce0043
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 20 17:14:48 2017 +0300
+
+    add upgrade command
+
+commit 1657f3aa42eb924b052e8515812043a0f3135c19
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 20 17:14:27 2017 +0300
+
+    edit Vagrantfile (add Provisioning and Networking section)
+
+commit 2afa4997bc2cb9627a5505d2781ff7113d7949e6
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 20 13:38:38 2017 +0300
+
+    Add script to LINUX folder - virtualbox setup on Ubuntu
+
+commit e59d8983789068c089399f79b57c7e86f9533776
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 19 18:56:31 2017 +0300
+
+    Delete /.vagrant folder
+
+commit 50fc057ec0d9a0834e1c9d3b39acdcbabab1561f
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 19 18:53:08 2017 +0300
+
+    add /.vagrant folder to gitignore
+
+commit 4acb746d9d569cd5635bd676e2c159cd461e8321
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 19 18:50:53 2017 +0300
+
+    create Vagrant VM
+
+commit 97c5b19ac17dc6ad5c2f9a2c1c9f6ee2fd8a5a64
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 19 18:50:22 2017 +0300
+
+    edit gitignore
+
+commit 6e760889ab9ba483aba26a0738b2f3f8b2217f0f
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 19 18:45:23 2017 +0300
+
+    add .vagrant folder to gitignore
+
+commit d6c0183a88a6dbb634f7cdd099b69227f544c83e
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 19 18:32:10 2017 +0300
+
+    Editing Vagrantfile
+
+commit 25122976fc9802eb0d1d51f3f3a4b5503c2447d8
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 19 18:21:01 2017 +0300
+
+    Continue editing linux_ommands.md
+
+commit 805fec429507bc67c4752fb98bfde7b649347020
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 18 19:26:54 2017 +0300
+
+    Continue editing linux_commands.md
+
+commit a019cd73fe08c46064aba79fd7ea3e1338dd50e3
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 18 17:19:22 2017 +0300
+
+    Origin Master
+
+commit ab71dd1c6d3e52f16d8ceb3272af27d5f123d3e3
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 18 17:10:34 2017 +0300
+
+    change type from linux_commands.txt to md
+
+commit b36041e3def218a49180fb25c804b98cd2c35472
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 18 13:49:59 2017 +0300
+
+    Example how to use try/catch construction
+
+commit fc4995f79769fcfe4d315993725eb31c0d29afe1
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 17:43:23 2017 +0300
+
+    Fix errors
+
+commit 83fc6091c8420c2a325a7371fb5c8c4ee43b6096
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 17:40:04 2017 +0300
+
+    Fix contents
+
+commit 327b08cd1bce065712bd41ca06bf20e58a905d94
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 17:38:21 2017 +0300
+
+    MOving Contents
+
+commit cb3c6c2dabed434f03037c27283116a88c39e084
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 17:36:48 2017 +0300
+
+    MOve wrong section
+
+commit 2cde9b3f2cc67150738e954a0606d3d615167135
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 17:35:29 2017 +0300
+
+    Fixing errors
+
+commit 2a0aff2e6bad32bd594e22fa26e92bf02b71d251
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 17:34:09 2017 +0300
+
+    Continue editing Windows_10.md
+
+commit 741eaf980d4bc7e284bbb3aea25edb0c5742f818
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 17:22:36 2017 +0300
+
+    Continue editing file
+
+commit d44994e582be1b0b77d2f9c6b1527d6d51ff1d5e
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 17:22:22 2017 +0300
+
+    Added certificates section
+
+commit 27eca0df845fee0949a0ca578a3ab0f69dbe7e93
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 12:23:52 2017 +0300
+
+    Add table of contemts
+
+commit d9cd85e5d82014e7551e89963b086d5c400771ff
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 12:09:55 2017 +0300
+
+    fixing errors
+
+commit 807fecc7e95f0cf36d4da1c68f5e24554940e429
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 12:05:03 2017 +0300
+
+    Table of contents added
+
+commit 1823097b58a1fa0836c2b998798a097395f97b79
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 17 12:04:48 2017 +0300
+
+    Cisco lab marks added
+
+commit be79db8858d83dc8f47f52c4d99a2633fa3f39ce
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 13 19:26:04 2017 +0300
+
+    Continue editing filePowerShell_Auto.md
+
+commit 0140f9b5788906cf628712afb49914e74775d2b1
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 13 18:48:45 2017 +0300
+
+    Continue editing file
+
+commit 4de529db2d9b24a3db20f446a28da1e8f54fce89
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 13 17:16:30 2017 +0300
+
+    Create file with important notes from course Automating Administration with Windows PowerShell
+
+commit 6fd992d5d8606957cda8357966a2ef656a1f4d71
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 13 11:55:12 2017 +0300
+
+    Continue editing Windows_10.md
+
+commit 44c26e283fbfa80718633f2dc0e1924196ccc572
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 12 19:25:52 2017 +0300
+
+    Continue editing Windows_10.md
+
+commit 7b723f61cbcc027064bb28bdbd71c2bc98fb6720
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 12 18:55:59 2017 +0300
+
+    Continue editing Windows_10.md
+
+commit 7776097fca67471315d0450a4b5058ddcfb2e4fe
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 12 18:38:21 2017 +0300
+
+    Continue editing file Windows_10.md
+
+commit 4084fc7acdf1299134e00d52d32f3c4fd803fa28
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 12 17:00:00 2017 +0300
+
+    Continue editing Windows_10.md
+
+commit e6fcf98672e2d4a58ee5a7d55d29a94c662dec3c
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 12 12:44:05 2017 +0300
+
+    Continue editing Windows_10.md
+
+commit 858ab5a84b41a82704b224938e71f7f4155ca1ce
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 12 11:41:20 2017 +0300
+
+    Continue Editing Wondows_10.md
+
+commit b2cee5d8c04dc9f7a4baa1229fc8b99b6dddecd7
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 12 11:31:07 2017 +0300
+
+    Add info to Windows_10.md
+
+commit 5f54bfd53695c9ce31c99215b5e4d79021c8b4a0
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 12 11:30:26 2017 +0300
+
+    Delete Windows_10.txt
+
+commit 28065cf1cc056bb566499e0dcdb36208a6c7f53a
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 12 11:30:04 2017 +0300
+
+    Convert Windows_10.txt to Windows_10.md
+
+commit c5ae5d12168b0be222e4d488580c29f7a026a404
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 12 11:27:48 2017 +0300
+
+    Review of Windows 10 course from NT
+
+commit b64ea429c2f851cd179b6a9c7f8c610b2c5b20d9
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Oct 12 00:07:19 2017 +0300
+
+    Close Chrome module
+
+commit 62e417e0a1b7432cce37e5f6eef50815b9a65801
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 11 19:11:08 2017 +0300
+
+    Continue editing file
+
+commit 1341c622190687943926281b0f30621e75abb73e
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 11 19:10:47 2017 +0300
+
+    Added PROVIDER Switch
+
+commit f5b8337751d7e276130b9c8aca6782d26dd76b8b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 11 18:59:43 2017 +0300
+
+    Configuration of PROVIDER switch
+
+commit e909e1344da392e167c4c2b2f7d2e61be28eec04
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 11 16:56:26 2017 +0300
+
+    Add Fasr log search section to Working with logs in PS.ps1
+
+commit 6c33b4475ea4e12d5e4b8cffe2bd096244139efb
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 11 15:47:28 2017 +0300
+
+    Adding log parsing section to Working with logs.ps1
+
+commit 623fafa71b6905e0eaced9263bb658890dd7123e
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 11 13:38:53 2017 +0300
+
+    Create files with examples how to work with logs in PS
+
+commit e89e1baf0cbd646e273585d55eb653844cc213fd
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 11 11:34:52 2017 +0300
+
+    Add info ti vi.txt
+
+commit 1a1c12a0aa65524a4893e4df8a8a81669962807a
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 11 11:25:37 2017 +0300
+
+    Created new file for vi next editor commands
+
+commit 505e2c6c35ccf372935d50fd93fea2432821c6f3
+Merge: f8d4382 fca5c1b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 19:12:59 2017 +0300
+
+    Merge branch 'master' of https://github.com/OlegPlatonenko/Virtualizing
+
+commit f8d43821d90b0c2fe5d21e90f1492a5dd4df52be
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 19:02:00 2017 +0300
+
+    added commands
+
+commit 18a4c0d0ce511e8da0b9c18c1ed54e661559e448
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 19:01:51 2017 +0300
+
+    added commands
+
+commit bc53d17fceb952aec93b01371dd3c4e314333c2e
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 19:01:32 2017 +0300
+
+    added commands
+
+commit 7f2b072316add428017990b91c54c9410a4bebf4
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 18:50:08 2017 +0300
+
+    Add new office (ODS)
+
+commit 67b7f0857d476808fc9c4547c713dd7e2eca640c
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 18:44:16 2017 +0300
+
+    Create file for common network requirements
+
+commit 1d032a21b8f8d1e91a27dff4d621543d66b2f133
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 17:51:35 2017 +0300
+
+    create file for network cmd commands
+
+commit c18ed88c778cde8a7fe4f3776136c34f6db823c0
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 17:50:18 2017 +0300
+
+    Mark which done by green
+
+commit c80fc29f044ca052ca8134238bceaee7986384cc
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 17:49:44 2017 +0300
+
+    Add LAB_Cisco.docx to gitignore
+
+commit 087faf36169580168e4dc2592941e0ca123ca607
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 16:45:34 2017 +0300
+
+    Configure all ports on UA-KYI-CS01, UA-KYI-AS01, UA-KYI-AS03
+
+commit b1a3c466a2632daecc603255227bc2fb2680ef6c
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 16:43:24 2017 +0300
+
+    Configured all ports on UA-KYI-AS01
+
+commit c38f8ee1a19cc97fc68a4fbbde7d0bd1e058555c
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 16:39:18 2017 +0300
+
+    Configured all ports on UA-KYI-CS01
+
+commit 7c07242e4ed59b65d14e796af4fd99d7302bf02b
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 15:36:09 2017 +0300
+
+    Configure all ports on UA-KYI-AS01 and create VLAN 3
+
+commit 624e7a9c243809b2ed017f2ad19bd6b93a820e2a
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 15:24:54 2017 +0300
+
+    Configured gi 0/2 on UA-KYI-CS01
+
+commit 2474bf0b721e25e55167cbf05df1ffdf17430c43
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 15:16:52 2017 +0300
+
+    Rename files
+
+commit 08c9e2c3a5d66a7780a59d7d6678ddfde794e27a
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 10 15:16:02 2017 +0300
+
+    Example of how to use Output type in PS
+
+commit fca5c1b59d28d44d9c5f42ad1e55800f75f807c2
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 21:19:41 2017 +0300
+
+    readme.md modified
+
+commit d7f73769614f48e541cffd49a3a2cba3f14881a7
+Merge: bc5de09 5124e0c
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 21:07:06 2017 +0300
+
+    Merge branch 'master' of https://github.com/OlegPlatonenko/Virtualizing
+
+commit 5124e0c2496315106d924909512db68d0287ec00
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 18:29:37 2017 +0300
+
+    Adding info to router.txt and switch.txt
+
+commit fb2efed7b9a335a3cc4ff5080b661efa35645975
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 18:03:28 2017 +0300
+
+    Virtual Interfaces configured
+
+commit d8e7ca04fe6bcc8967907f0191296a1920b12c26
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 17:58:34 2017 +0300
+
+    Configured UA-KYI-CS01
+
+commit 0513cee3156c13f9d66724a42818189fb8a046e9
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 17:58:13 2017 +0300
+
+    Configured UA-KYI-AS03
+
+commit 5f4a448e4d4145fbb62ee9d6095c20ed01881932
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 17:57:37 2017 +0300
+
+    Adding configs
+
+commit a45cc3efab54e98dfc635fb1c9f36a039f784222
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 17:56:42 2017 +0300
+
+    Make marks in LAB_Cosco
+
+commit 1dc14394267c2e6b9607ab1f5e5292d31b001cc7
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 15:07:07 2017 +0300
+
+    Rename router_switch and create separate router file
+
+commit 6107efb4c40a514a6a08023b51354ca5c9478b7a
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 14:38:28 2017 +0300
+
+    New-ScheduledScript.ps1 added
+
+commit 9d3fd9f7e0c816034066cfd2c2596bbcb5600c41
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 11:31:15 2017 +0300
+
+    Create folder NETWORK and add file from packet tracer
+
+commit cb104c1475ae66e2ecb6513e8d33d4d7bd87e9e9
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 11:26:06 2017 +0300
+
+    Reviewwed files in PS directory
+
+commit 9a9b3c60cecb5bbb5ecb48325ade93f9ef94fa75
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 9 11:00:49 2017 +0300
+
+    Create folder LINUX and move files to it
+
+commit 538742288d0fb7bb53185c3e9c0aa5ae108326e2
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 6 18:15:28 2017 +0300
+
+    Adding info to git_commands.txt
+
+commit 4faa0085fbea2fbbd93c180f5fb594dca020db96
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 6 18:14:32 2017 +0300
+
+    Adding info to router_switch
+
+commit 3c6c3c35e1269df2df1b05607ddf79c391fb3378
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 6 16:06:09 2017 +0300
+
+    Testing Test file
+
+commit 11d898335eb4a473db7697790094f6fc7826411e
+Merge: 7dd0824 557d824
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 6 15:28:19 2017 +0300
+
+    Merge branch 'master' into powershell
+
+commit 7dd0824f3b1aa4d8a4a1c65b96f58dc3454c4658
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 6 15:26:01 2017 +0300
+
+    Become invoke-UserLogoff workable
+
+commit 4e697d5aa78155b295ba0950cc18e1c04194b5fa
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 6 12:18:09 2017 +0300
+
+    Add new script "User Logoff"
+
+commit e1ccc774339fd5e1666a247a1ba06c4d1acc09c5
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 6 12:17:37 2017 +0300
+
+    Review linux_commands file
+
+commit 2aba62959740dd97238342987fb8daac539fe2c5
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Oct 6 10:02:08 2017 +0300
+
+    Create new file with switch and router CLI commands
+
+commit 0c9a4af9ffb7d446815b45208bc2e1472f234a44
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Wed Oct 4 18:04:17 2017 +0300
+
+    Delete unuseful info
+
+commit 68a6d143639c0bf600ea19db0aa98812af81bdaf
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 3 18:19:25 2017 +0300
+
+    Add info to linux_commands
+
+commit cd1276a45958e6f3579f0bf2cd8c499dd1ff95c5
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Oct 3 16:46:10 2017 +0300
+
+    Delete wrong section which deals with Icinga
+
+commit bc5de093611bb2527ddde2ffb4a21925fa9e3168
+Merge: 5eb2476 3e40bc5
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Oct 2 22:14:35 2017 +0300
+
+    Merge branch 'powershell' of https://github.com/OlegPlatonenko/Virtualizing
+
+commit 3e40bc5dbcfffed66fc3fd4beedb4ba4d065da2f
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Sep 29 19:05:38 2017 +0300
+
+    Created test file is /PS
+
+commit 557d8243c45b28c4a1d17695eb7eac4b00cd43bb
+Merge: 8839739 5eb2476
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Sep 29 18:56:54 2017 +0300
+
+    Merge branch 'master' of https://github.com/OlegPlatonenko/Virtualizing
+
+commit 883973929de02f8efe9af9db85dc970498e41bfb
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Sep 29 18:56:21 2017 +0300
+
+    Editing git_commands (Add BRANCHING) Section
+
+commit 07a9ca3f256bb08a0687654d1542f9c979dd5aea
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Fri Sep 29 14:04:05 2017 +0300
+
+    Edited gitignore
+
+commit 5eb2476c9fc4bf0fcbc58c24850aa04d50cd943a
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Sep 28 22:49:38 2017 +0300
+
+    Working with New-VM and Remove-VM sections
+
+commit 47290ff33b5399fce2193d2580c3d286900ed440
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Sep 28 18:14:34 2017 +0300
+
+    Added readme.md
+
+commit d8aa90cb3da33a6c74f1ece2e2edf0d76b44ab9f
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Sep 28 17:59:59 2017 +0300
+
+    Added template for VM Module and test file
+
+commit 340f6e26879886f48e42ba3d47feec6f41a3cbe0
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Sep 28 17:11:54 2017 +0300
+
+    Edit linux_commands.txt
+
+commit 1e25c2d11bcf6f01223c286e6b405c1005bf52b1
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Sep 28 17:11:14 2017 +0300
+
+    Add file linux_commands.txt
+
+commit e77406ce0038b8d3e9cbe94f08f561b44ad8dddc
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Thu Sep 28 16:24:23 2017 +0300
+
+    Editing k8s.txt
+
+commit ac723184f83943ed316bda51168965476ad44409
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Sep 26 18:22:05 2017 +0300
+
+    Edit k8s.txt
+
+commit ace3feef4e6321b3c4c03b777017d1a112ea2c53
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Sep 26 13:35:42 2017 +0300
+
+    Create folder PS for PowerShell scripts
+
+commit cb7e03c984587d6cda131b0523faf92e1e7e8ebe
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Sep 26 13:30:11 2017 +0300
+
+    Add k8s.txt file to repo
+
+commit f6d8bfc99a6dd339b720f609d66527e72a627b5e
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Tue Sep 26 13:28:20 2017 +0300
+
+    Add push section to git_commands
+
+commit c65c662a7c3fdd93f4fbf72cbd4ce43237b9be4e
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Sep 25 22:37:19 2017 +0300
+
+    Add to git_commands section how to push to GitHub
+
+commit 3cb99f1c22b8c424b79f408811d97828211ee175
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Sep 25 22:31:29 2017 +0300
+
+    Add gitignore
+
+commit 2b4fafcb5a1124d65857c7ffdb54cf2d5376aa43
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Sep 25 22:29:30 2017 +0300
+
+    Continue editing git_commands
+
+commit e8f61cb49f1c5299dc3077a6c4351e324e2fb84e
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Sep 25 22:19:33 2017 +0300
+
+    Finished Enable features and starting writing help for Git
+
+commit 79ac9afd7876030ddef71d3d4b2a68a8d6296353
+Author: Oleg Platonenko <oleg.platonenko@outlook.com>
+Date:   Mon Sep 25 22:11:06 2017 +0300
+
+    New personal data
