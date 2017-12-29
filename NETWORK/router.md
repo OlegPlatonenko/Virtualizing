@@ -301,6 +301,6 @@ S*   0.0.0.0/0 [1/0] via 200.0.0.2
 
 IPSec is standard with 3 protocols
 
-- ESP (Encapsulating Security Payload)
-- AH  (Authentication Heasder)
-- IKE (Internet Key Exchange protocol)
+- **ESP** (Encapsulating Security Payload)
+- **AH**  (Authentication Heasder)
+- **IKE** (Internet Key Exchange protocol)
