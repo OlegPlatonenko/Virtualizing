@@ -255,3 +255,44 @@ router eigrp <sybsystem number>
 ## VPN
 
 ### GRE (General Routing Encapsulation)
+
+```
+interface Tunnel 0
+ip address <tunnel IP> <tunnel mask>
+tunnel source <external provider white IP>
+tunnel destination <external provider white IP>
+
+ip route 0.0.0.0 0.0.0.0 <provider default gateway>
+ip route <current subnet IP> <current mask> <tunnel internal IP on the another end>
+```
+
+f.e.
+```
+tunnel IPs           10.2.2.1   10.2.2.2  255.255.255.252
+loopbacks             10.0.2.1   10.0.2.2  255.255.255.255
+external IP           100.0.0.1  200.0.0.1 255.255.255.252
+provider default GW   100.0.0.2  200.0.0.2 255.255.255.252
+
+GW2(config)#interface Tunnel 0
+GW2(config-if)#ip address 10.2.2.2 255.255.255.252
+GW2(config-if)#tunnel source 200.0.0.1
+GW2(config-if)#tunnel destination 100.0.0.1
+GW2(config-if)#exit
+
+ip route 0.0.0.0 0.0.0.0 100.0.0.2
+ip route 10.0.2.1 255.255.255.255 10.2.2.1
+```
+
+```
+show ip route
+     200.0.0.0/30 is subnetted, 1 subnets
+C       200.0.0.0 is directly connected, FastEthernet0/0
+     10.0.0.0/8 is variably subnetted, 4 subnets, 3 masks
+S       10.0.2.0/32 [1/0] via 10.2.2.1
+C       10.0.2.1/32 is directly connected, Loopback0
+C       10.2.2.0/30 is directly connected, Tunnel0
+C       10.0.1.0/24 is directly connected, FastEthernet0/1.1
+S*   0.0.0.0/0 [1/0] via 200.0.0.2
+```
+
+### IPSEC
