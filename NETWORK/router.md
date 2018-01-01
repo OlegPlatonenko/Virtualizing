@@ -304,3 +304,48 @@ IPSec is standard with 3 protocols
 - **ESP** (Encapsulating Security Payload)
 - **AH**  (Authentication Heasder)
 - **IKE** (Internet Key Exchange protocol)
+
+#### SA (Security association)
+
+- SA is the set of security connection parameters (encryption key, encryption algorythm)
+- All connections has associated SA
+
+IPSec phases
+
+0. A bit of traffic need to correspont to access list in crypto map
+1. IKE phase
+    - **ISAKMP tunnel** - information exchange about further encryption algorithms etc
+    - agreement about how to build main tunnel
+2. Data exchange
+3. In acording to lifetime encryption keys are updated for main tunnel
+
+
+1. ISAKMP setup
+```
+crypto isakmp policy 1
+encr aes
+authentication pre-share
+```
+
+2. Pre-shared key setup for neighbor check
+```
+crypto isakmp key 0 P@ssw0rd address 200.0.0.1
+```
+
+3. Traffic processing setup. AES encryption algorithm with ESP-header and authentication algorithm
+```
+crypto ipsec transform-set AES128-SHA esp-aes esp-sha-hmac
+```
+
+4. Encryption map creation
+```
+crypto map MAP1 10 ipsec-isakmp 
+set peer 200.0.0.1
+set transform-set AES128-SHA 
+match address 101
+```
+
+5. ACL creation
+```
+access-list 101 permit ip host 10.0.2.1 host 10.0.2.2
+```
