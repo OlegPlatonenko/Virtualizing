@@ -230,10 +230,13 @@ host.systems.com.
 - DATA - different info which format and syntax is defined by type
 
 Current symbols may be used:
+
+```
 - ;  - comment
 - @  - name of current domain
 - () - data may use a few rows
 - *  - metasymbol (only in NAME field)
+```
 
 #### Resource entries types
 
