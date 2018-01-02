@@ -192,7 +192,7 @@ OPTIONS="-4 -u bind"
 
 ### DNS Configuration
 
-The primary configuration file for the BIND DNS server named process is **/etc/bind/named.conf**. 
+The primary configuration file for the BIND DNS server named process is **/etc/named.conf** (**/etc/bind/named.conf** in Ubuntu/Debian). 
 
 It includes three additional configuration files: **named.conf.options, named.conf.local, and named.conf.default-zones**.
 
@@ -201,7 +201,29 @@ It includes three additional configuration files: **named.conf.options, named.co
 ```
 
 ```
-### Folder permissions 
+
+### DNS Zones
+
+- **Zone** is a part of domain name system tree which is located on one DNS-server. It also may be called *zone of responsibility*.
+
+#### Difference between zone and domain
+
+If we have domain *boston.edu* with 1 DNS-zones *math.boston.edu* so all machines are members of boston.edu domain but some of them are members of math.boston.edu DNS zone, not boston.edu
+
+### FQDN (Fully Qualified Domain Name)
+
+```
+host.systems.com.
+ |      |   | | |
+ |      |   | |  +- root domain
+ |      |   | +---- first level domain
+ |      |   +------ dot between domains, parts of FQDN
+ |      +---------- second level domain
+ +----------------- subdomain/third level domain, maybe hostname
+```
+ 
+
+## Folder permissions 
 
 ```
 sudo chown -R <username> <folder path>
