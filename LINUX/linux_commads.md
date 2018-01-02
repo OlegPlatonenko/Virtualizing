@@ -216,12 +216,26 @@ If we have domain *boston.edu* with 1 DNS-zones *math.boston.edu* so all machine
 host.systems.com.
  |      |   | | |
  |      |   | |  +- root domain
- |      |   | +---- first level domain
+ |      |   | +---- first level domain (TLD - top level domains)
  |      |   +------ dot between domains, parts of FQDN
  |      +---------- second level domain
  +----------------- subdomain/third level domain, maybe hostname
 ```
- 
+### Resource entry
+
+- NAME - domain name or IP address
+- TTL (Time to Live) - time for storing entry in DNS cache
+- CLASS - network type (in 99% cases IN (Internet) is used)
+- TYPE - entry type, syntax and purpose
+- DATA - different info which format and syntax is defined by type
+
+Current symbols may be used:
+- ;  - comment
+- @  - name of current domain
+- () - data may use a few rows
+- *  - metasymbol (only in NAME field)
+
+#### Resource entries types
 
 ## Folder permissions 
 
