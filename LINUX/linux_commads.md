@@ -140,7 +140,7 @@ sudo do-release-upgrade -d
 1. install python-pip
     sudo apt-get install python pip
 
-## GREP
+## 10. GREP
 
 - find string in file
 ```bash
@@ -166,7 +166,7 @@ egrep --color -i -n -A 5 -B 5 "Error" /var/log/messages
 - -B - print number of lines before match
 - --color - mark with color string match
 
-## DNS
+## 11. DNS
 
 ```bash
 sudo vi /etc/network/interfaces
@@ -286,7 +286,7 @@ test.com  86400   IN   SOA   dns01.test.com host01.test.com (
 - **SRV** - server selection (Jabber or Active Directory)
 
 
-## Folder permissions 
+## 12. Folder permissions 
 
 ```
 sudo chown -R <username> <folder path>
