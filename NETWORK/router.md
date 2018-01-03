@@ -349,3 +349,48 @@ match address 101
 ```
 access-list 101 permit ip host 10.0.2.1 host 10.0.2.2
 ```
+
+#### IPSec VTI
+
+f.e.
+```
+tunnel IPs            10.2.2.1   10.2.2.2  255.255.255.252
+loopbacks             10.0.2.1   10.0.2.2  255.255.255.255
+external IP           100.0.0.1  200.0.0.1 255.255.255.252
+provider default GW   100.0.0.2  200.0.0.2 255.255.255.252
+
+hostname R1
+!
+crypto isakmp policy 1
+ authentication pre-share
+crypto isakmp key P@ssw0rd address 200.0.0.1
+!
+crypto ipsec transform-set AES128-SHA esp-aes esp-sha-hmac 
+ mode transport
+!
+crypto ipsec profile P1
+ set transform-set AES128-SHA 
+!
+interface Loopback0
+ ip address 10.0.2.0 255.255.255.255
+!
+interface Tunnel0
+ ip address 10.2.2.1 255.255.255.252
+ tunnel source 100.0.0.1
+ tunnel destination 200.0.0.1
+ tunnel mode ipsec ipv4
+ tunnel protection ipsec profile P1
+!
+interface FastEthernet0/0
+ ip address 100.0.0.1 255.255.255.252
+ duplex auto
+ speed auto
+!
+ip forward-protocol nd
+ip route 0.0.0.0 0.0.0.0 100.0.0.2
+ip route 10.0.2.1 255.255.255.255 10.2.2.2
+!
+end
+```
+
+
