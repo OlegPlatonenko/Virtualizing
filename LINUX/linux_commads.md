@@ -314,6 +314,8 @@ search test.com
 - search - defines additional domain
 domain and search options couldn't be used both
 
+![DNS resolvers scheme](https://github.com/OlegPlatonenko/Virtualizing/blob/master/LINUX/images/dns_resolvers.png)
+
 ## 12. Folder permissions 
 
 ```
