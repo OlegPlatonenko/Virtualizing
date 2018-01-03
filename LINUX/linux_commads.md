@@ -1,4 +1,4 @@
-# Common Linux command
+# Common Linux commands
 
 -----------------------------------------
 
