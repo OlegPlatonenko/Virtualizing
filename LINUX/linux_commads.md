@@ -285,6 +285,34 @@ test.com  86400   IN   SOA   dns01.test.com host01.test.com (
 ```
 - **SRV** - server selection (Jabber or Active Directory)
 
+### DNS Servers
+
+- **Primary (Master)** - authoritive server. Which has main database copy
+- **Secondary** - receive database copy from primary server
+
+In depending of setup main server may send zone changing signal to secondary. After receiving secondary performs copy. It calls *zone transfer*. 
+- AXFR - full zone copy
+- IXFR - incremental
+
+- **Caching** - save in memory cache from previous requests
+
+### DNS clients (resolvers)
+
+- file /etc/nsswitch.conf - defines which services in what order use (/etc/hosts or DNS - /etc/resolv.conf)
+```
+hosts:    files dns
+networks: files
+```
+- file /etc/resolv.conf
+```
+nameserver 10.0.0.1
+nameserver 10.0.0.2
+domain example.com
+search test.com
+```
+- domain defines default domain
+- search - defines additional domain
+domain and search options couldn't be used both
 
 ## 12. Folder permissions 
 
