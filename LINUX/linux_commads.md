@@ -215,18 +215,18 @@ If we have domain *boston.edu* with 1 DNS-zones *math.boston.edu* so all machine
 ```
 host.systems.com.
  |      |   | | |
- |      |   | |  +- root domain
+ |      |   | | +-- root domain
  |      |   | +---- first level domain (TLD - top level domains)
  |      |   +------ dot between domains, parts of FQDN
  |      +---------- second level domain
  +----------------- subdomain/third level domain, maybe hostname
 ```
-### Resource entry
+### Resource records
 
 - NAME - domain name or IP address
-- TTL (Time to Live) - time for storing entry in DNS cache
+- TTL (Time to Live) - time for storing record in DNS cache
 - CLASS - network type (in 99% cases IN (Internet) is used)
-- TYPE - entry type, syntax and purpose
+- TYPE - record type, syntax and purpose
 - DATA - different info which format and syntax is defined by type
 
 Current symbols may be used:
@@ -238,7 +238,53 @@ Current symbols may be used:
 - *  - metasymbol (only in NAME field)
 ```
 
-#### Resource entries types
+#### Resource records types
+
+- **A** - address record
+```
+test.com.  86400   IN   A    10.0.0.25
+```
+- **AAAA** - same as A but for IPv6
+- **CNAME** (canonical name record) displays alias for real name
+```
+program_01 86400   IN CNAME  prog.test.com
+```
+- **MX** - mail exchange. 
+* NAME fileld displays destinamtion domain
+* DATA field displays priority and after space mail server domain name
+```
+test.com  17790  IN   MX     10 mail1.test.com
+test.com  17790  IN   MX     20 mail2.test.com
+```
+- **NS** - name server (DNS server for this domain)
+```
+test.com  17790  IN   MX     dns.microsoft.com
+```
+- **PTR** - convert IP-address to domain name
+- **SOA** - Start of Authority (describes main zone settings)
+* NAME - domain name (zone name)
+* TTL, CLASS - standard values
+* TYPE - SOA
+* DATA 
+    1. Primary DNS server name
+    2. zone administrator address
+    3. zone file serial number in brackets
+    4. Timers
+        1) Refresh - how often secondary server retrives primary serial number for updates
+        2) Retry - Waiting time after unsuccessful retrive
+        3) Expire - maximum time during what secondary server use info about zone
+        4) Minimum TTL - minimum time during what data is located in secondary server cache
+
+```
+test.com  86400   IN   SOA   dns01.test.com host01.test.com (
+                              20180103001 ; serial
+                              28800  ; refresh
+                              7200   ; retry
+                              604800 ; expire
+                              86400)  ; minimum TTL
+```
+- **SRV** - server selection (Jabber or Active Directory)
+
 
 ## Folder permissions 
 
