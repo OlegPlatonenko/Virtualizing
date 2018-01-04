@@ -211,4 +211,24 @@ Open with
 Displaying dig.txt.
 ```
 
+## Reverse name transformation
+
+**in-addr.arpa** domain is used in DNS for reserve transformation
+
+```
+; <<>> DiG 9.9.4-RedHat-9.9.4-51.el7_4.1 <<>> -x 199.7.91.13
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 8680
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 13, ADDITIONAL: 26
+
+...
+
+;; QUESTION SECTION:
+;13.91.7.199.in-addr.arpa.	IN	PTR
+
+;; ANSWER SECTION:
+13.91.7.199.in-addr.arpa. 175	IN	PTR	d.root-servers.net.
+...
+```
 
