@@ -147,3 +147,68 @@ search test.com
 domain and search options couldn't be used both
 
 ![DNS resolvers scheme](https://github.com/OlegPlatonenko/net-sys-administration/blob/master/linux/images/dns_resolvers.png)
+
+## DNS Requests
+
+- **Forward** - send domain name to DNS server and ask for IP address (root and TLD servers)
+- **Recursive** - send domain name to DNS server and ask for IP address, DNS server may ask another servers
+- **Reverse** - send IP and ask for domain name
+
+```
+1. Client (what IP has host.test.com?)             --> resolver
+2. resolver (/etc/nsswitch.conf, /etc/resolv/conf) --> Primary DNS server 
+3. Primary DNS server                              --> root DNS server
+4. root DNS server                                 --> DNS server for **com** domain
+5. DNS server for com domain                       --> DNS server for **test** domain
+6. DNS server for test domain                      --> return IP to Primary DNS server
+7. Primary DNS server                              --> return IP to client
+```
+
+## DNS Server response
+
+- Authoritative (from servers which are response for zone)
+- Non authoritative (from catching servers)
+
+### DNS response sections
+
+- Header entry
+- Request entry
+- Response entry
+- Authoritative servers entry
+- Additional information
+
+```
+; <<>> DiG 9.9.4-RedHat-9.9.4-51.el7_4.1 <<>> google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 20962
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 13, ADDITIONAL: 24
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+
+;; QUESTION SECTION:
+;google.com.			IN	A
+
+;; ANSWER SECTION:
+google.com.		35	IN	A	172.217.18.174
+
+;; AUTHORITY SECTION:
+.			1899	IN	NS	c.root-servers.net.
+.			1899	IN	NS	d.root-servers.net.
+
+;; ADDITIONAL SECTION:
+c.root-servers.net.	39649	IN	A	192.33.4.12
+d.root-servers.net.	1978	IN	A	199.7.91.13
+
+;; Query time: 8 msec
+;; SERVER: 172.22.61.3#53(172.22.61.3)
+;; WHEN: Thu Jan 04 09:42:02 EST 2018
+;; MSG SIZE  rcvd: 778
+
+dig.txt
+Open with
+Displaying dig.txt.
+```
+
+
