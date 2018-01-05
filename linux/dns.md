@@ -234,5 +234,5 @@ Displaying dig.txt.
 
 ## DNS Server Configuration (Debian and CentOS)
 
-![DNS resolvers scheme](https://github.com/OlegPlatonenko/net-sys-administration/blob/master/linux/images/dns_resolvers.png)
+![DNS Configuration structure](https://github.com/OlegPlatonenko/net-sys-administration/blob/master/linux/images/bind_config.png)
 
