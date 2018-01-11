@@ -72,3 +72,21 @@
 - Describes continuous action in the past which was finished before some another action
 - I explained that I **had been looking** for it for the last two hours.
 
+## Using Past Simple and Past Continuous
+
+### 1. Unfinished past
+
+We**'ve lived** in this house for 20 years.
+Sorry I'm late. **Have** you **been waiting** long?
+
+- The Continuous can sometimes suggest more temporary situation.
+- The simple can sound more permanent.
+
+**Continuous** words:
+- *wait, rain, snow, learn, sit, lie, play, stay*
+
+! State verbs rarely take the **Continuous**
+- *have, know, understand*
+
+### 2. Present result
+
