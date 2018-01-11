@@ -90,3 +90,11 @@ Sorry I'm late. **Have** you **been waiting** long?
 
 ### 2. Present result
 
+You**'ve** changed. What **have** you **done** for yourself. 
+I**'ve** doing some exercise. 
+I'm covered in mud because I've been gardening.
+
+- **"Simple"** words:
+- start, find, lose, begin, stop, break, die, decide, cut
+
+### 3. Indefinite past
