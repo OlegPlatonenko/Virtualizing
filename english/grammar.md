@@ -98,3 +98,8 @@ I'm covered in mud because I've been gardening.
 - start, find, lose, begin, stop, break, die, decide, cut
 
 ### 3. Indefinite past
+
+**Have** you ever **taken** any illegal drugs? 
+**Have** you ever **been flying** in a plane when it's hit an air pocket?
+
+ 
