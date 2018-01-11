@@ -236,3 +236,5 @@ Displaying dig.txt.
 
 ![DNS Configuration structure](https://github.com/OlegPlatonenko/net-sys-administration/blob/master/linux/images/bind_config.png)
 
+### named.conf structure
+
