@@ -362,3 +362,10 @@ $TTL	604800
     * *hint* - secondary zone (info about core servers)
     * *master* - work as *master* server for current zone
     * *slave* - work as *slave* server for current zone
+
+#### Additional configuration parameters
+
+**$TTL** - defines TTL-by default for all entries in current zone
+**$ORIGIN** - change zone name from defined in named.cong
+**$INCLUDE** - include current file as part of zone file
+
