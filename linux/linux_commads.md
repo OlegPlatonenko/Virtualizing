@@ -40,6 +40,8 @@ iface eth0 inet static
 wget  -O /home/omio/Desktop/ "http://thecanadiantestbox.x10.mx/CC.zip" - download file from internet
 tar xvzf file.tar.gz - unzip file
 
+sudo dpkg -i /path/to/file *.deb
+
 ## 4. SETUP SSH
 
 ```bash
