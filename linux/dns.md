@@ -4,6 +4,10 @@
 sudo vi /etc/network/interfaces
 ```
 
+```bash
+systemd-resolve --status
+```
+
 - Set IP to static
 
 ```
