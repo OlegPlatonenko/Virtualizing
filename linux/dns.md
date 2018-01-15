@@ -236,5 +236,84 @@ Displaying dig.txt.
 
 ![DNS Configuration structure](https://github.com/OlegPlatonenko/net-sys-administration/blob/master/linux/images/bind_config.png)
 
-### named.conf structure
+MAin binary file is located at **/usr/sbin/named**
+
+### named.conf (/etc/bind) structure
+
+- Working server catalog (/var/cache/bind) with zone description files
+- Accordance between zone name and zone description file is set in **zone**
+ section with **file** parameter
+- **Zone** section also describes server type for this zone - *master, slave, etc*
+
+**named.conf example**
+```
+include "/etc/bind/named.conf.options";
+include "/etc/bind/named.conf.local";
+include "/etc/bind/named.conf.default-zones";
+```
+
+**named.conf.options example**
+```
+acl "my_access_list" {
+	10.0.0.1/24; #my_lab
+};
+
+options {
+	directory "/var/cache/bind";
+
+	forwarders {
+	0.0.0.0;
+	};
+
+	dnssec-validation auto;
+
+	auth-nxdomain no;    # conform to RFC1035
+	listen-on-v6 { any; };
+};
+```
+
+**named.conf.default-zones example**
+```
+// prime the server with knowledge of the root servers
+zone "." {
+	type hint;
+	file "/etc/bind/db.root";
+};
+
+// be authoritative for the localhost forward and reverse zones, and for
+// broadcast zones as per RFC 1912
+
+zone "localhost" {
+	type master;
+	file "/etc/bind/db.local";
+};
+
+zone "127.in-addr.arpa" {
+	type master;
+	file "/etc/bind/db.127";
+};
+
+zone "0.in-addr.arpa" {
+	type master;
+	file "/etc/bind/db.0";
+};
+
+zone "255.in-addr.arpa" {
+	type master;
+	file "/etc/bind/db.255";
+};
+```
+**db file example example**
+```
+$TTL	604800
+@	IN	SOA	localhost. root.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	localhost.
+```
+
 
