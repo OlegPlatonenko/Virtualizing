@@ -316,4 +316,24 @@ $TTL	604800
 @	IN	NS	localhost.
 ```
 
+### named.conf syntax
+
+#### IP address
+- IP address list must be separated with ";"
+- IP-sybnet may be set in formats: 192.168.1.1/24 or 192.168.1.1/255.255.255.0
+- IP address may be excluded with "!"
+- You may use "any", "none", "localhost"
+
+#### Comments
+- Lines with #, //, /* */ are comments
+
+- In zones description files **@** symbol is variable with zone name value, which is set in **named.conf**
+- Each finished line with parameters must end with ";"
+
+#### ACL section
+- ACL - gives opportunity to set named network list in format: acl "network name" {ip; ip; ip};
+
+#### Options section
+
+
 
