@@ -369,7 +369,7 @@ $TTL	604800
 
 #### Additional configuration parameters
 
-**$TTL** - defines TTL-by default for all entries in current zone
-**$ORIGIN** - change zone name from defined in named.cong
-**$INCLUDE** - include current file as part of zone file
+- **$TTL** - defines TTL-by default for all entries in current zone
+- **$ORIGIN** - change zone name from defined in named.cong
+- **$INCLUDE** - include current file as part of zone file
 
