@@ -236,7 +236,7 @@ Displaying dig.txt.
 
 ![DNS Configuration structure](https://github.com/OlegPlatonenko/net-sys-administration/blob/master/linux/images/bind_config.png)
 
-MAin binary file is located at **/usr/sbin/named**
+Main binary file is located at **/usr/sbin/named**
 
 ### named.conf (/etc/bind) structure
 
@@ -335,5 +335,30 @@ $TTL	604800
 
 #### Options section
 
+- options {Option_section_operators};
 
+**Common used Options operators**
 
+- allow-query {ip list} - Allows responds only for listed ip's
+- allow-recursion {ip list} - Recurse responses for listed ip's
+- allow-transfer {ip list} - List of servers which may take zone from server
+- directory /path/to/work/dir - Absolute path to working directory
+- forwarders {ip port, ip port} - host adress and ports if needed for request redirection
+- forward ONLY or forward FIRST - if **first** - resolve with DNS-servers listed in **forwarders**
+- notify YES/NO - Yes - notify slave-servers about changes in zone
+- recursion YES/NO - Yes - Yes - do recurse requests
+
+#### Zone section
+
+- zone {Zone_section_operators}
+
+**Common used Zone section operators**
+
+- allow-update {ip_list} - list of systems which allows update zone dynamically
+- file "file_name" - path to file with zone parameters (must be located in folder defined in *options* section with *directory* operator)
+- masters {ip_list} - master servers list
+- type "zone_type"
+    * forward - redirection zone
+    * hint - secondary zone (info about core servers)
+    * master - work as *master* server for current zone
+    * slave - work as *slave* server for current zone
