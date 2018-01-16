@@ -54,7 +54,7 @@
 
 ```
 kern.*              /dev/console
-*.info;cron.none   /var/log/syslog
+*.info;cron.none    /var/log/syslog
 authpriv.*          /var/log/secure
 mail.*              /var/log/maillog
 cron.*              /var/log/cron
@@ -65,3 +65,17 @@ cron.*              /var/log/cron
 # Save system boot messages to boot.log
 local7.*            /var/log/boot.log
 ``` 
+
+```
+# Send all messages from kernel to /var/log/kernel
+# Send all messagess with priority *crit* to sysloger machine and to console
+# Send all messages with *info, notice and warning* to /var/log/kernel-info
+
+kern.*                  /var/log/kernel
+kern.crit               @sysloger
+kern.crit               /dev/console
+kern.info;kern.!err     /var/log/kernel-info
+
+# Send all messages from mail system, except info level to /var/log/mail
+mail.*;mail.!=info      /var/log/mail
+```       
