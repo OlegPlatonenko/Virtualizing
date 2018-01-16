@@ -3,7 +3,7 @@
 - Main config file **/etc/syslog.conf** (**/etc/rsyslog.conf**)
 - performing by daemon **syslogd** (**rsyslogd** - in new distributions)
 
-- /dev/log - is used for log info from local machine 
+- **/dev/log** - is used for log info from local machine 
 - **UDP 514** is used for receiving log info from remove machine 
 
 ## Configuration file syslog.conf
@@ -44,4 +44,10 @@
 - 6 - **info** - Information message
 - 7 - **debug** - Debugging message
 
-### Message destinations 
+### Message destinations
+
+- **File** - path start with "/"
+- **Naming channels** - use "|" for *fifo* (first-in-first-out) or **named pipe**
+- **Terminal or console** - /dev/console
+- **Remote machine** 
+- **User list** - f.e. root
