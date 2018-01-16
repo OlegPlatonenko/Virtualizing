@@ -78,4 +78,7 @@ kern.info;kern.!err     /var/log/kernel-info
 
 # Send all messages from mail system, except info level to /var/log/mail
 mail.*;mail.!=info      /var/log/mail
-```       
+```
+
+### syslog daemon start
+
