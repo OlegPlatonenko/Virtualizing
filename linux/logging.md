@@ -51,3 +51,17 @@
 - **Terminal or console** - /dev/console
 - **Remote machine** 
 - **User list** - f.e. root
+
+```
+kern.*              /dev/console
+*.info;cron.none   /var/log/syslog
+authpriv.*          /var/log/secure
+mail.*              /var/log/maillog
+cron.*              /var/log/cron
+
+# Send emergency messages for all system ysers
+*.emerg             *
+
+# Save system boot messages to boot.log
+local7.*            /var/log/boot.log
+``` 
