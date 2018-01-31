@@ -101,3 +101,11 @@ After **syslogd** start status file */var/lock/subsys/syslog* is created and fil
 Packet **sysklogd** consists of two daemons
 - *syslogd*
 - *klogd* - used for logging system core events
+
+### Automatic log rotation and archivation
+
+Main config file **/etc/logrotate.conf**
+
+logrotate.conf example
+```
+#Default parameters (global options)
