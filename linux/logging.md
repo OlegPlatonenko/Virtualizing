@@ -82,3 +82,22 @@ mail.*;mail.!=info      /var/log/mail
 
 ### syslog daemon start
 
+- **syslog daemon** starts by script **/etc/rc.d/init/d/syslog**
+- Startup config file is located at **/sysconfig/syslog (/etc/default/syslog)**
+
+Startup parameters:
+- **-a /folder/socket** - specifying additional listening socket
+- **-d** - debugging mode. Daemon show all messages in terminal
+- **-f name-of-config-file** - define alternative config file. Instead of default */etc/syslog.conf*
+- **-l hosts-list** - host exceptions for which FQDN doesn't used
+- **-m minutes** - change time interval for writing *mark* time stamps
+- **-p socket** - define alternative UNIX socket (insted of default */dev/log*)
+- **-r** - permission of receiving messages from remote hosts
+- **-x** - prohibition of defining hostname by it's address for preventing freezing on working with one host with DNS
+- **-v** - show version and finish work
+
+After **syslogd** start status file */var/lock/subsys/syslog* is created and file with process ID */var/run/syslogd.pid*
+
+Packet **sysklogd** consists of two daemons
+- *syslogd*
+- *klogd* - used for logging system core events
