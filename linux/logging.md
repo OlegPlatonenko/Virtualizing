@@ -80,7 +80,7 @@ kern.info;kern.!err     /var/log/kernel-info
 mail.*;mail.!=info      /var/log/mail
 ```
 
-### syslog daemon start
+## syslog daemon start
 
 - **syslog daemon** starts by script **/etc/rc.d/init/d/syslog**
 - Startup config file is located at **/sysconfig/syslog (/etc/default/syslog)**
@@ -102,7 +102,7 @@ Packet **sysklogd** consists of two daemons
 - *syslogd*
 - *klogd* - used for logging system core events
 
-### Automatic log rotation and archivation
+## Automatic log rotation and archivation
 
 Main config file **/etc/logrotate.conf**
 
@@ -159,3 +159,31 @@ Short custom script example
     endscript
 }
 ```
+
+### logrotate.conf parameters
+
+- **compress | nocompress** - old versions are compressed by gzip
+- **compresscmd** - set compress program (*gzip* by default)
+- **uncompressedcmd** - set uncompresss program (*ungzip* by default)
+- **compressext** - set suffix for compressed files
+- **compressoptions** - set options for compressing program
+- **copytruncate | nocopytruncate** - logrotate copy journal to new file and cut old
+- **create | nocreate [access rights, owner, group]** - after old version renaming and before calling *postrotate* new journal is creating with defined access parameters
+- **daily** - daily changing versions in series
+- **delaycompress | nodelaycompress** - delay compressing for next cycle
+- **error to-this-email** - send error reports to defined email
+- **extension suffix** - set suffix which will be added during rotation before compressing suffix
+- **ifempty | noifempty** - change version even if file is emply (is set by default)
+- **include file-name | directory-name** - textually substitute file or all files from selected directory
+- **mail mail-address | no mail** - send old journal before it will be deleted
+- **mailfirs** - send first journal version instead of geleting
+- **missingok | nomissingok** - do not send error message if journal is missed
+- **mounthly** - mounthly changing versions in series
+- **olddir directory-name | noolddirectory** - during version change journal is moving to specified directory
+- **postrotate** - all further rows till *endscript* executing as shell commands after version change
+- **prerotate** - all further rows till *endscript* executing as shell commands before version change  
+- **rotate specify-number** - how many versions keep
+- **size specifi-bytes** - change versions after file size reaching
+- **shared scripts | nosharedscripts** - execute *prerotate* and *postrotate* only ones for all files described in section
+- **tabooext [+] suffix list** - set suffix exclusion list for *include*
+- **weekly** - weekly changing versions in series
