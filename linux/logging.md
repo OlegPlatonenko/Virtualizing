@@ -146,3 +146,16 @@ include /etc/logrotate.d
 # system-specific logs may be configured here
 ```
 
+Short custom script example
+```
+/var/log/messages {
+    rotate 5
+    mail admin@example.com
+    size 1000k
+#postrotate restart syslogd after rotation complete by sending HUP signal
+    postrotate
+    /usr/bin/killall -HUP syslogd
+#endscript needs for script end
+    endscript
+}
+```
