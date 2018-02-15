@@ -174,3 +174,14 @@ egrep --color -i -n -A 5 -B 5 "Error" /var/log/messages
 ```
 sudo chown -R <username> <folder path>
 ```
+
+## 12. Add user to sudoers
+
+```
+usermod -aG sudo username
+```
+
+- At **/etc/sudoers** file add line
+```
+<username>   ALL=(ALL:ALL) ALL
+```
