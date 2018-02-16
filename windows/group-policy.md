@@ -22,7 +22,7 @@ ShowFisrtSignInAnimation="When this setting is enabled, Windows will show first 
 - **CATEGORY** - name of the group policy 
 - **POLICY** - section with settings
 
-![Settigs](https://github.com/OlegPlatonenko/net-sys-administration/blob/master/windows/images/Settings.png)
+![Settigs](https://github.com/OlegPlatonenko/net-sys-administration/blob/master/windows/images/Sections1.png)
 
 ## POLICY section properties
 
@@ -39,4 +39,4 @@ ShowFisrtSignInAnimation="When this setting is enabled, Windows will show first 
 - **LISTBOX** - Adds a list of values to add to the Registry 
 - **CLIENTTET** - Specify a DLL of GP used on client system
 
-![Properties](https://github.com/OlegPlatonenko/net-sys-administration/blob/master/windows/images/Properties.png)
+![Properties](https://github.com/OlegPlatonenko/net-sys-administration/blob/master/windows/images/Properties1.png)
