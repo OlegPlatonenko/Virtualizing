@@ -187,3 +187,42 @@ Short custom script example
 - **shared scripts | nosharedscripts** - execute *prerotate* and *postrotate* only ones for all files described in section
 - **tabooext [+] suffix list** - set suffix exclusion list for *include*
 - **weekly** - weekly changing versions in series
+
+## Log monitoring
+
+1. Paging return
+
+```
+less /var/log/syslog
+```
+
+2. Grep command
+
+```
+root@SRV02:/home/test/net-sys-administration# grep named /var/log/syslog
+
+Feb 16 00:41:55 SRV02 named[1119]: validating ./NS: got insecure response; parent indicates it should be secure
+Feb 16 00:41:55 SRV02 named[1119]: insecurity proof failed resolving './NS/IN': 172.22.61.3#53
+Feb 16 00:41:55 SRV02 named[1119]: managed-keys-zone: No DNSKEY RRSIGs found for '.': success
+Feb 16 00:41:56 SRV02 named[1119]: validating ./NS: no valid signature found
+Feb 16 00:41:56 SRV02 named[1119]: no valid RRSIG resolving './NS/IN': 198.97.190.53#53
+Feb 16 00:41:56 SRV02 named[1119]: validating ./NS: no valid signature found
+Feb 16 00:41:56 SRV02 named[1119]: no valid RRSIG resolving './NS/IN': 192.5.5.241#53
+Feb 16 00:41:56 SRV02 named[1119]: validating ./NS: no valid signature found
+Feb 16 00:41:56 SRV02 named[1119]: no valid RRSIG resolving './NS/IN': 192.33.4.12#53
+Feb 16 00:41:56 SRV02 named[1119]: validating ./NS: no valid signature found
+Feb 16 00:41:56 SRV02 named[1119]: no valid RRSIG resolving './NS/IN': 202.12.27.33#53
+Feb 16 00:41:56 SRV02 named[1119]: validating ./NS: no valid signature found
+```
+
+3. Kernel data
+
+```
+grep kernel /var/log/syslog
+```
+
+4. Live log monitoring
+
+```
+tail -f /var/log/messags | grep named
+```
