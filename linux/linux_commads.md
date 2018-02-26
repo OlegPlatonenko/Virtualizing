@@ -2,9 +2,10 @@
 
 -----------------------------------------
 
-## 1. SERVICES
+## 1. SERVICES/PROCESSES
 
 service --status-all - get status list
+ps fawx - return list of processes
 
 ## 2. NETWORK
 
