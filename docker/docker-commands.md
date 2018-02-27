@@ -20,7 +20,7 @@ ubuntu              12.10               3e314f95dcac        3 years ago         
 ```
 
 ```
-#Run docker image
+#Run Docker image
 
 docker run <image name>
 ```
