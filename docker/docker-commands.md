@@ -21,7 +21,7 @@ ubuntu              12.10               3e314f95dcac        3 years ago         
 ```
 #Run docker image
 
-docker run <image name>
+docker run <image repository name>
 ```
 
 ```
@@ -44,6 +44,20 @@ A /var/lib/apt/lists/partial/archive.ubuntu.com_ubuntu_dists_quantal_Release.gpg
 #Commit this changes and create new image
 
 docker commit <container ID> <username/new-image-name>
+
+#Add name to custom image separately
+
+docker image tag <image ID> <username/new-image-name>
 ```
 
+```
+#Run already created container
 
+docker start <container ID>
+```
+
+```
+#Send command to container
+
+docker exec <container ID> <command>
+```
