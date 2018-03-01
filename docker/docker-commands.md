@@ -74,3 +74,13 @@ docker image build -t <imagename>
 docker image history <image ID>
 ```
 
+```bash
+#Inspect Docker image
+
+docker image inspect <imagename>
+
+#Get info about layers
+
+docker image inspect --format "{{ json .RootFS.Layers }}" <imagename>
+```
+
