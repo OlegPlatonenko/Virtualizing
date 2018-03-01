@@ -73,4 +73,3 @@ docker image build -t <imagename>
 
 docker image history <image ID>
 ```
-
