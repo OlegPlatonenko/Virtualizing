@@ -1,6 +1,6 @@
 # DOCKER commands
 
-```
+```bash
 #Docker status (running containers list)
 
 docker ps
@@ -9,7 +9,7 @@ CONTAINER ID   IMAGE            COMMAND        CREATED              STATUS      
 ee7949239136   ubuntu:12.10     "/bin/bash"    About a minute ago   Up About a minute            kickass_joliot
 ```
 
-```
+```bash
 #List available downloaded Docker images
 
 docker images
@@ -18,13 +18,13 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 ubuntu              12.10               3e314f95dcac        3 years ago         172 MB
 ```
 
-```
+```bash
 #Run docker image
 
 docker run <image repository name>
 ```
 
-```
+```bash
 #Show cached changes in container
 
 docker diff <container ID>
@@ -50,14 +50,27 @@ docker commit <container ID> <username/new-image-name>
 docker image tag <image ID> <username/new-image-name>
 ```
 
-```
+```bash
 #Run already created container
 
 docker start <container ID>
 ```
 
-```
+```bash
 #Send command to container
 
 docker exec <container ID> <command>
 ```
+
+```bash
+#Build image from Dockerfile
+
+docker image build -t <imagename>
+```
+
+```bash
+#Get docker image creating history
+
+docker image history <image ID>
+```
+
