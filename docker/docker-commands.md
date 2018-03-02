@@ -1,6 +1,6 @@
 # DOCKER commands
 
-##Single node
+## Single node
 ```bash
 #Docker status (running containers list)
 
@@ -87,7 +87,7 @@ docker rm $(docker -a -f status=exited -q)
 docker run -it --name <container-name> -v <Host_shared_file_path>:<Container_folder> <image_name> <command>
 ```
 
-##Docker Swarm
+## Docker Swarm
 
 ```bash
 #Init Docker Swarm manager
@@ -119,11 +119,11 @@ docker stack deploy --compose-file=<file_name>
 docker stack ls
 ```
 
-##Inspect Docker image
+## Inspect Docker image
 
 docker image inspect <imagename>
 
-##Get info about layers
+## Get info about layers
 
 docker image inspect --format "{{ json .RootFS.Layers }}" <imagename>
 ```
