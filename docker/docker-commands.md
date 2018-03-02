@@ -76,7 +76,6 @@ docker image history <image ID>
 ```
 
 ```bash
-<<<<<<< HEAD
 #Remove a few containers
 
 docker rm $(docker -a -f status=exited -q)
@@ -120,20 +119,12 @@ docker stack deploy --compose-file=<file_name>
 docker stack ls
 ```
 
-
-
-
-
-
-
-=======
-#Inspect Docker image
+##Inspect Docker image
 
 docker image inspect <imagename>
 
-#Get info about layers
+##Get info about layers
 
 docker image inspect --format "{{ json .RootFS.Layers }}" <imagename>
 ```
 
->>>>>>> 2bfb67668450bb4c900fa18884380edd114d631b
