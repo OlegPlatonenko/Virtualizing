@@ -75,6 +75,18 @@ docker image build -t <imagename>
 docker image history <image ID>
 ```
 
+```bash
+#Remove a few containers
+
+docker rm $(docker -a -f status=exited -q)
+```
+
+```bash
+#Map folder to container
+
+docker run -it --name <container-name> -v <Host_shared_file_path>:<Container_folder> <image_name> <command>
+```
+
 ##Docker Swarm
 
 ```bash
