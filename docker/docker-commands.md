@@ -69,10 +69,29 @@ docker exec <container ID> <command>
 docker image build -t <imagename>
 ```
 
+Dockerfile example
+```Dockerfile 
+FROM alpine
+RUN apk update && apk add nodejs
+COPY . /app
+WORKDIR /app
+CMD ["node","index.js"]
+```
+
 ```bash
 #Get docker image creating history
 
 docker image history <image ID>
+```
+
+```bash
+#Inspect Docker image
+
+docker image inspect <imagename>
+
+#Get info about layers
+
+docker image inspect --format "{{ json .RootFS.Layers }}" <imagename>
 ```
 
 ```bash
@@ -118,13 +137,3 @@ docker stack deploy --compose-file=<file_name>
 
 docker stack ls
 ```
-
-## Inspect Docker image
-
-docker image inspect <imagename>
-
-## Get info about layers
-
-docker image inspect --format "{{ json .RootFS.Layers }}" <imagename>
-```
-
