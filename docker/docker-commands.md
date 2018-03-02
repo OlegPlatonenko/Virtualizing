@@ -1,5 +1,6 @@
 # DOCKER commands
 
+##Single node
 ```bash
 #Docker status (running containers list)
 
@@ -73,3 +74,42 @@ docker image build -t <imagename>
 
 docker image history <image ID>
 ```
+
+##Docker Swarm
+
+```bash
+#Init Docker Swarm manager
+
+docker swarm init --advertise-addr $(hostname -i)
+
+Swarm initialized: current node (tjocs7ul557phkmp6mkpjmu3f) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3b33jjwsqpkcy2c8og73aorjf2ao9sjm4crvbwg3xpd1ome459-ckfdcxqqahb9gy9s2t9n5mi78 10.0.25.3:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+```
+
+```bash
+#Get list of Swarm nodes
+
+docker node ls
+```
+
+```bash
+#Deploy Docker Stack
+
+docker stack deploy --compose-file=<file_name>
+
+#List of Docker Stacks
+
+docker stack ls
+```
+
+
+
+
+
+
+
