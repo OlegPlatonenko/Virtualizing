@@ -186,3 +186,45 @@ usermod -aG sudo username
 ```
 <username>   ALL=(ALL:ALL) ALL
 ```
+
+## 13. User management
+
+```bash
+#Get list of local users
+cut -d: -f1 /etc/passwd
+```
+
+```bash
+#Add new user
+sudo adduser new_username
+sudo useradd new_username
+```
+
+```bash
+#Delete user
+sudo userdael user_name
+
+#Delete home directory for user account
+sudo rm -r /home/user_name
+```
+
+```bash
+#Modify username or user
+usermod -l new_username old_username
+```
+
+```bash
+#Change a password for user
+sudo passwd user_name
+```
+
+```bash
+#Change a shell for user
+sudo chsh user_name
+```
+
+```
+#Change detail for user
+sudo chfn user_name
+```
+
