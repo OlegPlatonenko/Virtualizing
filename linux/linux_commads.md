@@ -78,7 +78,7 @@ sudo dpkg -i /path/to/file *.deb
 - sudo apt-get install -y powershell
 
 - **Start PowerShell**
-- powershell
+- pwsh
 
 ## 6. APACHE2
 
@@ -170,13 +170,13 @@ egrep --color -i -n -A 5 -B 5 "Error" /var/log/messages
 - --color - mark with color string match
 
 
-## 11. Folder permissions 
+## 11. FOLDER PERMISSIONS
 
 ```
 sudo chown -R <username> <folder path>
 ```
 
-## 12. Add user to sudoers
+## 12. ADD USER TO SUDOERS
 
 ```
 usermod -aG sudo username
@@ -187,7 +187,7 @@ usermod -aG sudo username
 <username>   ALL=(ALL:ALL) ALL
 ```
 
-## 13. User management
+## 13. USER MANAGEMENT
 
 ```bash
 #Get list of local users
@@ -227,4 +227,7 @@ sudo chsh user_name
 #Change detail for user
 sudo chfn user_name
 ```
+## 14. ADD USER VIA POWERSHELL
+
+
 
