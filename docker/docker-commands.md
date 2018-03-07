@@ -224,3 +224,19 @@ ExecStart=/usr/bin/docker daemon -H tcp://0.0.0.:2375 -H unix:///var/run/docker.
 root@SRV02:/home/test/net-sys-administration/powershell# systemctl restart docker
 root@SRV02:/home/test/net-sys-administration/powershell# systemctl status docker
 ```
+
+### Reviewing logs
+
+```
+root@SRV02:~# journalctl -u docker
+-- Logs begin at Tue 2018-03-06 12:21:01 EST, end at Wed 2018-03-07 00:59:27 EST. --
+Mar 07 00:33:17 SRV02 systemd[1]: Starting Docker Application Container Engine...
+Mar 07 00:33:17 SRV02 dockerd[10923]: time="2018-03-07T00:33:17.757014455-05:00" level=info msg="libcontainerd: new containerd process, pid: 10943"
+Mar 07 00:33:18 SRV02 dockerd[10923]: time="2018-03-07T00:33:18.904698813-05:00" level=info msg="[graphdriver] using prior storage driver: aufs"
+Mar 07 00:33:19 SRV02 dockerd[10923]: time="2018-03-07T00:33:19.344977585-05:00" level=info msg="Graph migration to content-addressability took 0.00 seconds"
+Mar 07 00:33:19 SRV02 dockerd[10923]: time="2018-03-07T00:33:19.345774153-05:00" level=warning msg="Your kernel does not support swap memory limit"
+Mar 07 00:33:19 SRV02 dockerd[10923]: time="2018-03-07T00:33:19.346235226-05:00" level=warning msg="Your kernel does not support cgroup rt period"
+Mar 07 00:33:19 SRV02 dockerd[10923]: time="2018-03-07T00:33:19.346566120-05:00" level=warning msg="Your kernel does not support cgroup rt runtime"
+Mar 07 00:33:19 SRV02 dockerd[10923]: time="2018-03-07T00:33:19.349953896-05:00" level=info msg="Loading containers: start."
+Mar 07 00:33:19 SRV02 dockerd[10923]: time="2018-03-07T00:33:19.814502801-05:00" level=info msg="Firewalld running: false"
+```
