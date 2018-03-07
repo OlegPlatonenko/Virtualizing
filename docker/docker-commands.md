@@ -302,4 +302,14 @@ brctl show
 bridge name	bridge id		STP enabled	interfaces
 docker0		8000.024220846709	no		
 docker_gwbridge		8000.0242ba139cec	no		vethf5945ab
+
+#More deep info
+ip a
+
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:20:84:67:09 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:20ff:fe84:6709/64 scope link 
+       valid_lft forever preferred_lft forever
 ```
