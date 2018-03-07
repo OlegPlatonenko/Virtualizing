@@ -3,7 +3,6 @@
 ## Single node
 ```bash
 #Docker status (running containers list)
-
 docker ps
 
 CONTAINER ID   IMAGE            COMMAND        CREATED              STATUS              PORTS    NAMES
@@ -12,7 +11,6 @@ ee7949239136   ubuntu:12.10     "/bin/bash"    About a minute ago   Up About a m
 
 ```bash
 #List available downloaded Docker images
-
 docker images
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
@@ -21,13 +19,11 @@ ubuntu              12.10               3e314f95dcac        3 years ago         
 
 ```bash
 #Run docker image
-
 docker run <image repository name>
 ```
 
 ```bash
 #Show cached changes in container
-
 docker diff <container ID>
 
 C /var
@@ -43,29 +39,24 @@ A /var/lib/apt/lists/partial/archive.ubuntu.com_ubuntu_dists_quantal-updates_Rel
 A /var/lib/apt/lists/partial/archive.ubuntu.com_ubuntu_dists_quantal_Release.gpg.reverify
 
 #Commit this changes and create new image
-
 docker commit <container ID> <username/new-image-name>
 
 #Add name to custom image separately
-
 docker image tag <image ID> <username/new-image-name>
 ```
 
 ```bash
 #Run already created container
-
 docker start <container ID>
 ```
 
 ```bash
 #Send command to container
-
 docker exec <container ID> <command>
 ```
 
 ```bash
 #Build image from Dockerfile
-
 docker image build -t <imagename>
 ```
 
@@ -80,29 +71,24 @@ CMD ["node","index.js"]
 
 ```bash
 #Get docker image creating history
-
 docker image history <image ID>
 ```
 
 ```bash
 #Inspect Docker image
-
 docker image inspect <imagename>
 
 #Get info about layers
-
 docker image inspect --format "{{ json .RootFS.Layers }}" <imagename>
 ```
 
 ```bash
 #Remove a few containers
-
 docker rm $(docker -a -f status=exited -q)
 ```
 
 ```bash
 #Map folder to container
-
 docker run -it --name <container-name> -v <Host_shared_file_path>:<Container_folder> <image_name> <command>
 ```
 
@@ -110,7 +96,6 @@ docker run -it --name <container-name> -v <Host_shared_file_path>:<Container_fol
 
 ```bash
 #Init Docker Swarm manager
-
 docker swarm init --advertise-addr $(hostname -i)
 
 Swarm initialized: current node (tjocs7ul557phkmp6mkpjmu3f) is now a manager.
@@ -124,16 +109,118 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 
 ```bash
 #Get list of Swarm nodes
-
 docker node ls
 ```
 
 ```bash
 #Deploy Docker Stack
-
 docker stack deploy --compose-file=<file_name>
 
 #List of Docker Stacks
-
 docker stack ls
+```
+
+## DOCKER DAEMON CONTROL
+
+```bash
+#Common information
+root@SRV02:/home/test/net-sys-administration/powershell# systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; disabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-03-07 00:33:21 EST; 1min 6s ago
+     Docs: https://docs.docker.com
+ Main PID: 10923 (dockerd)
+    Tasks: 28
+   Memory: 68.6M
+      CPU: 910ms
+   CGroup: /system.slice/docker.service
+           ├─10923 /usr/bin/dockerd -H fd://
+           ├─10943 docker-containerd -l unix:///var/run/docker/libcontainerd/docker-containerd.sock --metrics-interval=0 --start-timeout 2m --state-dir /var/run/docker/libcon
+           ├─11999 docker-containerd-shim c1149129c40ed21b153237ed8ad4db40a7c81b944cb97b14820282f9d3241c6d /var/run/docker/libcontainerd/c1149129c40ed21b153237ed8ad4db40a7c81
+           └─12015 bash
+
+Mar 07 00:33:21 SRV02 dockerd[10923]: time="2018-03-07T00:33:21.594871630-05:00" level=info msg="No non-localhost DNS nameservers are left in resolv.conf. Using default exter
+Mar 07 00:33:21 SRV02 dockerd[10923]: time="2018-03-07T00:33:21.595387161-05:00" level=info msg="IPv6 enabled; Adding default IPv6 external servers: [nameserver 2001:4860:486
+Mar 07 00:33:22 SRV02 dockerd[10923]: time="2018-03-07T00:33:22-05:00" level=info msg="Firewalld running: false"
+Mar 07 00:33:41 SRV02 dockerd[10923]: time="2018-03-07T00:33:41.438469484-05:00" level=warning msg="failed to retrieve docker-init version: unknown output format: tini versio
+Mar 07 00:34:01 SRV02 dockerd[10923]: time="2018-03-07T00:34:01.442464404-05:00" level=warning msg="failed to retrieve docker-init version: unknown output format: tini versio
+Mar 07 00:34:07 SRV02 dockerd[10923]: time="2018-03-07T00:34:07.864572609-05:00" level=info msg="No non-localhost DNS nameservers are left in resolv.conf. Using default exter
+Mar 07 00:34:07 SRV02 dockerd[10923]: time="2018-03-07T00:34:07.865138445-05:00" level=info msg="IPv6 enabled; Adding default IPv6 external servers: [nameserver 2001:4860:486
+Mar 07 00:34:08 SRV02 dockerd[10923]: time="2018-03-07T00:34:08.314473343-05:00" level=error msg="Handler for POST /v1.26/containers/bash/start returned error: No such contai
+Mar 07 00:34:15 SRV02 dockerd[10923]: time="2018-03-07T00:34:15.585865352-05:00" level=error msg="Handler for POST /v1.26/containers/c1149129c40e/start returned error: Contai
+Mar 07 00:34:21 SRV02 dockerd[10923]: time="2018-03-07T00:34:21.442816177-05:00" level=warning msg="failed to retrieve docker-init version: unknown output format: tini version"
+
+#Default daemon directory
+root@SRV02:/home/test/net-sys-administration/powershell# systemctl status docker.service | grep loaded
+   Loaded: loaded (/lib/systemd/system/docker.service; disabled; vendor preset: enabled)
+```
+
+### Docker main configuration file - docker.service
+
+**docker.service** has 3 main sections: 
+
+- Unit
+- Service
+- Install
+
+```
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target docker.socket firewalld.service
+Requires=docker.socket
+
+[Service]
+Type=notify
+# the default is not to use systemd for cgroups because the delegate issues still
+# exists and systemd currently does not support the cgroup feature set required
+# for containers run by docker
+EnvironmentFile=-/etc/default/docker
+ExecStart=/usr/bin/dockerd -H fd:// $DOCKER_OPTS
+ExecReload=/bin/kill -s HUP $MAINPID
+LimitNOFILE=1048576
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNPROC=infinity
+LimitCORE=infinity
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### Changing settings
+
+```bash
+#Receive current settings
+root@SRV02:/home/test/net-sys-administration/powershell# systemctl cat docker | grep ExecStart
+ExecStart=/usr/bin/dockerd -H fd:// $DOCKER_OPTS
+
+#Changing settings
+root@SRV02:/home/test/net-sys-administration/powershell# systemctl edit docker
+
+#Enter into opened editor:
+[Service]
+ExecStart=
+ExecStart=/usr/bin/docker daemon -H tcp://0.0.0.:2375 -H unix:///var/run/docker.sock
+
+#If file waas edited manually you need one more command:
+root@SRV02:/home/test/net-sys-administration/powershell# systemctl daemon-reload
+
+#Check override file
+root@SRV02:/home/test/net-sys-administration/powershell# cat /etc/systemd/system/docker.service.d/override.conf 
+[Service]
+ExecStart=
+ExecStart=/usr/bin/docker daemon -H tcp://0.0.0.:2375 -H unix:///var/run/docker.sock
+
+#Restart service and check status
+root@SRV02:/home/test/net-sys-administration/powershell# systemctl restart docker
+root@SRV02:/home/test/net-sys-administration/powershell# systemctl status docker
 ```
