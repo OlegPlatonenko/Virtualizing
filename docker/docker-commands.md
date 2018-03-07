@@ -240,3 +240,66 @@ Mar 07 00:33:19 SRV02 dockerd[10923]: time="2018-03-07T00:33:19.346566120-05:00"
 Mar 07 00:33:19 SRV02 dockerd[10923]: time="2018-03-07T00:33:19.349953896-05:00" level=info msg="Loading containers: start."
 Mar 07 00:33:19 SRV02 dockerd[10923]: time="2018-03-07T00:33:19.814502801-05:00" level=info msg="Firewalld running: false"
 ```
+
+## DOCKER NETWORKING
+
+```bash
+#List Docker networks
+docker network ls
+
+NETWORK ID          NAME                DRIVER              SCOPE
+2f220bd57a11        bridge              bridge              local
+db20efe9b8d3        docker_gwbridge     bridge              local
+4385f6264a19        host                host                local
+v5soowd10tjf        ingress             overlay             swarm
+92d92d8c0e5d        none                null                local
+
+#All networks which use bridge driver are based locally
+```
+
+```
+#Network inspection
+docker inspect <network_name>
+
+[
+    {
+        "Name": "bridge",
+        "Id": "2f220bd57a110050db07b6f0feb1471329efd370eaf6d1ac4fb8a53de49c7e8d",
+        "Created": "2018-03-07T00:54:26.921640162-05:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.17.0.0/16",
+                    "Gateway": "172.17.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Containers": {},
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+```
+
+```bash
+#Get list of all Linux network bridges
+brctl show
+
+bridge name	bridge id		STP enabled	interfaces
+docker0		8000.024220846709	no		
+docker_gwbridge		8000.0242ba139cec	no		vethf5945ab
+```
