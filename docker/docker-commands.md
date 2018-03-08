@@ -331,6 +331,8 @@ docker0		        8000.024220846709	    no		      veth5800aef
 docker_gwbridge		8000.0242ba139cec	    no		      vethf5945ab
 
 #Look more deeply to docker0 bridge and see that it is connected no new createdcontainer
+root@SRV02:/home/test/net-sys-administration# docker network inspect bridge
+...
 "Containers": {
             "e2e14923fd92287881088f7a543df21a423881100c95d12c29cf3d1cc544ba74": {
                 "Name": "competent_ptolemy",
@@ -340,6 +342,7 @@ docker_gwbridge		8000.0242ba139cec	    no		      vethf5945ab
                 "IPv6Address": ""
             }
         },
+...
 
 #Pinging container
 root@SRV02:/home/test/net-sys-administration# ping -c5 172.17.0.2
