@@ -313,3 +313,46 @@ ip a
     inet6 fe80::42:20ff:fe84:6709/64 scope link 
        valid_lft forever preferred_lft forever
 ```
+
+```bash
+#Create new container
+root@SRV02:/home/test/net-sys-administration# docker run -dt ubuntu sleep infinity
+e2e14923fd92287881088f7a543df21a423881100c95d12c29cf3d1cc544ba74
+
+#Review that container is created
+root@SRV02:/home/test/net-sys-administration# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+e2e14923fd92        ubuntu              "sleep infinity"    22 seconds ago      Up 20 seconds                           competent_ptolemy
+
+#Inscpect bridges
+root@SRV02:/home/test/net-sys-administration# brctl show
+bridge name	          bridge id		    STP enabled	      interfaces
+docker0		        8000.024220846709	    no		      veth5800aef
+docker_gwbridge		8000.0242ba139cec	    no		      vethf5945ab
+
+#Look more deeply to docker0 bridge and see that it is connected no new createdcontainer
+"Containers": {
+            "e2e14923fd92287881088f7a543df21a423881100c95d12c29cf3d1cc544ba74": {
+                "Name": "competent_ptolemy",
+                "EndpointID": "e3dcdaecfdcecd40b442692bef1e389eee8b9f21494653177a2e6208270fdee2",
+                "MacAddress": "02:42:ac:11:00:02",
+                "IPv4Address": "172.17.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+
+#Pinging container
+root@SRV02:/home/test/net-sys-administration# ping -c5 172.17.0.2
+PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
+64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.063 ms
+64 bytes from 172.17.0.2: icmp_seq=2 ttl=64 time=0.054 ms
+64 bytes from 172.17.0.2: icmp_seq=3 ttl=64 time=0.043 ms
+64 bytes from 172.17.0.2: icmp_seq=4 ttl=64 time=0.044 ms
+64 bytes from 172.17.0.2: icmp_seq=5 ttl=64 time=0.044 ms
+
+--- 172.17.0.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4052ms
+rtt min/avg/max/mdev = 0.043/0.049/0.063/0.011 ms
+```
+
+
