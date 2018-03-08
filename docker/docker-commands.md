@@ -300,8 +300,8 @@ docker inspect <network_name>
 brctl show
 
 bridge name	       bridge id		   STP enabled	  interfaces
-docker0            8000.024220846709	   no		
-docker_gwbridge    8000.0242ba139cec	   no		  vethf5945ab
+docker0            8000.024220846709       no		
+docker_gwbridge    8000.0242ba139cec       no         vethf5945ab
 
 #More deep info
 ip a
