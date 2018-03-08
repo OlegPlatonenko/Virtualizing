@@ -39,7 +39,7 @@ iface eth0 inet static
 ## 3. INSTALLERS
 
 wget  -O /home/omio/Desktop/ "http://thecanadiantestbox.x10.mx/CC.zip" - download file from internet
-tar xvzf file.tar.gz - unzip file
+tar -xvzf file.tar.gz - unzip file
 
 sudo dpkg -i /path/to/file *.deb
 
