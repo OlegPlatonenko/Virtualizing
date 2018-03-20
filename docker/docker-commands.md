@@ -358,4 +358,38 @@ PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.043/0.049/0.063/0.011 ms
 ```
 
+### NAT on Docker networking
+
+```bash
+#Setting port forwarding due container creation
+root@SRV02:/home/ docker run --name web1 -dp 8080:80 nginx
+
+docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+a69188d6cec7        nginx               "nginx -g 'daemon ..."   6 seconds ago       Up 4 seconds        0.0.0.0:8080->80/tcp   web1
+```
+
+### Network overlay
+
+```bash
+#Creating overlay network
+root@SRV02:~ docker network create -d overlay overnet
+majqxruf48l6qmyvkaca1ihf7
+
+#Listing networks
+root@SRV02:~ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+2d8333332c85        bridge              bridge              local
+db20efe9b8d3        docker_gwbridge     bridge              local
+4385f6264a19        host                host                local
+v5soowd10tjf        ingress             overlay             swarm
+92d92d8c0e5d        none                null                local
+majqxruf48l6        overnet             overlay             swarm
+
+root@SRV02:~ docker service create --name myservice \
+> --network overnet \
+> --replicas 2 \
+> ubuntu sleep infinity
+14mgbskw2zntiyzxgejv0pdxz
+```
 
