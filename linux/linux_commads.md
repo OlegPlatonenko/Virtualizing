@@ -2,7 +2,11 @@
 
 -----------------------------------------
 
-## 1. SERVICES/PROCESSES
+## TABLE OF CONTENTS
+- [1.  SERVICES/PROCESSES](#ServProc)
+- [14. PERMISSIONS](#Perm)
+
+## 1. SERVICES/PROCESSES <a name="ServProc"></a>
 
 service --status-all - get status list
 ps fawx - return list of processes
@@ -227,7 +231,42 @@ sudo chsh user_name
 #Change detail for user
 sudo chfn user_name
 ```
-## 14. ADD USER VIA POWERSHELL
+## 14. PERMISSIONS <a name="Perm"></a>
+
+### Permission types
+
+- Read
+- Write
+- Execute
+
+### Users
+
+- Users info is stored at **/etc/passwd** file
+- Provided info
+    * user_name
+    * UID
+    * GroupID
+    * home_directory
+
+```
+root@SRV02:/home/test/net-sys-administration# cat /etc/passwd | grep test
+test:x:1000:1000:test,,,:/home/test:/bin/bash
+testtest:x:1001:1001:thisis test user:/home/testtest:
+```
+
+### Groups
+
+- Groups info is stored at **/etc/group** file
+- Provided info
+    * group_name
+    * GroupID
+    * members username
+
+```
+adm:x:4:syslog,test
+syslog:x:108:
+```
+
 
 
 
