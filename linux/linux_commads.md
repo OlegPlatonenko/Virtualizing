@@ -267,6 +267,36 @@ adm:x:4:syslog,test
 syslog:x:108:
 ```
 
+### Permission review
+
+```
+root@SRV02:~# ls -l /etc/passwd
+-rw-r--r-- 1 root root 2972 Mar  5 21:46 /etc/passwd
+
+```
+
+- **-**     passwd is regular file
+- **rw-**   permission for the owner
+- **r--**   permission for the group
+- **r--**   all other users
+- **root**  owner
+- **root**  group which users can read
+
+```
+root@SRV02:~# ls -l /bin/ls
+-rwxr-xr-x 1 root root 129696 Oct  4 15:56 /bin/ls
+```
+- **r-x**  execution permission (read and execute)
+
+```
+root@SRV02:~# ls -l /
+drwxr-xr-x   2 root root 12288 Mar  2 10:35 bin
+```
+- **d**    directory
+
+### Permission change
+
+
 
 
 
