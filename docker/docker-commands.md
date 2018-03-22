@@ -370,6 +370,15 @@ rtt min/avg/max/mdev = 0.043/0.049/0.063/0.011 ms
 
 #Create Docker network
 docker network create net_name
+
+#Create a container with adding to specific network
+docker create -it --net net_name --name container_name ubuntu
+
+#Connect container to another network
+docker network connect net_name container_name
+
+#disconnect container to another network
+docker network disconnect net_name container_name
 ```
 
 
