@@ -269,6 +269,123 @@ adm:x:4:syslog,test
 syslog:x:108:
 ```
 
+### Permission review
+
+```
+root@SRV02:~# ls -l /etc/passwd
+-rw-r--r-- 1 root root 2972 Mar  5 21:46 /etc/passwd
+
+```
+
+- **-**     passwd is regular file
+- **rw-**   permission for the owner
+- **r--**   permission for the group
+- **r--**   all other users
+- **root**  owner
+- **root**  group which users can read
+
+```
+root@SRV02:~# ls -l /bin/ls
+-rwxr-xr-x 1 root root 129696 Oct  4 15:56 /bin/ls
+```
+- **r-x**  execution permission (read and execute)
+
+```
+root@SRV02:~# ls -l /
+drwxr-xr-x   2 root root 12288 Mar  2 10:35 bin
+```
+- **d**    directory
+
+### Permission change (chmod)
+
+```
+root@SRV02:~# touch script.sh
+root@SRV02:~# ls
+example-voting-app  script.sh
+root@SRV02:~# ls -l script.sh 
+-rw-r--r-- 1 root root 0 Mar 19 22:15 script.sh
+root@SRV02:~# chmod 755 script.sh 
+root@SRV02:~# ls -l script.sh 
+-rwxr-xr-x 1 root root 0 Mar 19 22:15 script.sh
+```
+
+- CHMOD settings
+    * 0 No permissions granted
+    * 4 Execute
+    * 2 Write
+    * 1 Read
+
+- Another option
+```
+root@SRV02:~# chmod u+rwx,g+rw,o+rx script.sh 
+root@SRV02:~# ls -l script.sh 
+-rwxrwxr-x 1 root root 0 Mar 19 22:15 script.sh
+
+root@SRV02:~# chmod u+rwx,go+rw script.sh 
+
+root@SRV02:~# chmod go-w script.sh 
+root@SRV02:~# ls -l script.sh 
+-rwxr-xr-x 1 root root 0 Mar 19 22:15 script.sh
+```
+
+### Default permissions
+
+- Use umask command to manage def permissions
+
+```
+root@SRV02:~# umask 777
+root@SRV02:~# touch script1.sh
+root@SRV02:~# ls -l
+total 8
+drwxr-xr-x 7 root root 4096 Mar  2 07:30 example-voting-app
+---------- 1 root root    0 Mar 19 22:25 script1.sh
+-rwxr-xr-x 1 root root   11 Mar 19 22:22 script.sh
+```
+
+- To set *umask* forewer add it to *~/.bashrc* file
+
+### Access control lists (ACL)
+
+Use **getfacl** command to view ACL's
+
+```
+root@SRV02:~# getfacl script.sh 
+# file: script.sh
+# owner: root
+# group: root
+user::rwx
+group::r-x
+other::r-x
+```
+
+Use **setfacl** command to modify ACL
+- **-m** flag to add permission
+- **-x** flag to remove permission
+
+```
+root@SRV02:~# setfacl -m u:test:rwx script.sh 
+root@SRV02:~# getfacl script.sh 
+# file: script.sh
+# owner: root
+# group: root
+user::rwx
+user:test:rwx
+group::r-x
+mask::rwx
+other::r-x
+```
+
+```
+root@SRV02:~# ls -l script.sh 
+-rwxrwxr-x+ 1 root root 11 Mar 19 22:22 script.sh
+```
+- **+** - ACL is added to the file
+
+
+
+
+
+
 
 
 
