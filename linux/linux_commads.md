@@ -20,6 +20,8 @@ ip route | grep default - get default gateway
 cat /etc/resolv.conf - DNS info
 
 ```bash
+/etc/network/interfaces
+
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
