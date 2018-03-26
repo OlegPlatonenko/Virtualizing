@@ -413,5 +413,17 @@ end
 
 ### BGP Session establishment
 
-1. **BGP IDLE** - nothing to happend
+1. **BGP IDLE** - nothing to happend (no route to BGP neighbor)
+2. **CONNECT** - listen 179-TCP port 
+3. **ACTIVE** - send packets on 179 TCP-port
+    R1 send **TCP-SYN** to R2 179-port - initiating TCP session
+    R2 send **TCP-ACK** and own **TCP-SYN** to R1 
+    R1 send **TCP-ACK** to R2
+4. **OPEN** - messages send only once at the beginning of BGP-session
+    **OPENSENT** - message sent
+    **OPENCONFIRM** - message received
+    After receiving *OPEN* from R1, R2 send own *OPEN* and **KEEPALIVE**
+5. **KEEPALIVE** - signal for R1 to go to **ESTABLISHED** state
+6. **UPDATE** - route information exchange
+
 
