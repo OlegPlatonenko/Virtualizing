@@ -10,6 +10,7 @@
 
 service --status-all - get status list
 ps fawx - return list of processes
+ps aux  - ---"---
 
 ## 2. NETWORK
 
