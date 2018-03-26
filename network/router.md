@@ -395,3 +395,23 @@ end
 
 ## BGP (Border Gateway Protocol)
  
+- Each AS (Autonomous sytem) has its own number
+- BGP uses TCP
+
+### AS numbers
+
+- **64512 - 65534** - for private AS
+- **64496 - 64511** - for examples and Documentation
+
+- **PA-address (Provider Aggregadable)** - public IP-address range from provider
+- **PI-address (Provider Independent)** - public IP-address range, are provided by LIR 9local Internet registry)
+
+### BGP Architecture
+
+- IBGP - run BGP routes in internal network
+- EBGP - BGP between AS
+
+### BGP Session establishment
+
+1. **BGP IDLE** - nothing to happend
+
