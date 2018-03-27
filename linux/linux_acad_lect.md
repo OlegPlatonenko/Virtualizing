@@ -232,6 +232,10 @@ apt update
 
 #Update system
 apt upgrade
+apr -f upgrade
+
+-f - fix dependencies, which needed
+
 apt full-upgrade
 
 #Search for package to install
@@ -248,5 +252,29 @@ apt remove --purge package_name
 
 #Remove unused files
 apt autoremove
+```
 
+### dpkg 
 
+```bash
+#Check package installed
+dpkg --get-selections
+
+#Get info from .deb file
+dpkg-deb -I package_name (.deb file)
+
+#See what package contains
+dpkq-deb --contents package_name (.deb file)
+
+#Install software
+dpkg -i package_name (.deb file)
+
+#Remove software
+dpkg -r package_name
+dpkg -P package_name
+
+-P - delete all configuration files
+
+#Check if package installed
+dpkg -l package_name
+```
