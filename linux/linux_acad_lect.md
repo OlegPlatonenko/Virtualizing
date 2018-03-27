@@ -153,6 +153,8 @@ Port number | Protocol | Server Application   |
 ### YUM commands
 
 ```bash
+#YUM repository folder
+cd /etc/yum.repos.d
 
 #Search for package
 yum serach search_word
@@ -181,9 +183,6 @@ yum list installed package_name
 
 #get repository list
 yum repolist
-
-#YUM repository folder
-cd /etc/yum.repos.d
 
 #Clear yum updates database
 yum clean all
@@ -221,4 +220,33 @@ rpm -Uvh package_name (rpm file)
 #Remove sotware
 rpm -e --test package_name
 ```
+
+### APT
+
+```bash
+#APT repository file
+/etc/apt/sources.list
+
+#Update repository info
+apt update
+
+#Update system
+apt upgrade
+apt full-upgrade
+
+#Search for package to install
+apt-cache search package_name
+
+#Install software
+apt install package_name
+
+#Remove software
+apt remove package_name
+apt remove --purge package_name
+
+--purge - remove all config files
+
+#Remove unused files
+apt autoremove
+
 
