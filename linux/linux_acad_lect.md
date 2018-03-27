@@ -1,0 +1,158 @@
+# Linux Essentials
+
+## 1. Typical commands
+
+- **Alt + F2** - open command box
+
+## 2. Linux concepts
+
+- GNU is not UNIX
+- GNU/Linux - makes fully operating system
+
+- Soft should be free
+- All apps shoul be distributed with source code
+
+## 3. Linux distributions
+
+### Linux distribution architecture
+
+1. Linux Cernel
+2. Core utilities (bash, networking, file system tools)
+3. Supplemental Software
+4. System Services
+5. Software Management
+
+### Common linux distribution
+
+- Slackware - Compile yourself all soft
+- Debian - Servers
+- RedHat - Servers, DataCenter
+- SUSE - Server, DataCenter
+- Ubuntu - Usability, Desktop
+- Fedora - Desktop
+- OpenSUSE - Desktop
+- CentOS -  Servers
+
+### Embedded Systems
+
+- SmartTV
+- Vehicle
+- Set-top-box
+- GPS
+- Medical
+- Space
+- Networking
+
+## 4. Open source applications
+
+### Environments
+
+- GNOME Classic (RH7, CentOS7, Ubuntu)
+- KDE (OpenSUSE)
+- XFCE (Fedora)
+- Enlightement
+- LXDE
+
+### User Applications
+
+- Firefox
+- Terminal
+- Libre Office (Open Office)
+- GIMP (graphic Image Manipulation Program)
+
+### Server Applications
+
+Server is a powerful computer that 'serves' data from itself to client systems
+
+#### Common network ports
+
+```
+-----------------------------------------------
+Port number | Protocol | Server Application   |
+-----------------------------------------------
+|    22     |  SSH     |    OpenSSH           |
+|    23     | TELNET   |    telnetd           |
+|    25     |  SMTP    | PostFix, Sendmail    |
+|    53     |  DNS     | BIND, named, unbound |
+|    67     |  BOOTP   |   dnsmasq, dhcpd     |
+|    80     |  HTTP    |   Apache, nginx      |
+|    443    | HTTPS    |   Apache, nginx      |
+-----------------------------------------------
+```
+
+#### Applications
+
+1. File sharing - NFS, Samba/CIFS
+2. Database Server - MySQL/MariaDB/PostgreSQL
+3. Printing Server - CUPS
+
+
+## 5. Development languages
+
+- Cathedral Model
+- Bazaar Model
+
+### Compiled Languages
+
+- C
+- C++
+
+### Interpreter Languages
+
+- Python
+- Java
+- Perl
+- PHP
+
+### Assembly Languages
+
+## 6. Package management Tolls
+
+### a) Package parts
+
+- Dependency information (software, libraries)
+- Version information
+- Architecture information 932/64 bit, ARM, RapsberryPi)
+
+### b) Installation way
+
+- **Installing from Source** *tar/gz files* (Slack,Gentoo Linux distributions)
+- **Pre-built Packages** *.RPM/.deb files*
+
+#### RPM (RedHat package manager) .rpm
+
+##### Distributions
+
+- RedHat Enterprise Linux
+- Fedora
+- CentOS
+- SUSE
+- openSUSE
+
+##### Package managers
+
+- YUM (command line) - RH Ent, Fedora, CentOS
+- Zyper (command line) - SUSE, openSUSE
+- GNOME Software (graphical) - RH Ent, Fedora, CentOS
+- YaST (graphical) - SUSE, openSUSE
+
+#### Debian .deb
+
+##### Distributions
+
+- Debian
+- Ubuntu
+- LinuxMint
+- Elementary OS
+
+##### Package managers
+
+- Aptitude (command line)
+- GNOME Software (graphical)
+
+
+
+
+
+
+
