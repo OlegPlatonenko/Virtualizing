@@ -191,3 +191,34 @@ yum clean all
 #System update
 yum update
 ```
+
+### RPM
+
+```bash
+#Install package
+rpm -ivh package_name (rpm file)
+
+- i - install
+- v - Verbose
+- h - progress bar (command operation
+
+#Query package
+rpm -q package_name
+rpm -qi package_name
+rpm -ql package_name
+rpm -qd package_name
+rpm -qR package_name
+rpm -qpR package_name (rpm file)
+
+- i - more details
+- l - list of files installed
+- d - documentation
+- R - requirements (dependencies)
+
+#Software update
+rpm -Uvh package_name (rpm file)
+
+#Remove sotware
+rpm -e --test package_name
+```
+
