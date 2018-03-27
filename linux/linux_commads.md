@@ -20,6 +20,15 @@ netstat -a - list of ports
 ip route | grep default - get default gateway
 cat /etc/resolv.conf - DNS info
 
+### Disable wain online network service
+
+```
+systemctl disable systemd-networkd-wait-online.service
+systemctl mask systemd-networkd-wait-online.service
+```
+
+### Network config file
+
 ```bash
 /etc/network/interfaces
 
@@ -209,7 +218,7 @@ sudo useradd new_username
 
 ```bash
 #Delete user
-sudo userdael user_name
+sudo userdel user_name
 
 #Delete home directory for user account
 sudo rm -r /home/user_name
@@ -381,12 +390,3 @@ root@SRV02:~# ls -l script.sh
 -rwxrwxr-x+ 1 root root 11 Mar 19 22:22 script.sh
 ```
 - **+** - ACL is added to the file
-
-
-
-
-
-
-
-
-
