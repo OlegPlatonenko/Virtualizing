@@ -106,7 +106,7 @@ Port number | Protocol | Server Application   |
 
 ### Assembly Languages
 
-## 6. Package management Tolls
+## 6. Package management Tools
 
 ### a) Package parts
 
@@ -121,7 +121,7 @@ Port number | Protocol | Server Application   |
 
 #### RPM (RedHat package manager) .rpm
 
-##### Distributions
+**Distributions**
 
 - RedHat Enterprise Linux
 - Fedora
@@ -129,7 +129,7 @@ Port number | Protocol | Server Application   |
 - SUSE
 - openSUSE
 
-##### Package managers
+**Package managers**
 
 - YUM (command line) - RH Ent, Fedora, CentOS
 - Zyper (command line) - SUSE, openSUSE
@@ -138,21 +138,56 @@ Port number | Protocol | Server Application   |
 
 #### Debian .deb
 
-##### Distributions
+**Distributions**
 
 - Debian
 - Ubuntu
 - LinuxMint
 - Elementary OS
 
-##### Package managers
+**Package managers**
 
 - Aptitude (command line)
 - GNOME Software (graphical)
 
+### YUM commands
 
+```bash
 
+#Search for package
+yum serach search_word
 
+#Get info for package
+yum info package_name
 
+#Install package
+yum install package_name
 
+#Check installation
+yum list installed package_name
 
+#See package dependencies
+yum deplist package_name
+
+#Remove software
+yum remove package_name
+
+#Remove software with not used dependencies
+yum autoremove package_name
+
+#Check for deleted software
+which package_name
+yum list installed package_name
+
+#get repository list
+yum repolist
+
+#YUM repository folder
+cd /etc/yum.repos.d
+
+#Clear yum updates database
+yum clean all
+
+#System update
+yum update
+```
