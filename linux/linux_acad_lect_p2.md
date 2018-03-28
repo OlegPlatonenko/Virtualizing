@@ -229,13 +229,13 @@ ls \
 
 ### Formatting commands
 
-- ls - l Domuments/
+ls - l Domuments/
 
-- **ls** - command - *What to do?*
-- **-l** - paramenter - *How to do it?*
-- **Documents/** - argument - *What to do it on?*
+**ls** - command - *What to do?*
+**-l** - paramenter - *How to do it?*
+**Documents/** - argument - *What to do it on?*
 
-### Search for foles and dirs
+### Search for files and dirs
 
 ```bash
 #Search for files and folders
@@ -245,6 +245,69 @@ find containing_folder -name 'file_name'
 #Search comamnds
 whereis command_name
 ```
+
+## 2.man
+
+### Manual Sections
+
+- 1 - Executable programs and shell commands
+- 2 - System calls provided by kernel
+- 3 - Library calls provided by program libraries
+- 4 - Device file (usually stored in /dev)
+- 5 - File formats
+- 6 - Games
+- 7 - Miscellaneous
+- 8 - Sysadmin commands
+- 9 - Kernel routines
+
+```bash
+man <command_name>
+man <section_number> <config file>
+
+#F.e.
+man 5 passwd
+
+#If we dont know which section to use
+whatis <command_name/config file>
+
+#F.e.
+whatis passwd
+man -f passwd
+
+#Search for command by word
+apropos <command_word>
+man -k <command_word>
+
+#Search in man
+/
+n - next item
+? - previous
+```
+
+## 3. info
+
+### Navigation
+
+- ? - Display help information
+- N - Moves to the next level
+- P - Moves back
+- U - Moves up one level
+- Arrow keys - move the cursos around the screen
+- PgUp PgDn  - Scroll up/down within node
+- Enter - Moves to a new selected node
+- L - Display the last info page
+- T - Display the top page for topic
+- Q - Exits from info page system 
+
+
+## 4. More local documentation
+
+### Common locations
+
+- **/usr/doc/package_name**
+- **/usr/share/doc/packagename**
+- **/usr/share/doc/packages/packagename**
+
 
 
 
