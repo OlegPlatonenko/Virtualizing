@@ -229,11 +229,11 @@ ls \
 
 ### Formatting commands
 
-ls - l Domuments/
+- ls - l Domuments/
 
-**ls** - command - *What to do?*
-**-l** - paramenter - *How to do it?*
-**Documents/** - argument - *What to do it on?*
+- **ls** - command - *What to do?*
+- **-l** - paramenter - *How to do it?*
+- **Documents/** - argument - *What to do it on?*
 
 ### Search for foles and dirs
 
