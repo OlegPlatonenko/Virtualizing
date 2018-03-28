@@ -1,4 +1,4 @@
-# Linux Essentials
+# Linux Essentials Part 1
 
 ## 1. Typical commands
 
