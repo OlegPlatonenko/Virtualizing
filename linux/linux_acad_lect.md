@@ -3,6 +3,7 @@
 ## 1. Typical commands
 
 - **Alt + F2** - open command box
+- **Ctrl+Alt+F(1-7) - open Terminal
 
 ## 2. Linux concepts
 
@@ -278,3 +279,55 @@ dpkg -P package_name
 #Check if package installed
 dpkg -l package_name
 ```
+
+## 7. Open Source Licensing
+
+### Software licensing models
+
+1. Proprietary Software Models
+
+- Commercial Software
+- Shareware Software
+- Freeware Software
+
+2. Open Source Software Licensing
+
+### Free Software Foundation principals
+
+- Free to use soft in every purposes
+- Free to modify code
+- Free to redistribute the soft
+- Free to redistribute modified soft
+
+### Open Source Software Licensing Types
+
+#### General Public License (GPL)
+
+- Any soft that comes from GPL licensed soft must also be released as GPL licensed
+
+- GPLv2
+- GPLv3
+
+- **LGPL** - Lesser GPL - for libraries
+- **FDL** - Free Documentation License
+
+#### Open Source Initiative
+
+You may license your code with different license (not GPL) and do not share your code.
+
+- **Licenses list**
+- GPL
+- Apache
+- BSD
+- FreeBSD
+- MPL (Mozilla Public License)
+- MIT License
+
+#### Creatice Commons
+
+### Open Source Business Models
+
+- Donations
+- Bounties
+- Hardware Vendors
+- Paid Support (Cygnus, RedHat, SUSE)
