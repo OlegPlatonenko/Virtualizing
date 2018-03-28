@@ -395,3 +395,35 @@ end
 
 ## BGP (Border Gateway Protocol)
  
+- Each AS (Autonomous sytem) has its own number
+- BGP uses TCP
+
+### AS numbers
+
+- **64512 - 65534** - for private AS
+- **64496 - 64511** - for examples and Documentation
+
+- **PA-address (Provider Aggregadable)** - public IP-address range from provider
+- **PI-address (Provider Independent)** - public IP-address range, are provided by LIR 9local Internet registry)
+
+### BGP Architecture
+
+- IBGP - run BGP routes in internal network
+- EBGP - BGP between AS
+
+### BGP Session establishment
+
+1. **BGP IDLE** - nothing to happend (no route to BGP neighbor)
+2. **CONNECT** - listen 179-TCP port 
+3. **ACTIVE** - send packets on 179 TCP-port
+    R1 send **TCP-SYN** to R2 179-port - initiating TCP session
+    R2 send **TCP-ACK** and own **TCP-SYN** to R1 
+    R1 send **TCP-ACK** to R2
+4. **OPEN** - messages send only once at the beginning of BGP-session
+    **OPENSENT** - message sent
+    **OPENCONFIRM** - message received
+    After receiving *OPEN* from R1, R2 send own *OPEN* and **KEEPALIVE**
+5. **KEEPALIVE** - signal for R1 to go to **ESTABLISHED** state
+6. **UPDATE** - route information exchange
+
+

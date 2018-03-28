@@ -94,6 +94,8 @@ docker run -it --name <container-name> -v <Host_shared_file_path>:<Container_fol
 
 ## Docker Swarm
 
+Services were a new concept in Docker 1.12. They work with swarms and are intended for long-running containers.
+
 ```bash
 #Init Docker Swarm manager
 docker swarm init --advertise-addr $(hostname -i)
@@ -118,6 +120,15 @@ docker stack deploy --compose-file=<file_name>
 
 #List of Docker Stacks
 docker stack ls
+
+#Deploy Docker service (application as a service)
+docker service create --name app_name image_name
+
+#Replicate services 
+docker service update --replicas 7 app_name
+
+#Temporary stop the node (for maintanence)
+docker node update --availability drain your_node_id
 ```
 
 ## DOCKER DAEMON CONTROL
@@ -356,6 +367,18 @@ PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
 --- 172.17.0.2 ping statistics ---
 5 packets transmitted, 5 received, 0% packet loss, time 4052ms
 rtt min/avg/max/mdev = 0.043/0.049/0.063/0.011 ms
+
+#Create Docker network
+docker network create net_name
+
+#Create a container with adding to specific network
+docker create -it --net net_name --name container_name ubuntu
+
+#Connect container to another network
+docker network connect net_name container_name
+
+#disconnect container to another network
+docker network disconnect net_name container_name
 ```
 
 ### NAT on Docker networking
