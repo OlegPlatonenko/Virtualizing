@@ -308,6 +308,69 @@ n - next item
 - **/usr/share/doc/packagename**
 - **/usr/share/doc/packages/packagename**
 
+## 5. File system
+
+- Filesystem Hierarchy Standard (FHS)
+- http://www.pathname.com/fhs
+
+### Directory structure
+
+- 'inverted tree' with a single root
+- Case sensitive
+- Paths are deliminated by a / (forward slash)
+- Any folder or file whose name is preceded by a . (dot) are hidden
+- A single . (dot) in a directory refers tj the current directory
+- A double .. (dot) refers to the parent or directory up in the hierarchy
+
+### Linux file sysytem main directories
+
+- **bin** - contains executable files
+- **boot** - booting files + Linux kernel
+- **dev** - devices (HDDs, Keyboards, etc.)
+- **etc** - system services and system info
+- **home** - regular user has folders
+- **lib, lib64** - library files
+- **media** - cd mounted
+- **mnt**- connect other harddrives
+- **opt** - optional location for applications
+- **proc** - info about running linux system
+- **root** - home directory for root 
+- **sbin** - sysadmin tools location
+- **srv** - server applications location
+- **sys** - information about hardware on the system
+- **tmp** - store temporary data
+- **usr** - contains the mirror of root (/) directory tree
+- **var** - contain logs, printer files etc.
+
+## 6. Files manipulation
+
+```bash
+#Create folder
+mkdir <folder_name1> <folder_name2>
+mkdir -p <parent_folder>/<sub_folder>
+
+#remove folder
+rmdir <folder_name>
+
+#Create file
+touch <file_name>
+
+#Copy file
+cp <file_name> <destination>
+
+-R - copy folder recursivly
+-v - show what is copying
+
+#Move file
+mv <file_name> <destination>
+
+#Renaming
+mv <old_name> <new_name>
+
+#Deleting
+rm <file/folder_name>
+-r - deleting recursivly
+```
 
 
 
