@@ -372,6 +372,181 @@ rm <file/folder_name>
 -r - deleting recursivly
 ```
 
+## 7. Archivation
+
+### tar (tape archive)
+
+```bash
+#Creating archive
+
+tar -cf <Archive name> <Archiving folder name> (.tar extension)
+
+- c - Archive
+- f - Name archive
+
+#Look inside archive
+tar -tf <Archive>
+
+- t - look inside archive
+
+#Extract content
+tar -xf <Archive_name>
+
+- x - extract content
+
+#Compress file
+tar -czf <Archive_name> (.tgz or .gz extension)
+
+- z - use gzip compression
+
+tar -cjf <Archive_name> (.bz2 extension)
+
+- j - compress with bzip2
+
+#Extract archive
+tar -xzf <Archive_name>
+tar -xvjf <Archive_name> 
+
+- v - Verbose
+
+#ZIP file
+zip -r <Archive_name> <Archiving_content>
+gzip <File_name>
+bzip2 <File_name>
+
+- r - Recursivly
+
+#Unzip file
+unzip <Archive_file>
+gunzip <Archive_file>
+bunzip2 <Archive_file>
+```
+
+## 8. Viewing and Analyzing Text
+
+```bash
+#Get file content and scroll it
+less <File_name>
+
+#View first lines of the file
+head -n <Number> <File_name>
+
+#View last lines of the file
+tail -n <Number> <File_name>
+
+#Follow file with it gets updated
+tail -f <File_name>
+
+#F.e.
+tail -f /var/log/secure
+```
+
+```bash
+#Redirect stdout (standard output) to text file
+echo "Hello Linux!" > Hello.txt
+
+##Uppend stdout to text file
+echo "Hi" >> Hello.txt
+
+#Remove text
+cut -d" " -f <Number-range> <File_name>
+
+- d - delimiter symbol (symbol, which separates the groups)
+- f - Range of fields which needs to keep
+
+#Sort file content
+sort <File_name>
+
+#Get number of lines, words and characters
+wc -lw <File_name>
+
+- l - number of lines
+- w - number of words
+```
+
+### grep
+
+```bash
+#Simple grep using
+grep <pattern> <file to search>
+- i - cases insensitive
+
+#Search patterns
+grep -i '^error' file.txt
+- ^ - beginning of the line
+
+grep -i 'error$' file.txt
+- $ - end of the line
+
+grep '^[ABCabc]' file.txt
+- [] - search special sharacters
+
+
+grep '^[^ABCabc]' file.txt
+- [^] - exclude symbols from search
+
+grep '^.[h]' file.txt
+- . - replace one unknown character
+
+grep 'www*' file.txt
+- * - exactly what before the star
+
+#Search for word (boundary)
+grep '\b<serach_word>\b' file.txt
+- \b \b - boundaries
+```
+
+## 9. vi/vim Text editor
+
+```bash
+
+- i       - insert mode
+- esc     - leave insert mode
+- o       - enter below current line
+- hjkl    - move cursor
+- v       - visual mode
+- y       - yank/copy
+- p       - put/paste
+- u       - undo
+- :w      - save
+- Shift+q - go down
+- gg      - go up
+- Shift+a - uppend
+- d       - delete
+- :q      - quit
+
+#Vim tutor
+vimtutor
+```
+
+## 10. Scripting
+
+```bash
+#!/bin/bash
+
+#Comments
+```
+
+```bash
+chmod +x <File to change the mode>
+```
+
+```bash
+if <something>
+then
+    <action>
+fi
+
+if <something>
+then
+    <action1>
+else
+    <action2>
+fi
+```
+
+
+
 
 
 
