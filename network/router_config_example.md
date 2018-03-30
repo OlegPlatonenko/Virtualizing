@@ -1,4 +1,4 @@
-<span style="color:red">
+```cisco
 !
 !
 service timestamps debug datetime msec
@@ -26,4 +26,4 @@ line aux 0
 !
 !
 end
-</span>
+```
