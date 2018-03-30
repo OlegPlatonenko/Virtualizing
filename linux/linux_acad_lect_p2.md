@@ -545,6 +545,232 @@ else
 fi
 ```
 
+```bash
+for <variable> in <set of values>
+do
+    <action>
+done
+```
+
+## 11. Lifecycle management
+
+### Lifecycle steps
+
+- Design
+- Develop
+- Deploy
+- Manage
+- Retire
+
+## 12. Hardware
+
+```bash
+#CPU info file
+cat /proc/cpuinfo
+
+#RAM
+free -m
+free -g
+- m - show megabytes
+- g - show gigabytes
+
+#Motherboard/BIOS
+dmidecode
+
+#HDD info
+lsblk
+
+#Wiew free space
+df -f 
+- f - human readable format
+
+#Show all info
+top
+```
+
+## 13. Linux processes
+
+- Process is set of instructions loaded into memory
+
+- PID1 - **init/systemd** - main process
+
+```bash
+#Winew process tree
+ps -eH | less
+
+#Processes by user
+ps -u <username>
+
+#Process from all users
+ps -eH
+- e - all processes
+- H - show Hierarchy
+- --forest - show Hierarchy
+
+ps -efH
+- f - full format listing
+
+#Process folder
+ls /proc
+
+#Show al processes
+top
+```
+
+## 14. System logging
+
+- **/var/log** - log directory
+
+- boot.log - Records information from system boot
+- messages/syslog - what is going on in system
+- secure - defence report
+- dmesg - utility to view kernel ring buffer info
+
+```bash
+dmesg | grep console
+```
+
+## 15. Linux Networking
+
+```bash
+#Show network interface info
+ip addr show
+ifconfig
+
+#Get default GW address
+ip route show
+route
+netstat -r
+
+#Test DNS
+host <website_name>
+
+#DNS config fiel
+cat /etc/resolv.conf
+cat /etc/hosts
+
+#Ping in Linux
+ping -c N <host name otr IP>
+N - number of packages
+```
+
+## 16. User accounts
+
+### User account types
+
+- root
+- regular user
+- system user
+
+```bash
+#logged users
+who
+w
+
+#User info
+id
+
+sudo - superuser-do
+
+#sudo config file
+/etc/sudoers
+
+#Account info file
+/etc/passwd - main account info
+<user_name>:x:user_id:group_id:<comment>:<path to home directory>:<users login default shell>
+
+/etc/group
+<group_name>:x:<group_id>:<users_list>
+
+#Create user group
+groupadd <group_name>
+
+#Create account
+useradd -G <group_id> -c "Full Name" -m <user_name>
+- G - add to secondary group id 
+- m - create home directory
+- c - full user name
+
+#Default settings for user creation
+/etc/default/useradd
+
+#Set of default folders for new users
+/etc/skel
+
+Password file
+/etc/shadow
+
+<user_name>:<encrypted_password>:<number of days since January 1st 1970>:<days before to change the password>:<password age>:<password warning period>
+
+#Wiew who loged in system and when
+last
+
+#Modiry user settings
+usermod
+
+#See groups of user
+groups <user_name>
+```
+
+## 17. Permissions
+
+- "-" - file
+- d   - directory
+- b   - block (drives)
+- c   - terminal, monitor, etc.
+- l   - link file
+
+- r   - read
+- w   - write
+- x   - execute
+- "-" - no permission
+- t   - sticky bit (anyone can delete only own files and folders)
+
+- 4 - read
+- 2 - write
+- 1 - execute
+- 0 - no permission
+
+```bash
+#Change permission
+chmod o-<permission letter> <file_name> 
+- u - user
+- g - group
+- o - other
+
+- "-" - substitute permission
+- "+" - add permission
+
+- R - change permission recursivly
+
+#Change owner
+chown <user_name>:<group_name> <file_name>
+chgrp <group_name> <file_name>
+```
+
+## 18. Symbolic links
+
+```bash
+#Create link
+ln -s <file_name> <link_name> 
+- s - symbolic link to the file
+
+#Unlink link
+unlink <link_file>
+```
+
+## 19. Different files and directories
+
+### Temp files
+
+- /var/tmp - do not get deleted during reboot
+- /tmp     - get deleted during reboot
+
+```bash
+#Apply sticky bit
+chmod o+t <path to file/folder>
+chmod 1777 <path to file/folder>
+
 
 
 
