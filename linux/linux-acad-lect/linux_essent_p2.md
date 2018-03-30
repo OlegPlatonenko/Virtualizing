@@ -770,15 +770,3 @@ unlink <link_file>
 #Apply sticky bit
 chmod o+t <path to file/folder>
 chmod 1777 <path to file/folder>
-
-
-
-
-
-
-
-
-
-
-
-
