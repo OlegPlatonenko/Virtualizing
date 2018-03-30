@@ -1,0 +1,56 @@
+? - show help
+<command> ? - show command help
+<command> <parameter> ? - show parameter help
+enable - enable priviledge mode
+
+PRIVILEDGE MODE COMMANDS
+-------------------------
+configure terminal - enter configurational mode
+show ip interface - get info about ip interfaces
+show running-config
+
+CONFIG MODE COMMANDS
+-------------------------
+interface <interface name> - select interface (f.e. interface gigabitethernet 0/0)
+shutdown/no shutdown - disable/enable port
+do - run commands from other modes
+write memory - Save current configurational
+reload - reboot switch/router
+
+PORT SETUP
+-------------------------
+interface <interface name> - select interface (f.e. interface gigabitethernet 0/0)
+description - port description
+switchport mode <access/trunk> - set trunk or access port
+switchport access VLAN <X> - assign VLAN X to port
+
+interface <interface name> - select interface (f.e. interface gigabitethernet 0/0)
+description - port description
+switchport mode <access/trunk> - set trunk or access port
+switchport trunk allowed vlan <VLAN numbers> - set VLANS to port
+
+VLAN CREATION
+-------------------------
+vlan X - create VLAN X
+name <VLAN name> - assign name to VLAN
+
+SWITCH CONFIGURING
+-------------------------
+Switch(config)# interface vlan 99 - start configure SVI switch virtual interface)
+Switch(config-if)# ip address X.X.X.X X.X.X.X - assign IP and Mask
+Switch(config-if)# no shutdown - enable port
+Switch(config-if)# end
+Switch# copy running-config startup-config
+
+ACCESS CONFIGURATION
+-------------------------
+line vty 0 4 - Setup telnet/ssh connection (0 4 - five user virtual terminals/sessions)
+password <Password> - Setup password for access via telnet
+enable secret <Password> - Setup password for access via ssh
+
+aaa new-model - Another way to setup login/password
+username <username> password <Password> - Set login/password
+
+line console 0        |
+login                 | - set password for console port
+password <Password>   |
