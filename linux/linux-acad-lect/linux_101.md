@@ -1,6 +1,10 @@
 # Hardware settings
 
-## 1. Special file systems
+## Table of contents
+
+- [1. Special file systems](#SFS)
+
+## 1. Special file systems <a name="SFS"></a>
 
 - **SUDO file system** - file system whcih contains info about hardware and the state of the sytem
 
