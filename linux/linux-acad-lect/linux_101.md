@@ -3,6 +3,8 @@
 ## Table of contents
 
 - [1. Special file systems](#SFS)
+- [2. Hardware Settings Configuration](#HSK)
+- [3. Boot the system](#BTS)
 
 ## 1. Special file systems <a name="SFS"></a>
 
@@ -47,4 +49,37 @@ cat /proc/dma
 /dev
 ```
 
+## 2. Hardware Settings Configuration <a name="HSK"></a>
 
+```bash
+#Show the status of modules in the linux kernel
+lsmod
+
+#Show CPU architecture
+lscpu
+lscpu -ae
+
+#Disk info
+lsblk
+lsblk -f
+lsblk -t
+
+#PCI bus info
+lspci
+lspci -v
+lspci -m
+
+#SCSI and SATA devices
+lsscsi
+
+#USB devices info
+lsusb
+
+#RAID info
+lsraid
+
+#List all devices
+lsdev
+```
+
+## 3. Boot the system <a name="BTS"></a>
