@@ -84,7 +84,7 @@ lsdev
 
 ## 3. Boot the system <a name="BTS"></a>
 
-### sysvinit
+### a) sysvinit
 
 - Package, containing a group of processes that are responsible 
 - for controlling the basic functions of the system
@@ -95,7 +95,7 @@ lsdev
 - *Init* program controlls the startup, running and stutdown of
 - all the programs
 
-### sysvinit runlevels
+#### sysvinit runlevels
 
 - 0 - HALT (Shutdown)
 - 1 - Single User
@@ -105,7 +105,12 @@ lsdev
 - 5 - X11 (full Multi-User with GUI)
 - 6 - Reboot
 
-### Boot process
+```bash
+#Config files
+cat /etc/inittab
+```
+
+#### Boot process 
 
 1. Power on
 2. BIOS (EFI)
@@ -128,6 +133,72 @@ lsdev
 19. Runlevel scripts are executed in numeric order
 20. TTY sessions are loaded
 21. System login promt is displayed
+
+### b) systemd
+
+- Initialization system for bootstrapping the user space
+- and managing all processes subseqent to system start.
+
+- Designed to replace *sysvinit*
+
+#### Systemd runlevels
+
+- 0 - poweroff.target (Sutdown)
+- 1 - single.target (Single User/Rescue Shell)
+- 2 - multi-user.target(Non-Graphical, Full Network, Multi-User)
+- 3 - multi-user.target(Non-Graphical, Full Network, Multi-User)
+- 4 - multi-user.target(Non-Graphical, Full Network, Multi-User)
+- 5 - graphical.target (Graphica Desktop, Multi-User)
+- 6 - reboot.target (Reboot)
+
+```bash
+#Config files
+cd /usr/lib/systemd/system
+ls -al *.target
+
+ls -al default.target
+```
+
+#### Boot process
+
+1. Power on
+2. BIOS (EFI) 
+3. Primary disk's 'boot sector'
+4. Boot sector provides MBR (Master Boot Record)
+5. Boot loader is executed
+6. LILO/GRUB/GRUB2 begins
+7. User Input
+8. Linux kernel is read and executed
+9. Device initialization, module loading, initial RAM is loaded
+10. Root filesystem is mounted
+11. systemd runs
+12. Default run target is executed
+13. Modules indicated
+14. Root filesystem checked
+15. Remaining local filesystem are mounted
+16. Network devices are started
+17. Remote filesystems are mounted
+18. systemd sets the runlevel as indicated in the def target
+19. System login promt is displayed
+
+### Init and RC Scripts
+
+```bash
+#Debian/Ubuntu init scripts location
+/etc/init.d/
+
+#RedHat/CentOS init scripts location
+/etc/init.d/rc.d
+```
+
+### systemd targets location
+
+```bash
+cd /usr/lib/systemd/system
+ls -al *.target
+
+ls -al default.target
+```
 
 
 
