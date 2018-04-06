@@ -10,7 +10,7 @@
 
 - **SUDO file system** - file system whcih contains info about hardware and the state of the sytem
 
-- **proc fs** - system hardware and state
+- **procfs** - system hardware and state
 
 ```bash
 #Short file system info 
@@ -35,7 +35,7 @@ cat /proc/ioports
 cat /proc/dma
 ```
 
-- **sys fs** - responsible for kernel modules and hardware associated to system
+- **sysfs** - responsible for kernel modules and hardware associated to system
 
 ```bash
 #Working directory
@@ -200,8 +200,33 @@ ls -al *.target
 ls -al default.target
 ```
 
+### Changing runlevels
 
+```bash
+#Get runlevel
+runlevel
 
+#Changing runlevel (sysvinit)
+init <runlevel>
+telinit <runlevel>
 
+#Set default runlevel (sysvinit)
+cat /etc/inittab
 
+#Changing runlevel (systemd)
+systemctl get-default
+systemctl set-default <target name>
+systemctl isolate <target name>
 
+#List all targets
+systemctl list-units --type=target
+```
+
+### TArgets hierarchy
+
+```
+sysinit.target
+              |_basic.target
+                            |_multi-user.target
+                                               |_graphical.target
+```
