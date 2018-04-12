@@ -7,6 +7,10 @@
 - [3. Manage Shared Libraries](#MSL)
 - [4. Debian Package Management](#DPM)
 - [5. RedHat Package Management](#RPM)
+- [6. Work on the Command Line](#WCL)
+- [7. Environment Variables](#EV)>
+- [8. Using Filters 1](#UF1)
+- [9. Using Filters 2](#UF2)
 
 ## 1. Logical Volume Manager <a name="LVM"></a>
 
@@ -72,7 +76,7 @@ grub2-mkconfig > /boot/grub2/grub.cfg
 
 ```bash
 #Show all libraries which app use
-ldd <app name>
+ldd <app name> / <path to app>
 
 #Configure dynamic ling boundaries
 ldconfig
@@ -189,6 +193,9 @@ dpkg-reconfigure <package_name>
 - **/var/log/yum.log** - log file
 
 ```bash
+#List all installed packages
+yum list installed
+
 #Update package cache and upgrade all software
 yum update
 
@@ -200,6 +207,9 @@ yum install -enablerepo <repository_name> <package_name>
 
 #Download rpm and dependencies
 yum install --downloadonly <package_name>
+
+#Delete with all config files
+yum autoremove <package_name>
 
 #Default download directory
 /var/cache/yun/x86_64/7/base/packages
@@ -263,4 +273,198 @@ rpm -Uvh <package_name>
 #Unpacking rpm archive with cpio
 rpm2cpio <package_name> > <file_name>.cpio
 cpio -idmv < <file_name>
+```
+
+## 6. Work on the Command Line <a name="WCL"></a>
+
+### Shell types
+
+- csh
+- ksh
+- zsh
+
+- login
+- non-login shell
+
+### Scripts execution
+
+- *.sh
+- service files (no ext.)
+- **/usr/bin** - common script location
+
+### Profile files run order
+
+- All files are located in *Home* directory
+- .bash_profile -> .bashrc -> .bash_logout
+
+
+### Profile files run priority (if previous doesn't exist)
+
+1. .bash_profile
+2. .bash_login
+3. .profile
+
+### User change!!!
+
+```bash
+sudo su -
+
+- "-" - apply all scripts end environmental variables to new user
+```
+
+### Executing multiple commands
+
+```bash
+& - run in the background
+&& - run next if previous true
+|| - run next if previous false
+; - wharever
+
+/bin/true && echo "This executed"
+/bin/false || echo "This executed"
+
+yum update && yum install -y telnet 
+```
+
+### Exitcodes
+
+```bash
+0 - success
+1 - 127 - unsuccess
+
+$? - request exitcode for previous command
+```
+
+## 7. Environment Variables <a name="WCL"></a>
+
+```bash
+#Show environment variables
+set | more
+env | more
+shopt
+
+#Turn option on
+set -o
+
+#Turn option off
+set +o
+
+#Adding folder to a PATH variable
+export PATH = $PATH:<folder_path>
+```
+
+## 8. Using Filters 1 <a name="UF1"></a>
+
+```bash
+#Sorting
+sort <file_name>
+
+#Sort by number
+sort -n <file_name>
+
+#Sort by delimited field
+sort -k<field_number> <file_name>
+
+#----------------------------------
+
+#Add line numbering
+nl <file_name>
+
+#Assign number to blank lines
+nl -ba <file_name>
+
+#----------------------------------
+
+#Count number of lines
+wc -l <file_name>
+
+#Count number of words
+wc -w <file_name>
+
+#Count number of characters
+wc -c <file_name>
+cat /var/log/messages | wc -l
+
+#----------------------------------
+
+#Change tabs interval
+expand -t <spacing_number> <file_name>
+
+#----------------------------------
+
+#Cut fields
+cut -d<delimeter> -f <filed_number> <file_name>
+cut -d: -f 1 columns.txt
+
+#----------------------------------
+
+#File concatination
+paste <file_name1> <file_name2>
+
+#Combine files with redundance removing
+join <file_name1> <file_name2>
+
+#Extract unique data from file
+uniq <file_name>
+
+#Return duplicated lines
+uniq -d <file_name>
+uniq -D <file_name>
+
+#----------------------------------
+
+#Look at the top of the file
+head <file_name>
+head -n <number_of_lines> <file_name>
+
+#Look at the buttom of the file
+tail <file_name>
+tail -n <number_of_lines> <file_name>
+tail -f head <log_file_name>
+```
+
+## 9. Using filters 2 <a name="UF2"></a>
+
+```bash
+#Split file
+split -a <split_index_number> <file_name>
+split -a 4 <file_name>
+
+#Split by size
+split -b <bytes> <file_name>
+split -K <Kilobytes> <file_name>
+split -M <Megabytes> <file_name>
+
+#Split by lines number
+split -l <number_of_lines>
+
+#----------------------------------
+
+#Look at binaty file (decimax. hex, etc. format)
+od <file_name>
+
+#----------------------------------
+
+#Format output (print format)
+pr <file_name>
+fmt <file_name>
+
+fmt -15 <file_name> | pr --columns=2 -h "Header text"
+
+#----------------------------------
+
+tr <expression> < <file_name>
+tr 'a' 'A' < alpha.txt
+
+sed <expression> <file_name>
+sed 's/the/THE/g' example.txt
+sed -e 's/the/THE/g' -e 's/NOW/NEVER/g' example.txt
+sed -f <options_file_name> <file_name>
+
+#----------------------------------
+
+more -d <file_name> 
+- d - display tips options
+
+less <file_name>
 ```
