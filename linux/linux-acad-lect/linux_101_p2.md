@@ -11,6 +11,7 @@
 - [7. Environment Variables](#EV)>
 - [8. Using Filters 1](#UF1)
 - [9. Using Filters 2](#UF2)
+- [10. File Management](#FM)
 
 ## 1. Logical Volume Manager <a name="LVM"></a>
 
@@ -467,4 +468,57 @@ more -d <file_name>
 - d - display tips options
 
 less <file_name>
+```
+
+## 10. File Management <a name="FM"></a>
+
+```bash
+#Full directory listing with hidden files
+ls -al 
+
+#Create directory with subdirectory
+mkdir -p mydir1/dir1/dira/dirA
+
+#Determine file type
+file <file_name>
+
+#Set timestamp for file
+touch -t YYYYMMDDHHMM <file_name>
+touch -t 201801021234 example.txt
+
+#File or system status
+stat -f <file_name>
+stat -t <file_name>
+
+#Copy directory
+cp -r <directory_name> 
+cp -i <directory_name> 
+
+- i - ask for overriting
+- f - force
+- u - update with newer 
+- x - ignore other filesystems
+
+#Remove directory
+rm -r <directory_name>
+
+- f - force
+
+#Search for file
+find <search_path> -name <file_name> -print
+
+- print - is optional
+- iname - ignore case sentitivity
+- user  - find files belong to user
+- exec  - make sime action with search result
+- {}    - for each search result 
+- \;    - end of exec command
+
+find /home/user -iname "config_*.sh" -exec chmod 777 {} \;
+
+#Create backup images / CD-DVD *.iso
+dd if=/dev/sr0 of=imgbkup.iso
+
+#Backup MBR
+dd if=/dev/xvde of=mbrbackup.img count=1 bs=512
 ```
