@@ -521,4 +521,36 @@ dd if=/dev/sr0 of=imgbkup.iso
 
 #Backup MBR
 dd if=/dev/xvde of=mbrbackup.img count=1 bs=512
+
+#Archivation
+tar -cvf <archive_name> <path to folder to archive>
+
+- c - create archive
+- v - verbose
+- f - create file
+
+#Review contenr
+tar -tvf <file_name>
+
+- t - show content
+
+#Extract content
+rat -xvf <path_to_archive> <folder_path>
+
+#Compression
+tar -cvzf <file_name> <directory_to_archive>
+
+- z - gzip compression
+- j - bzip compression
+
+gzip <file_name>
+gunzip <file_name>
+
+bzip2 <file_name>
+bunzip2 -d <file_name>
+
+#XZ Compression
+xz --compress <file_name>
+xz -d <file_name>
 ```
+
