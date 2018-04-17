@@ -85,3 +85,29 @@ ansible -m -a "name=<package_name> state=<state_available>"
 #Create user
 ansible -s -m user -a "name=<user_name>"
 ```
+
+## YAML Playbook Structure
+
+```yaml
+--- # This is a structural YAML example to install HTTPD on CENTOS
+- hosts: localhost
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: yes
+  vars:
+    username: myuser
+  tasks:
+  - name: Install HTTPD server on CentOS 7 Nodes
+    yum:
+        name: httpd
+        state: latest
+    notify:
+    - startservice
+  handlers:
+  - name: srartservice
+    service:
+        name: httpd
+        state: restarted
+     
