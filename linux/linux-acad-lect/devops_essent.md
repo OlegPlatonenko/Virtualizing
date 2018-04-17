@@ -19,6 +19,10 @@
     - [d. Virtualization and Containerization](#VC1)
     - [e. Monitoring](#MG1)
     - [f. Orchestration](#ON1)
+- [4. DevOps in a Cloud](#DSC)
+    - [a. Google Cloud Platform](#GCP)
+    - [b. Microsoft Azure](#AZR)
+    - [c. Amazon Web Services](#AWS)
 
 ## 1. DevOps goals <a name="DG"></a>
 
@@ -121,3 +125,121 @@ https://xebialabs.com/periodic-table-of-devops-tools/
 - **Kubernetes** - Orchestration Server
 - **Zookeeper** - centralized service registry
 - **Terraform** - Combines orchestration with IaC
+
+## 4. DevOps in a Cloud <a name="DSC"></a>
+
+### Traditional Datacenter Architecture
+
+- Applications
+- Data
+- Runtime
+- Middleware
+- O/S
+- Virtualization
+- Servers
+- Storage
+- Networking
+
+### Infrastructure as a Server (IaaS)
+
+- **3rd party is responsible for:**
+
+- O/S
+- Virtualization
+- Servers
+- Storage
+- Networking
+
+- Amazon ec2
+- Microsoft Azure VMs and Containers
+- Google Compute Engine
+
+### Platform as a Service (PaaS)
+
+- **3rd party is responsible for:**
+
+- Runtime
+- Middleware
+- O/S
+- Virtualization
+- Servers
+- Storage
+- Networking
+
+- AWS Elastic Beanstalk
+- Heroku
+- Google App Engine
+
+### Software as a Service (SaaS)
+
+- **3rd party is responsible for:**
+
+- Applications
+- Data
+- Runtime
+- Middleware
+- O/S
+- Virtualization
+- Servers
+- Storage
+- Networking
+
+- G-mail
+- Microsoft Office 365
+
+### Function as a Service (FaaS)
+
+- Deploy small simple functions
+- Pay for functions
+
+- Functions is above Applications
+
+- AWS Lambda (AWS Serverless Platform)
+- Azure Functions
+- Google Cloud Functions
+
+### a. Google Cloud Platform <a name="GCP"></a>
+
+- **PaaS** - Google App Engine (Microservices, autoscaling)
+- **IaaS** - Google Compute Engine (VMs, Orchestration, Ansible, Puppet)
+- **FaaS** - Goole Functions
+
+- Google SDK - build own tools
+
+- **Monitoring** - Stack Driver
+- **Cloud Deployment Management** - IaaS, Automation deployment
+
+- **Google Kubernetes Engine** - for Orchestration, use Jenkins
+
+### b. Microsoft Azure <a name="AZR"></a>
+
+- **Visual Studio Team Services** - Git, CI
+- **Jenkins** - CI for Java
+
+- **Azure Container Registry** - Orchestration
+- **Azure Container Service** - Kubernetes Orchestration
+- **Azure Web Apps** - Cloud hosting for Web Apps
+
+- **Azure App Insights** - APM, Diagnostics, Monitoring
+- **Machine Lerning** - log monitoring
+
+- **FaaS** - Azure Functions
+
+### c. Amazon Web Services <a name="AWS"></a>
+
+- **IaaS** - Amazon EC2
+- **PaaS** - AWS Elastic Beanstalk (NLB, Autoscaling)
+- **CI, CD, Deploy** - AWS CodeBuild 
+                     - AWS CodeDeploy
+                     - AWS CodePipeline
+                     - AWS CodeStar
+- **IaaS** - CloudFormation (YAMS, JSON), IaC
+- **IaC** -  OpsWorks (use Chef)
+- **FaaS** - AWS Lambda
+
+- **Monitoring** - Amazon CloudWatch
+
+
+
+
+
