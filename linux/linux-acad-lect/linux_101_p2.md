@@ -12,6 +12,7 @@
 - [8. Using Filters 1](#UF1)
 - [9. Using Filters 2](#UF2)
 - [10. File Management](#FM)
+- [11. Streams, Pipes, and Redirects](#SPR)
 
 ## 1. Logical Volume Manager <a name="LVM"></a>
 
@@ -554,3 +555,36 @@ xz --compress <file_name>
 xz -d <file_name>
 ```
 
+## 11. Streams, Pipes, and Redirects <a name="SPR"></a>
+
+- **Stream standards**
+- input
+- output
+- error
+
+- Each stream has device
+- /dev/std*
+
+- **Characters:**
+- "|" - pipe
+- ">" - redirect to a file
+- ">>" - append to file
+- "<" - input for command
+- "2>" - redirect error output
+- "1>" - redirect output
+- "0<" - redirect input
+
+```bash
+#Example - exclude error messages
+find / -iname "*.sh" 2> /dev/null > output.txt
+```
+
+```bash
+#Print redirected output
+find / -iname "*.sh" | tee results.log
+```
+
+```bash
+#Redirect with execution
+find / -name "*.sh" | xargs ls -al
+```
