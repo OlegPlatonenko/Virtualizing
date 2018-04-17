@@ -15,7 +15,7 @@
     notify:
     - startservice
   handlers:
-  - name: srartservice
+  - name: startservice
     service:
         name: httpd
         state: restarted
