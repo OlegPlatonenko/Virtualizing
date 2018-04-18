@@ -13,6 +13,7 @@
 - [9. Using Filters 2](#UF2)
 - [10. File Management](#FM)
 - [11. Streams, Pipes, and Redirects](#SPR)
+- [12. Process Monitoring](#PM)
 
 ## 1. Logical Volume Manager <a name="LVM"></a>
 
@@ -587,4 +588,147 @@ find / -iname "*.sh" | tee results.log
 ```bash
 #Redirect with execution
 find / -name "*.sh" | xargs ls -al
+```
+
+## 12. Process Monitoring <a name="PM"></a>
+
+### Process Identification (PID)
+
+```bash
+#Get process list for current user
+ps
+
+- a - for all users
+- u - user info
+- x - all info (use aux)
+
+ps -aux
+
+#UNIX way to display processes
+ps -ef
+
+#Display processes list as tree
+pstree
+
+- a - process tree with all parameters
+- p - show PIDs
+```
+
+### System memory
+
+```bash
+#Get system memory info
+free
+
+- m - display in Megabytes
+- h - human readable
+- c <number of times>
+- s <number of seconds>
+- t - get totals at the end
+- l - low and high memory statistics
+
+free -h -c 2 -s 3 -t
+```
+
+### System info
+
+```bash
+#User login times info
+iptime
+```
+
+### Process killing
+
+
+- **Kindly stop and restart process**
+- SIGHUP 1 
+
+- **Interrupt process**
+- SIGINT 2
+
+- **Kill process (can't be ignored)**
+- SIGKILL 9
+
+- **Terminate process (do all before shutdown)**
+- SIGTERM 15
+
+- **Stop but not kill**
+- SIGSTOP 19
+
+- **Pause smth running in terminal**
+- SIGTSTP 20
+
+```bash
+#Kill process
+kill <PID>
+
+#Kill based on signal
+kill -SIGSTOP <PID> 
+kill -19 <PID>
+
+#Killing all instances of named process
+killall <process_name>
+
+#Process kill command
+pkill -<Termination_code or name> -U <user_name>
+pkill -9 -U apache
+
+#Test kill command before running
+pgrep -U <user_name>
+```
+
+### Jobs 
+
+```bash
+#Get available apps in stop state
+jobs
+
+#Send to background (with + in index)
+bg
+bg <job number>
+
+#Back to foreground (with + in index)
+fg
+fg <job number>
+
+#Example
+vim somefile.txt
+Ctrl+Z
+<some set of commands>
+fg
+```
+
+### Nohup (long term processes)
+
+```bash
+#Creating file
+test.sh
+```
+```bash
+#!/bin/bash
+
+while true;
+    do echo "Hello" >> test.txt
+    sleep 2;
+done
+```
+```bash
+#Run this script as infinite job (You can close active terminal)
+nohup ./test.sh
+```
+
+### Screen (Text based session manager)
+
+```bash
+#Start screen
+screen
+
+#Get list of sessions
+Ctrl-A ?
+
+#Nexp and Previous sessions
+Ctrl-A N/P
+
+#Reattach to the instance
+screen -r
 ```
