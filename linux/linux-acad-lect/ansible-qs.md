@@ -110,4 +110,55 @@ ansible -s -m user -a "name=<user_name>"
     service:
         name: httpd
         state: restarted
-     
+```
+
+## Gathering Facts
+
+```bash
+#Get info about host or host group (Ansible playbook prerequisits)
+ansible <group_name> -m setup
+ansible <group_name> - m setup -a 'filter=*ipv4*'
+
+#Get all facts for the host
+ansible <group_name> -m setup --tree <folder_name>
+```
+
+## Variable Substitution
+
+```yaml
+--- # Testing how variables work in vars section of a playbook
+- hosts: '{{ myhosts }}'
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: '{{ gather }}'
+  vars:
+    myhosts: centos
+    gather: yes
+    pkg: telnet
+  tasks: 
+    - name: Install the indicated software
+      yum:
+        name: '{{ pkg }}'
+        state: latest
+```
+
+```yaml
+--- # Testing how substitution variables work in vars section of a playbook
+- hosts: '{{ myhosts }}'
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: '{{ gather }}'
+  tasks: 
+    - name: Install the indicated software
+      yum:
+        name: '{{ pkg }}'
+        state: latest
+```
+
+```bash
+ansible-playbook <playbook_name> --extra-vars "myhosts=centos gather=yes pkg=telnet"
+```
