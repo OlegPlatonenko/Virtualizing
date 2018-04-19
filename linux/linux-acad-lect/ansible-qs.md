@@ -101,15 +101,15 @@ ansible -s -m user -a "name=<user_name>"
   tasks:
   - name: Install HTTPD server on CentOS 7 Nodes
     yum:
-        name: httpd
-        state: latest
+      name: httpd
+      state: latest
     notify:
     - startservice
   handlers:
   - name: srartservice
     service:
-        name: httpd
-        state: restarted
+      name: httpd
+      state: restarted
 ```
 
 ## Gathering Facts
@@ -138,10 +138,10 @@ ansible <group_name> -m setup --tree <folder_name>
     gather: yes
     pkg: telnet
   tasks: 
-    - name: Install the indicated software
-      yum:
-        name: '{{ pkg }}'
-        state: latest
+  - name: Install the indicated software
+    yum:
+      name: '{{ pkg }}'
+      state: latest
 ```
 
 ```yaml
@@ -153,12 +153,56 @@ ansible <group_name> -m setup --tree <folder_name>
   connection: ssh
   gather_facts: '{{ gather }}'
   tasks: 
-    - name: Install the indicated software
-      yum:
-        name: '{{ pkg }}'
-        state: latest
+  - name: Install the indicated software
+    yum:
+      name: '{{ pkg }}'
+      state: latest
 ```
 
 ```bash
 ansible-playbook <playbook_name> --extra-vars "myhosts=centos gather=yes pkg=telnet"
+```
+
+## Debug Statement
+
+```yaml
+--- # Playbook demo of debag and register statement
+- hosts: centos
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Install telnet package
+    yum:
+      name: telnet
+      state: latest
+    register: result
+  - debug: var=result
+```
+
+## Notifications and Handlers
+
+```yaml
+--- # Notification and Handling events
+- hosts: centos
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  gather_facts: yes
+  connection: ssh
+  tasks:
+  - name: install nginx web server
+    yum:
+      name: nginx
+      state: latest
+    notify:
+    - enable and start nginx service
+  handlers: 
+  - name: enable and start nginx service
+    service:
+      name: nginx
+      enabled: yes
+      state: restarted
 ```
