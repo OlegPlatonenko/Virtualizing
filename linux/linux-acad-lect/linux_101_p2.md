@@ -14,6 +14,7 @@
 - [10. File Management](#FM)
 - [11. Streams, Pipes, and Redirects](#SPR)
 - [12. Process Monitoring](#PM)
+- [13. Process Execution Priorities](#PEP)
 
 ## 1. Logical Volume Manager <a name="LVM"></a>
 
@@ -732,3 +733,31 @@ Ctrl-A N/P
 #Reattach to the instance
 screen -r
 ```
+
+## 13. Process Execution Priorities <a name="PEP"></a>
+
+### Priority markers
+
+- from "-20" to "19".
+- Default is "0" - NI (when you do ps -lu user_name)
+- Default PRI is "80" (when you do ps -lu user_name)
+
+- "19" is the lowest priority
+- "-20" is the highest priority
+
+- Any user can lower priority
+- Only *root* cal increase priority
+
+```bash
+#Start a command with a positive priority modifier
+nice <script_name> 
+
+#Increase nice modifier
+renice +19 <PID>
+
+#Process Manager
+top
+
+- <Space> - ypdate live
+```
+
