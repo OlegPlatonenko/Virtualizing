@@ -15,6 +15,7 @@
 - [11. Streams, Pipes, and Redirects](#SPR)
 - [12. Process Monitoring](#PM)
 - [13. Process Execution Priorities](#PEP)
+- [14. Search Text Files Using Regular Expressions](#STF)
 
 ## 1. Logical Volume Manager <a name="LVM"></a>
 
@@ -761,3 +762,39 @@ top
 - <Space> - ypdate live
 ```
 
+## 14. Search Text Files Using Regular Expressions <a name="STF"></a>
+
+```bash
+#Search for string
+cat <file_path> | grep <string_to_search>
+grep <string_to_search> <file_path>
+
+#Search for string in many files (with standard error redirect to /dev/null)
+grep -i <string_to_search> <directory_path> 2>/dev/null
+
+- i - Search for both upper/lowercase
+```
+
+- **Regular Expression Examples:**
+
+```bash
+#Begins with "ope" with "n" or "r" followed and any characters further
+egrep '^ope(n|r)' /etc/passwd
+
+#Begins with "ope" but without "r" followed
+egrep '^ope[^r]' /etc/passwd
+
+#Useing boolean operators (OR)
+egrep '(bin|bash)' /etc/passwd
+
+#List of users which ends with nologin
+egrep 'nologin\>' /etc/passwd
+egrep 'nologin$' /etc/passwd
+```
+
+- **fgrep**
+
+```bash
+#Search for patterns
+fgrep -f <pattern_file> <directory_path>
+```
