@@ -1,6 +1,6 @@
 # Python 3 for System Administration
 
-## Install development Tools
+## Install Dev Tools and Python 3 from source
 
 ```bash
 yum groupinstall -y "development tools"
@@ -31,5 +31,5 @@ sudo vim /etc/sudoers
 #Searc for secure_path
 #Add at the end :/usr/local/bin
 
-
+sudo pip3.6 install --upgrade pip
 ```
