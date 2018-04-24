@@ -82,7 +82,7 @@ yum install phpmyadmin
 
 #<Directory /usr/share/phpMyAdmin/>
 #        Options none
-#        AllowOwerride Limit
+#        AllowOverride Limit
 #        Require all granted
 #</Directory>
 
