@@ -2,6 +2,16 @@
 
 ## Install Dev Tools and Python 3 from source
 
+```
+yum install -y \
+> git \
+> wget \
+> which \
+> words \
+> lsof \
+> vim
+```
+
 ```bash
 yum groupinstall -y "development tools"
 yum install -y \
