@@ -42,3 +42,12 @@ sudo vim /etc/sudoers
 #Add at the end :/usr/local/bin
 sudo pip3.6 install --upgrade pip
 ```
+
+## Python 2 vs 3
+
+- https://wiki.python.org/moin/Python2orPython3
+- https://docs.python.org/3/whatsnew/3.0.html
+
+## Script example and comments
+
+- See hello.py in /scripts folder

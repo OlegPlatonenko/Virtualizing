@@ -79,3 +79,20 @@ gvim
 
 :16,23 ! sort -r - sort values from line 16 to 23
 ```
+
+## VIM Working with Files and Buffers
+
+### Saving file
+
+```
+:wq - write and quit
+ZZ - write what in the buffer and exit emideately
+
+:saveas <new file name> - save to different file
+:bad <file_name> - give buffer
+
+:bn/bp - switch to next/previous buffer
+Ctrl+6 - go to next buffer
+:f - file what I am already in 
+```
+
