@@ -57,6 +57,7 @@ mysql -u root -p icinga < /usr/share/icinga2-ido-mysql/schema/mysql.sql
 
 #Edit ido conf file
 #/etc/icinga2/features-available/ido-mysql.conf
+#Uncomment all!!!
 #set correct password!
 
 #Check icinga features
@@ -74,17 +75,21 @@ yum install centos-release-scl-rh
 #Install icinga2-web and icinga2-CLI
 yum install icingaweb2 icingacli
 
+#Change /etc/opt/rh/rh-php71/php.ini
+# Find date.timezone row and set f.e. America/New_York
+
 #Give Apache permissions for icinga
 chcon -R -t httpd_sys_rw_content_t /etc/icingaweb2
-
-#Install PHP ImageMagick module
-yum install ImageMagick*
 
 #Restart Apache
 systemctl restart httpd
 
+#Install PHP ImageMagick module
+#yum install ImageMagick*
+
 #Start PHP service
 systemctl start rh-php71-php-fpm
+systemctl enable rh-php71-php-fpm
 
 #Give Apache user permissions to Icinga
 groupadd -r icingaweb2;
