@@ -122,3 +122,17 @@ type(False)
 
 #Nothingness
 None
+```
+
+## Variables
+
+```python
+my_str = "This is a simple string"
+my_str
+print(my_str)
+
+my_str += " testing"
+my_str = my_str + "testing"
+
+my_str = 1 #Variable type live changing
+```
