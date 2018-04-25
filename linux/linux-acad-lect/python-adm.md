@@ -136,3 +136,94 @@ my_str = my_str + "testing"
 
 my_str = 1 #Variable type live changing
 ```
+
+## Lists
+
+```python
+#List examples
+my_list = [1, 2, 3, 4, 5]
+mix_list = [1, 'a', True]
+
+#Call for list element
+my_list[0]
+my_list[-2]
+
+#List length
+len(my_list)
+
+#Call for range
+my_list[0:2]
+my_list [1:]
+my_list[:3]
+
+#Takes step of 2 for each item
+my_list[0::2]
+
+#Set items
+my_list[0] = 'a'
+
+#Add to the list
+my_list.append(6)
+
+my_list + [8, 9, 10]
+my_list += [8, 9, 10]
+
+my_list[1:3] = ['b', 'c']
+my_list[3:5] = ['d', 'e', 'f']
+
+#Replace entire section with a nothing
+my_list = ['a', 'b', 'c', 'd', 5, 6, 7]
+my_list[4:] = []
+
+#Remove items from list
+my_list.remove('b')
+my_list.pop() #remove from the end
+my_list.pop(0)#remove from the beginning
+```
+
+## Tuples
+
+```python
+#Plot using
+point = (2.0, 3.0)
+
+#Concatenation
+point_3d = point + (4.0,)
+
+#Tuple unpacking
+x, y, z = point_3d
+
+print("My name is: %s %s" % ("Oleg", "Platonenko"))
+```
+
+## Dictionaries (dicts)
+
+```python
+#Create Dictionary
+ages ={ 'kevin': 49, 'alex': 29 'bob': 41 }
+
+#Read value
+ages['kevin']
+
+#Assign value
+ages['kayla'] = 21
+ages['kayla'] = 22
+
+#Remove thing
+del ages['kevin']
+ages.pop() #You need to provide argument
+ages.pop('alex')
+
+#Methods
+ages.keys()
+list(ages.keys())
+
+ages.values()
+list(ages.values())
+
+#Alternative creation
+weights = dict(kevin=160, bob=240, kayla=135)
+
+#Create dictionary from Tuples
+colors = dict([('kevin', 'blue'), ('bob', 'green'), ('kayla', 'red')])
+```
