@@ -51,3 +51,74 @@ sudo pip3.6 install --upgrade pip
 ## Script example and comments
 
 - See hello.py in /scripts folder
+
+## Data Types in Python
+
+### String
+
+```python
+#String in Python has 'str' type"
+
+"Hello, World!"
+"pass" + "word"
+"Ha" * 3
+
+"double".find('s')
+"TeStInG".lower()
+
+#Escape Sequences
+
+print("Tab\tDelimeted")
+print("New\nLine")
+print("Slash\\Character")
+
+print("'Single' are fine")
+print('"Doble" are fine')
+print('Your\'s are awesome')
+```
+
+### Int and Float
+
+```python
+#Adding
+2 + 2
+
+#Substruction
+3 - 2
+
+#Multiplying
+3 * 2 
+
+#Division
+5 / 3
+1.666666667
+
+5 // 3
+1
+
+5 % 3
+2
+
+#Power
+2 ** 3
+8
+```
+```python
+#Define type
+type(3)
+type("String")
+
+int(1)
+float(2.1)
+str("Hello")
+```
+
+### Booleans and None
+
+```python
+True
+type(True)
+type(False)
+
+#Nothingness
+None
