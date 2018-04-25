@@ -2,6 +2,16 @@
 
 ## Install Dev Tools and Python 3 from source
 
+```
+yum install -y \
+> git \
+> wget \
+> which \
+> words \
+> lsof \
+> vim
+```
+
 ```bash
 yum groupinstall -y "development tools"
 yum install -y \
@@ -25,9 +35,10 @@ tar xf Python-3.6.5.tgz
 cd Python-3.6.5/
 ./configure --enable-optimizations
 make altinstall
-sudo vim /etc/sudoers
 
-#Searc for secure_path
+chmod +w /etc/sudoers
+sudo vim /etc/sudoers
+#Search for secure_path
 #Add at the end :/usr/local/bin
 sudo pip3.6 install --upgrade pip
 ```
