@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-- [. Install Dev Tools and Python 3 from source](#IDT)
+- [1. Install Dev Tools and Python 3 from source](#IDT)
 - [2. Python 2 vs 3](#P2P3)
 - [3. Script example and comments](#SEC)
 - [4. Data Types in Python](#DAT)
@@ -15,6 +15,9 @@
 - [7. Tuples](#TPL)
 - [8. Dictionaries](#DIC)
 - [9. Comparisons and Conditionals](#CAC)
+- [10. While Loop](#WHL)
+- [11. For Loop](#FOL)
+- [12. Logic Operations](#LOG)
 
 ## 1. Install Dev Tools and Python 3 from source <a name="IDT"></a>
 
@@ -294,3 +297,68 @@ elif len(name) >= 4:
 else:
     print('name is short')
 ```
+
+## 10. While Loop <a name="WHL></a>
+
+```python
+while True:
+    print('looping') #Infinite loop
+
+count = 1
+while count <= 4:
+    print('looping')
+    count += 1
+
+count = 0
+while count < 10:
+    if count % 2 == 0:
+        count += 1
+        continue
+    print(f"We're counting odd numbers: {count}") #Run executable code inside of 'print' function
+    count += 1
+
+count = 1
+while count < 10:
+    if count % 2 == 0:
+        break
+    print(f"We're counting odd numbers: {count}")
+    count += 1
+```
+
+## 11. For Loop <a name="FOL></a>
+
+```python
+colors = ['blue', 'green', 'red', 'purple']
+for color in colors:
+    print(color)
+
+for color in colors:
+    if color == 'blue'
+        continue
+    elif color == 'red'
+        break
+    print(color)
+
+point = (2.1, 3.2, 7.7)
+for value in point:
+    print(value)
+
+ages = {'kevin': 59, 'bob': 40, 'kayla':21}
+for key in ages:
+    print(key)
+
+for letter in "my_string"
+    print(letter)
+
+#Unpack multiple items
+list_of_points = [(1, 2), (2, 3), (4, 3)]
+for x, y in list_of_points:
+    print(f"x: {x}, y: {y}")
+
+ages = {'kevin': 59, 'bob': 40, 'kayla':21}
+for name, age in ages.items():
+    print(f"Person named: {name}")
+    print(f"Age of: {age}")
+```
+
+## 12. Logic Operations <a name="LOG></a>
