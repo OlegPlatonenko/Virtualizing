@@ -227,3 +227,54 @@ weights = dict(kevin=160, bob=240, kayla=135)
 #Create dictionary from Tuples
 colors = dict([('kevin', 'blue'), ('bob', 'green'), ('kayla', 'red')])
 ```
+
+## Comparisons and Conditionals
+
+```python
+#Comparisons
+1 < 2
+True
+0 > 2
+False
+2 == 1
+False
+2 != 1
+True
+3.0 >= 3.0
+True
+3.1 <= 3.0
+False
+1.1 == float("1.1")
+True
+'this' == 'this'
+True
+'b' > 'a'
+True
+'abc' < 'b'
+True
+2 in [1, 2, 3]
+True
+2 not in [1, 2, 3]
+False
+```
+
+```python
+#Conditionals
+if 1 == 1: 
+    print('this is true')
+
+if False:
+    print('was true')
+else:
+    print('was false')
+
+name = 'Kevin'
+if len(name) >= 6:
+    print('name is long')
+elif len(name) == 5:
+    print('name is 5 characters')
+elif len(name) >= 4:
+    print('name is 4 or more')
+else:
+    print('name is short')
+```
