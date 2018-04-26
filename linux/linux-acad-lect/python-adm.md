@@ -1,6 +1,22 @@
 # Python 3 for System Administration
 
-## Install Dev Tools and Python 3 from source
+## Table of contents
+
+- [. Install Dev Tools and Python 3 from source](#IDT)
+- [2. Python 2 vs 3](#P2P3)
+- [3. Script example and comments](#SEC)
+- [4. Data Types in Python](#DAT)
+    - [4.1 String](#STR)
+    - [4.2 Int and Float](#IAF)
+    - [4.3 Booleans and None](#BAN)
+    - [4.3 Booleans and None](#BAN)
+- [5. Variables](#VAR)
+- [6. Lists](#LST)
+- [7. Tuples](#TPL)
+- [8. Dictionaries](#DIC)
+- [9. Comparisons and Conditionals](#CAC)
+
+## 1. Install Dev Tools and Python 3 from source <a name="IDT"></a>
 
 ```
 yum install -y \
@@ -43,18 +59,18 @@ sudo vim /etc/sudoers
 sudo pip3.6 install --upgrade pip
 ```
 
-## Python 2 vs 3
+## 2. Python 2 vs 3 <a name="P2P3"></a>
 
 - https://wiki.python.org/moin/Python2orPython3
 - https://docs.python.org/3/whatsnew/3.0.html
 
-## Script example and comments
+## 3. Script example and comments <a name="SEC"></a>
 
 - See hello.py in /scripts folder
 
-## Data Types in Python
+## 4. Data Types in Python <a name="DAT"></a>
 
-### String
+### 4.1 String <a name="STR"></a>
 
 ```python
 #String in Python has 'str' type"
@@ -77,7 +93,7 @@ print('"Doble" are fine')
 print('Your\'s are awesome')
 ```
 
-### Int and Float
+### 4.2 Int and Float <a name="IAF"></a>
 
 ```python
 #Adding
@@ -113,7 +129,7 @@ float(2.1)
 str("Hello")
 ```
 
-### Booleans and None
+### 4.3 Booleans and None <a name="BAN"></a>
 
 ```python
 True
@@ -124,7 +140,7 @@ type(False)
 None
 ```
 
-## Variables
+## 5. Variables <a name="VAR"></a>
 
 ```python
 my_str = "This is a simple string"
@@ -137,7 +153,7 @@ my_str = my_str + "testing"
 my_str = 1 #Variable type live changing
 ```
 
-## Lists
+## 6. Lists <a name="LST"></a>
 
 ```python
 #List examples
@@ -181,7 +197,7 @@ my_list.pop() #remove from the end
 my_list.pop(0)#remove from the beginning
 ```
 
-## Tuples
+## 7. Tuples <a name="TPL"></a>
 
 ```python
 #Plot using
@@ -196,7 +212,7 @@ x, y, z = point_3d
 print("My name is: %s %s" % ("Oleg", "Platonenko"))
 ```
 
-## Dictionaries (dicts)
+## 8. Dictionaries (dicts) <a name="DIC"></a>
 
 ```python
 #Create Dictionary
@@ -228,7 +244,7 @@ weights = dict(kevin=160, bob=240, kayla=135)
 colors = dict([('kevin', 'blue'), ('bob', 'green'), ('kayla', 'red')])
 ```
 
-## Comparisons and Conditionals
+## 9. Comparisons and Conditionals <a name="CAC"></a>
 
 ```python
 #Comparisons
