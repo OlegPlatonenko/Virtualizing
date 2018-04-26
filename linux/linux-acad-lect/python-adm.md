@@ -362,3 +362,28 @@ for name, age in ages.items():
 ```
 
 ## 12. Logic Operations <a name="LOG></a>
+
+```python
+name = ""
+not name
+
+if not name:
+    print("no Name givrn")
+
+first = ""
+last "Thompson"
+if first or last:
+    print("The user has a first or last name")
+
+last = ""
+last_name = last or "Doe"
+
+first = "Keith"
+last = ""
+if first and last:
+    print(f"Full name: {first} {last}")
+elif first:
+    print(f"First name: {first}")
+elif last:
+    print(f"Last name: {last}")
+```
