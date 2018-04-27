@@ -18,6 +18,8 @@
 - [10. While Loop](#WHL)
 - [11. For Loop](#FOL)
 - [12. Logic Operations](#LOG)
+- [13. Reading User Input](#RUI)
+- [14. Function Basics](#FBS)
 
 ## 1. Install Dev Tools and Python 3 from source <a name="IDT"></a>
 
@@ -386,4 +388,32 @@ elif first:
     print(f"First name: {first}")
 elif last:
     print(f"Last name: {last}")
+```
+
+## 13. Reading User Input <a name="RUI></a>
+
+```python
+#!/usr/bin/env python 3.6
+
+name = input("What is your name? ")
+birthdate = input("What is your birthday date? ")
+age = int(input("How old are you? "))
+
+print(f"{name} was born on {birthdate}")
+print(f"Half of your age is {age / 2}")
+```
+
+## 14. Function Basics <a name="FBS></a>
+
+```python
+def hello_world():
+    print("Hello, World!")
+
+#Function with input parameter
+def print_name(name):
+    print(f"Name is {name}")
+
+#Function returns value
+def add_two(num):
+    return num + 2
 ```
