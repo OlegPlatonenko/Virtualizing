@@ -426,3 +426,25 @@ def add_two(num):
 
 ## 16. Using Standard Library Oackages <a name="SLP></a>
 
+- https://docs.python.org/3/library/index.html
+
+```python
+import time
+now = time.localtime() #Time function
+now.tm_hour #One of parameters
+
+import time
+from time import localtime, mktime, strftime #Import functions from class 'time'
+
+start_time = time.localtime()
+print(f"Timer started at {time.strftime('%X', start_time)}")
+
+#Wait for user to stop timer
+input("Press 'Enter' to stop timer ")
+
+stop_time = time.localtime()
+difference = time.mktime(stop_time) - time.mktime(start_time)
+
+print(f"Timer stopped at {time.strftime('%X', stop_time)}")
+print(f"Total time: {difference} seconds")
+```
