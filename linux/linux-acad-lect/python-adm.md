@@ -20,6 +20,7 @@
 - [12. Logic Operations](#LOG)
 - [13. Reading User Input](#RUI)
 - [14. Function Basics](#FBS)
+- [15. Using Functions in Scripts](#UFS)
 
 ## 1. Install Dev Tools and Python 3 from source <a name="IDT"></a>
 
@@ -417,3 +418,5 @@ def print_name(name):
 def add_two(num):
     return num + 2
 ```
+
+## 15. Using Functions in Scripts <a name="UFS></a>
