@@ -21,6 +21,7 @@
 - [13. Reading User Input](#RUI)
 - [14. Function Basics](#FBS)
 - [15. Using Functions in Scripts](#UFS)
+- [16. Using Standard Library Oackages](#SLP)
 
 ## 1. Install Dev Tools and Python 3 from source <a name="IDT"></a>
 
@@ -422,3 +423,6 @@ def add_two(num):
 ## 15. Using Functions in Scripts <a name="UFS></a>
 
 - Look for bmi.py script in /scripts folder
+
+## 16. Using Standard Library Oackages <a name="SLP></a>
+
