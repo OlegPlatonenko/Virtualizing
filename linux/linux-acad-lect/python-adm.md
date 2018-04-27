@@ -420,3 +420,5 @@ def add_two(num):
 ```
 
 ## 15. Using Functions in Scripts <a name="UFS></a>
+
+- Look for bmi.py script in /scripts folder
