@@ -43,3 +43,13 @@ Item_3: Value_3
   - name: Querying to Telnet Install
     yum: pkg=telnet state=present update_cache=true
 ```
+
+## Ansible Modules
+
+```bash
+#Get full list of available modules in the system
+ansible-doc -l
+
+#Get info about particular module
+ansible-doc <module key_word>
+```
