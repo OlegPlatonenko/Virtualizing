@@ -21,7 +21,8 @@
 - [13. Reading User Input](#RUI)
 - [14. Function Basics](#FBS)
 - [15. Using Functions in Scripts](#UFS)
-- [16. Using Standard Library Oackages](#SLP)
+- [16. Using Standard Library Packages](#SLP)
+- [17. Environment Variables](#EVS)
 
 ## 1. Install Dev Tools and Python 3 from source <a name="IDT"></a>
 
@@ -302,7 +303,7 @@ else:
     print('name is short')
 ```
 
-## 10. While Loop <a name="WHL></a>
+## 10. While Loop <a name="WHL"></a>
 
 ```python
 while True:
@@ -329,7 +330,7 @@ while count < 10:
     count += 1
 ```
 
-## 11. For Loop <a name="FOL></a>
+## 11. For Loop <a name="FOL"></a>
 
 ```python
 colors = ['blue', 'green', 'red', 'purple']
@@ -365,7 +366,7 @@ for name, age in ages.items():
     print(f"Age of: {age}")
 ```
 
-## 12. Logic Operations <a name="LOG></a>
+## 12. Logic Operations <a name="LOG"></a>
 
 ```python
 name = ""
@@ -392,7 +393,7 @@ elif last:
     print(f"Last name: {last}")
 ```
 
-## 13. Reading User Input <a name="RUI></a>
+## 13. Reading User Input <a name="RUI"></a>
 
 ```python
 #!/usr/bin/env python 3.6
@@ -405,7 +406,7 @@ print(f"{name} was born on {birthdate}")
 print(f"Half of your age is {age / 2}")
 ```
 
-## 14. Function Basics <a name="FBS></a>
+## 14. Function Basics <a name="FBS"></a>
 
 ```python
 def hello_world():
@@ -420,11 +421,11 @@ def add_two(num):
     return num + 2
 ```
 
-## 15. Using Functions in Scripts <a name="UFS></a>
+## 15. Using Functions in Scripts <a name="UFS"></a>
 
 - Look for bmi.py script in /scripts folder
 
-## 16. Using Standard Library Oackages <a name="SLP></a>
+## 16. Using Standard Library Packages <a name="SLP"></a>
 
 - https://docs.python.org/3/library/index.html
 
@@ -447,4 +448,21 @@ difference = time.mktime(stop_time) - time.mktime(start_time)
 
 print(f"Timer stopped at {time.strftime('%X', stop_time)}")
 print(f"Total time: {difference} seconds")
+```
+
+## 17. Environment Variables <a name="EVS</a>
+
+https://docs.python.org/3/library/os.html
+
+```python
+import os
+
+#stage = os.environ["STAGE"].uper()
+stage = os.getenv("STAGE", default="dev").upper()
+output = f"We're running in {stage}"
+
+if stage.startwith("PROD"):
+    output = "Attention - " + output
+
+print(output)
 ```
