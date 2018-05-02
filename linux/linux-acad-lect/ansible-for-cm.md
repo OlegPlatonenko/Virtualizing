@@ -90,4 +90,42 @@ yum install ansible
 
 ## Ansible Config File
 
+- /etc/ansible/ansible.cfg
+- Enable logging! (log_path = /var/log/ansible.log)
+
+## Ansible Python Dependencies
+
+```bash
+#List all Python components
+yum list intalled | grep python
+dpkg -l | grep python #On Debian/Ubuntu
+```
+
+## The HOSTS file
+
+- /etc/ansible/hosts
+
+```bash
+#Hosts file example
+[local]
+localhost
+
+[apacheweb]
+192.168.204.129
+
+[appserver]
+192.168.204.130
+[ans-test@localhost ansible]$
+```
+
+## Overriding Default HOSTS File
+
+```bash
+#Get list of Ansible environment
+ansible all --list-hosts
+
+#Tell Ansible to use local hosts file (by -i key)
+ansible myubuntu -i hosts -m ping
+```
+
 
