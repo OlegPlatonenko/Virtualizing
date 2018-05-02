@@ -51,3 +51,10 @@
     - /var/spool - Spool for tasks
     - /var/tmp - Temporary files
 
+## 2. Partitions and Filesystem creation (fdisk, gdisk, parted)
+
+```bash
+#Get list of disk devices
+fdisk -l
+gdisk -l
+```
