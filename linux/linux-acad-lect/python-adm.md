@@ -23,6 +23,7 @@
 - [15. Using Functions in Scripts](#UFS)
 - [16. Using Standard Library Packages](#SLP)
 - [17. Environment Variables](#EVS)
+- [18. Interacting with Files](#IVF)
 
 ## 1. Install Dev Tools and Python 3 from source <a name="IDT"></a>
 
@@ -466,3 +467,33 @@ if stage.startwith("PROD"):
 
 print(output)
 ```
+
+## 18. Interacting with Files <a name="IWF</a>
+
+```python
+#Open function ('r' - read mode)
+new_items = open('file_path', 'r')
+new_items.read()
+
+#Return cursor to beginning
+new_items.seek(0)
+
+#Read file using for loop
+for line in new_items:
+    print(line, end="")
+
+#Close file after reading
+new_items.close()
+```
+
+```python
+#Open function ('w' - write mode)
+new_items = open('file_path', 'w')
+new_items.write(file_var.read())
+
+new_items.open('file_path', 'r+') #Open for read/write
+new_items.write("Test-string")
+
+with open('file_path', 'a') as f:
+    f.write("Test string")
+
