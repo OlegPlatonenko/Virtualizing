@@ -53,3 +53,41 @@ ansible-doc -l
 #Get info about particular module
 ansible-doc <module key_word>
 ```
+
+## Test Environment Setup
+
+- Create user for Ansible and copy **ssh** to all servers
+
+```bash
+#Add user
+adduser ans-test
+passwd ans-test
+
+#Create folder for playbooks and make Ansible user as owner
+mkdir playbook
+chown ans-test:ans-test playbook/
+
+#Relogin as ans-test
+su - ans-test
+
+#Generate ssh-keys and copy to all servers
+ssh-keygen
+ssh-copy-id <internal_ip>
+ssh <internal_ip> #test connection
+```
+
+## Ansible Installation
+
+```bash
+#Install repository
+yum install epel-release
+yum update repolist
+yum update
+yum install ansible
+
+#For ubuntu see Ansible documentation
+```
+
+## Ansible Config File
+
+
