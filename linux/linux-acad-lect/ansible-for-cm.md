@@ -128,4 +128,28 @@ ansible all --list-hosts
 ansible myubuntu -i hosts -m ping
 ```
 
+## Overriding Default System Ansible.cfg File
 
+```bash
+#Config file
+/etc/ansible/ansible.cfg
+
+#!!!Ansible will look for cfg file in user home directory
+export ANSIBLE_CONFIG=<path to new configs folder>
+```
+
+- **Ansible config priority**
+
+1. environment variable ANSIBLE_CONFIG
+2. folder which command is run
+3. user home directory
+4. /home/user_name/.ansible.cfg
+5. /etc/ansible/ansible.cfg
+
+## Overriding Default Roles Path
+
+- **Ansible.cfg**
+```
+# additional paths to search for roles in, colon separated
+roles_path    = /etc/ansible/roles:<custom path to 'Roles' folder>
+```
