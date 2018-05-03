@@ -53,8 +53,109 @@
 
 ## 2. Partitions and Filesystem creation (fdisk, gdisk, parted)
 
+For details see the Lab
+
 ```bash
 #Get list of disk devices
 fdisk -l
 gdisk -l
+```
+
+## 3. Filesystem Types and Creating Them on Partitions
+
+For details see the Lab
+
+- 
+
+```bash
+#Get inodes (index number) which related to a file
+ls -i <file_path>
+stat <file_path> #more detailed
+df -i
+```
+
+### ext File system
+
+- ext2 - Linux Extended
+- ext3 - Linux Extended with journalling
+- ext4 - Linux Extended with journalling with performance improvements
+
+### xfs File System
+
+- Has enhance performance (IO Block:2049)
+
+### btr File System
+
+- Special for large files
+
+### Format drive with particular filesystem
+
+```bash
+#Create filesystem in partition (eample)
+mkfs -t ext3 /dev/xvdg1
+mkfs -t xfs /dev/xvdg1
+
+#Use config file
+/etc/mke2fs.conf
+mke2fs -t ext3 /dev/xvdg1
+
+#Override config file
+mkfs -t ext4 -b 8192 -m 10 -L LargeData - O sparse_super /dev/xvdg2
+- b - change block size
+- m - 10% space for root user
+- L - disk label
+- O - override config file
+```
+
+## 4. Maintein the Integrity of Filesystems
+
+```bash
+#Define how mutch space dir use
+du <dir_path>
+du -h <dir_path>
+- h - show values (K,M,G)
+
+du -sh <dir_path>
+- sh - total for directory
+- ah - show for all files
+```
+
+```bash
+#Work with filesystem
+df -h
+- h - human readable foramt
+
+df -ah 
+- ah - show for all (even empty) systems
+- th - show total
+```
+
+```bash
+#File system debugger
+debugfs <partition>
+```
+
+```bash
+#File system check (generally used for ext FS)
+fsck <partition>
+fsck -f <partition>
+- f - force check
+- C - progress bar
+- N - drive run (what might been run)
+- V - verbose output
+
+#!!! Not run on MOUNTED FS
+``` 
+
+```bash
+#Tune filesystem
+tune2fs -c <partition>
+- c - number of mount counts before fsck will be run automatically
+
+tune2fs -e <continue/panic/remount-ro> <partition>
+```
+
+```bash
+#xfs utilities
+yum install xfsprogs
 ```
