@@ -95,3 +95,37 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 
 ## Configuring the Host for SSL/TLS/HTTPS
 
+- In **/etc/nginx/conf.d/default.conf** add rows:
+```
+listen 443 ssl;
+...
+ssl_certificate /etc/nginx/ssl/public.pem;
+ssl_certificate_key /etc/nginx/ssl/private.key;
+```
+
+## Cleaning Up URLs
+
+- In **/etc/nginx/conf.d/default.conf** add rows:
+```
+rewrite ^(/.*)\.html(\?.*)?$ $1$2 redirect;
+rewrite ^/(.*)/$ /$1 redirect;
+
+- ^(/.*)\.html(\?.*)?$ - regular expression
+- $1$2 - links for 1st and 2nd groups in regular expression
+
+location / {
+    try_files $uri/index.html $uri.html $uri/ $uri =404;
+}
+```
+
+## Redirecting all trafic to HTTPS
+
+- In **/etc/nginx/conf.d/default.conf** add rows:
+
+```
+server {
+    listen 80 default_server;
+    server_name _;
+    return 301 https://$host$request_uri;
+}
+```
