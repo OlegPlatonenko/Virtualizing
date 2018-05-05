@@ -53,3 +53,45 @@ nginx -t
 ```
 
 - **/usr/share/nginx/html** - Default HTML folder
+
+
+## Error Pages
+
+- In **/etc/nginx/conf.d/default.conf** add rows:
+```
+error_page 404 /404.html;
+error_page 500 501 502 503 504 /50x.html;
+```
+
+## Access Control with HTTP Basic Auth
+
+- In **/etc/nginx/conf.d/default.conf** add rows:
+```
+ location = /admin.html {
+        auth_basic "Login Required"; #String which will be displayed
+        auth_basic_user_file /etc/nginx/.htpasswd;
+    }
+```
+
+```bash
+htpasswd -c /etc/nginx/.htpasswd admin #'admin' is username
+```
+
+## Generating Self-Signed Certificates
+
+```
+mkdir /etc/nginx/ssl
+
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 \ 
+-keyout /etc/nginx/ssl/private.key -out /etc/nginx/ssl/public.pem
+
+- x509 - key structure
+- nodes - do not encrypt output keys
+- days - expiration period
+- newkey - key type
+- keyout - key type (private/public)
+- out - public key location
+```
+
+## Configuring the Host for SSL/TLS/HTTPS
+
