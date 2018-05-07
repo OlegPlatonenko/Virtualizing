@@ -129,3 +129,71 @@ server {
     return 301 https://$host$request_uri;
 }
 ```
+
+## Overview of NGINX Modules
+
+- **/etc/nginx/modules** - default modules location
+
+```bash
+#Full nginx config info
+nginx -V
+nginx -V 2>&1 | tr -- -'\n' | grep _module
+```
+
+## Adding Functionality to NGINX with Dynamic Modules
+
+```bash
+yum groupinstall 'Development tools'
+yum install -y \
+geoip-devel \
+libcurl-devel \
+libxml2-devel \
+libxslt-devel \
+libgb-devel \
+lmdb-devel \
+openssl-devel \
+pcre-devel \
+perl-ExtUtils-Embed \
+yajl-devel \
+zlib-devel
+
+cd /opt
+git clone --depth 1 -b v3/master https://github.com/SpiderLabs/ModSecurity.git
+
+cd ModSecurity
+git submodule init
+git submodule update
+./build.sh
+./configure
+make
+make install
+git clone --depth 1 https://github.com/SpiderLabs/ModSecurity-nginx.git
+wget http://nginx.org/download/nginx-1.14.0.tar.gz
+tar zxvf nginx-1.14.0.tar.gz
+./configure --with-compat --add-dynamic-module=../ModSecurity-nginx
+make modules
+cp objs/ngx_http_modsecurity_module.so /etc/nginx/modules/
+cd /etc/nginx/
+vim nginx.conf
+
+#Add rows:
+# Load ModSecurity dynamic module
+load_module /etc/nginx/modules/ngx_modsecurity_module.so;
+
+mkdir /etc/nginx/modsecutiry
+cp /opt/ModSecurity/modsecurity.conf-recommended /etc/nginx/modsecutiry/modsecurity.conf
+
+vim /etc/nginx/modsecutiry/modsecurity.conf
+
+#Add /nginx/ to row:
+SecAuditLog /var/log/nginx/modsec_audit.log
+
+vim /etc/nginx/conf.d/default.conf
+#Add rows to default conf:
+modsecurity on;
+modsecurity_rules_file /etc/nginx/modsecurity/modsecurity.conf;
+
+nginx -t
+systemctl reload nginx.service
+systemctl status nginx.service
+```
