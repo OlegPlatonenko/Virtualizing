@@ -27,6 +27,8 @@
 - [19. Parsing Command Line Parameters](#PCP)
 - [20. Robust CLIs with 'argparse'](#RCW)
 - [21. Handling Errors with try/except/else/finally](#HEW)
+- [22. Exit Statuses](#ESS)
+- [23. Execute Shell Commands from Python](#ESC)
 
 ## 1. Install Dev Tools and Python 3 from source <a name="IDT"></a>
 
@@ -560,3 +562,35 @@ else:
 
         for line in lines:
             print(line.strip([::-1]))
+```
+
+## 22. Exit Statuses <a name="ESS"></a>
+
+```python
+#use script from previous units
+import sys
+#....
+xcept FileNotFoundError as err:
+    print(f"Error: {err}")
+    sys.exit(2)
+#...
+```
+
+## 23. Execute Shell Commands from Python <a name="ESC"></a>
+
+```python
+import subprocess
+#Run 'ls -l' command
+proc = subprocess.run(["ls", "-l"])
+
+proc = subprocess.run(
+    ["ls", "-l"], 
+    stdout=subprocess.PIPE, 
+    stderr=subprocess.PIPE,
+    )
+print(proc.stdout.decode())
+
+new_proc = subprocess.run(['cat', 'fake.txt'])
+new_proc = subprocess.run(['cat', 'fake.txt'], check=True)
+```
+
