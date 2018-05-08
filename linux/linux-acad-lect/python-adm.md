@@ -24,6 +24,9 @@
 - [16. Using Standard Library Packages](#SLP)
 - [17. Environment Variables](#EVS)
 - [18. Interacting with Files](#IVF)
+- [19. Parsing Command Line Parameters](#PCP)
+- [20. Robust CLIs with 'argparse'](#RCW)
+- [21. Handling Errors with try/except/else/finally](#HEW)
 
 ## 1. Install Dev Tools and Python 3 from source <a name="IDT"></a>
 
@@ -451,7 +454,7 @@ print(f"Timer stopped at {time.strftime('%X', stop_time)}")
 print(f"Total time: {difference} seconds")
 ```
 
-## 17. Environment Variables <a name="EVS</a>
+## 17. Environment Variables <a name="EVS"></a>
 
 https://docs.python.org/3/library/os.html
 
@@ -468,7 +471,7 @@ if stage.startwith("PROD"):
 print(output)
 ```
 
-## 18. Interacting with Files <a name="IWF</a>
+## 18. Interacting with Files <a name="IWF"></a>
 
 ```python
 #Open function ('r' - read mode)
@@ -497,3 +500,45 @@ new_items.write("Test-string")
 with open('file_path', 'a') as f:
     f.write("Test string")
 ```
+
+## 19. Parsing Command Line Parameters <a name="PCP"></a>
+
+```python
+import sys
+print(f"Positional arguments: {sys.argv[1:]}")
+print(f"First argument: {sys.argv[1]}")
+```
+
+## 20. Robust CLIs with 'argparse' <a name="RCW"></a>
+
+```python
+import argparse
+
+#ArgParser is a Class
+parser = argparse.ArgumentParser(description='Read a file in reverse') 
+#'filename' is positional (required) parameter, 'help=' -s help text, displays by -h
+parser.add_argument('filename', help='the file to read')
+parser.add_argument('--limit', '-l', type=int, help='the number of lines to read')
+parser.add_argument('--version', '-v', action='version', version='%(prog)s 1.0')
+
+#parser_args method returns info taken from class
+args = parser.parse_args()
+
+#Open a file and read the lines
+with open(args.filename) as f:
+    lines = f.readlines()
+    lines.reverse()
+
+    if args.limit:
+        lines = lines[:args.lomit]
+
+    for line in lines:
+        print(line.strip([::-1]))
+
+print(args)
+
+#Parse the arguments
+#Read the file, reverse the contents and print
+```
+
+## 21. Handling Errors with try/except/else/finally <a name="HEW"></a>
