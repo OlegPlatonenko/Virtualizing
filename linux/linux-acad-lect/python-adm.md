@@ -29,6 +29,7 @@
 - [21. Handling Errors with try/except/else/finally](#HEW)
 - [22. Exit Statuses](#ESS)
 - [23. Execute Shell Commands from Python](#ESC)
+- [24. Advanced Iteration with List Comprehensions](#AIL)
 
 ## 1. Install Dev Tools and Python 3 from source <a name="IDT"></a>
 
@@ -592,5 +593,30 @@ print(proc.stdout.decode())
 
 new_proc = subprocess.run(['cat', 'fake.txt'])
 new_proc = subprocess.run(['cat', 'fake.txt'], check=True)
+```
+
+## 24. Advanced Iteration with List Comprehensions <a name="AIL"></a>
+
+```python
+import argparse
+
+parser = argparse.ArgumentParser(description='Search for words including partial word')
+parser.add_argument('snippet', help='partial (or complete) string to search for in words')
+
+args = parser.parse_args()
+snippet = args.snippet.lower()
+
+with open('/usr/share/dict/words') as f:
+    words = f.readlines()
+
+#matches = []
+#
+#for word in words:
+#    if snippet in word.lower():
+#        matches.append(word)
+
+print([word.strip() for word in words if snippet in word.lower()])
+
+#print(matches)
 ```
 
