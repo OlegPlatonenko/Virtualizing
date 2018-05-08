@@ -197,3 +197,13 @@ nginx -t
 systemctl reload nginx.service
 systemctl status nginx.service
 ```
+
+## Preparing a Node.js Sample Application
+
+```bash
+curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+yum install nodejs
+mkdir /srv/www
+git clone https://github.com/CloudAssessment/s3photoapp.git
+cd s3photoapp
+make install
