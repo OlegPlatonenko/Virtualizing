@@ -530,7 +530,7 @@ with open(args.filename) as f:
     lines.reverse()
 
     if args.limit:
-        lines = lines[:args.lomit]
+        lines = lines[:args.limit]
 
     for line in lines:
         print(line.strip([::-1]))
@@ -542,3 +542,21 @@ print(args)
 ```
 
 ## 21. Handling Errors with try/except/else/finally <a name="HEW"></a>
+
+```python
+
+try:
+    f = open(args.filename)
+    limit = args.limit
+except FileNotFoundError as err:
+    print(f"Error: {err}")
+else:
+    with f:
+        lines = f.readlines()
+        lines.reverse()
+
+        if args.limit:
+            lines = lines[:limit]
+
+        for line in lines:
+            print(line.strip([::-1]))
