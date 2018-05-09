@@ -236,3 +236,21 @@ changed: [192.168.204.130]
 PLAY RECAP ***********************************************************************
 192.168.204.130            : ok=2    changed=1    unreachable=0    failed=0
 ```
+
+## Inclusion Types
+
+```yaml
+- hosts: appserver
+  vars_files:
+  - vars.yaml
+  vars: 
+    control_server: localhost
+    web_root: /var/www/html/
+  tasks:
+  - name: Install Lynx on App Server
+    yum: pkg=lynx state=installed update_cache=true
+```
+```yaml
+control_server: localhost
+web_root: /var/www/html/
+```
