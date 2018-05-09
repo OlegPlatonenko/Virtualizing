@@ -194,3 +194,21 @@ ansible local -s -m setup > /home/test/net-sys-administration/linux/configs/sysi
 
 ansible local -s -m setup -a 'filter=*ipv4*
 ```
+
+## Common Values for Playbooks
+
+```bash
+ansible local -m setup -a 'filter=ansible_architecture'
+ansible local -m setup -a 'filter=ansible_distribution'
+ansible local -m setup -a 'filter=ansible_distribution_version'
+ansible local -m setup -a 'filter=ansible_domain'
+ansible local -m setup -a 'filter=ansible_fqdn'
+ansible local -m setup -a 'filter=ansible_interfaces'
+ansible local -m setup -a 'filter=ansible_kernel'
+ansible local -m setup -a 'filter=ansible_processor'
+ansible local -m setup -a 'filter=ansible_memtotal_mb'
+```
+
+## First Playbook
+
+
