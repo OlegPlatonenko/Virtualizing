@@ -1,0 +1,10 @@
+- hosts: appserver
+  vars_files:
+  - vars.yaml
+  vars: 
+    control_server: localhost
+    web_root: /var/www/html/
+  tasks:
+  - name: Install Lynx on App Server
+    yum: pkg=lynx state=installed update_cache=true
+
