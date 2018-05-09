@@ -153,3 +153,41 @@ export ANSIBLE_CONFIG=<path to new configs folder>
 # additional paths to search for roles in, colon separated
 roles_path    = /etc/ansible/roles:<custom path to 'Roles' folder>
 ```
+
+## Configuring Your 'Ansible' Account
+
+- **Sudoers setup for 'Ansible user'**
+```bash
+visudo 
+#Add rows as below:
+root    ALL=(ALL)       ALL
+ansible ALL=(ALL)       NOPASSWD: ALL
+```
+```bash
+cd /etc/ansible
+vim ansible.cfg
+
+#Comment row below
+ask_sudo_pass = True
+```
+```bash
+ssh-copy-id localhost
+```
+
+## Ansible Command Line
+
+```bash
+ansible all --list-hosts
+ansible all -m ping
+
+#Get list of python packages installed
+ansible appserver -s -m shell -a 'yum list installed | grep python'
+
+#Install telnet
+ansible all -s -m shell -a 'yum install telnet'
+```
+
+## System Facts
+
+
+
