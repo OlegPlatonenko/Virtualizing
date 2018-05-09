@@ -189,5 +189,8 @@ ansible all -s -m shell -a 'yum install telnet'
 
 ## System Facts
 
+```bash
+ansible local -s -m setup > /home/test/net-sys-administration/linux/configs/sysinfo.json
 
-
+ansible local -s -m setup -a 'filter=*ipv4*
+```
