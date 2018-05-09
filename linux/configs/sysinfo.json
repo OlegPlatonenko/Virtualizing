@@ -1,4 +1,4 @@
-localhost | SUCCESS => {
+{
     "ansible_facts": {
         "ansible_all_ipv4_addresses": [
             "192.168.122.1", 
