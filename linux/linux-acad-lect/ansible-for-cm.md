@@ -211,4 +211,28 @@ ansible local -m setup -a 'filter=ansible_memtotal_mb'
 
 ## First Playbook
 
+```bash
+ansible local -s -m shell -a 'yum install lynx'
+ansible local -s -m yum -a 'pkg=lynx state=installed update_cache=true'
+```
 
+```yaml
+- hosts: appserver
+  tasks:
+  - name: Install Lynx on App Server
+    yum: pkg=lynx state=installed update_cache=true
+```
+```bash
+ansible-playbook -s appserver.yaml
+
+PLAY [appserver] *****************************************************************
+
+TASK [Gathering Facts] ***********************************************************
+ok: [192.168.204.130]
+
+TASK [Install Lynx on App Server] ************************************************
+changed: [192.168.204.130]
+
+PLAY RECAP ***********************************************************************
+192.168.204.130            : ok=2    changed=1    unreachable=0    failed=0
+```
