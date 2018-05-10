@@ -1,10 +1,10 @@
 # Ansible for Configuration Management
 
-## Ansible architecture
+## 1. Ansible architecture
 
 ![Ansible architecture](https://github.com/OlegPlatonenko/net-sys-administration/blob/master/linux/images/ansible_fig.png)
 
-## YAML Structure
+## 2. YAML Structure
 
 ```yaml
 ---# List
@@ -44,7 +44,7 @@ Item_3: Value_3
     yum: pkg=telnet state=present update_cache=true
 ```
 
-## Ansible Modules
+## 3. Ansible Modules
 
 ```bash
 #Get full list of available modules in the system
@@ -54,7 +54,7 @@ ansible-doc -l
 ansible-doc <module key_word>
 ```
 
-## Test Environment Setup
+## 4. Test Environment Setup
 
 - Create user for Ansible and copy **ssh** to all servers
 
@@ -76,7 +76,7 @@ ssh-copy-id <internal_ip>
 ssh <internal_ip> #test connection
 ```
 
-## Ansible Installation
+## 5. Ansible Installation
 
 ```bash
 #Install repository
@@ -88,12 +88,12 @@ yum install ansible
 #For ubuntu see Ansible documentation
 ```
 
-## Ansible Config File
+## 6. Ansible Config File
 
 - /etc/ansible/ansible.cfg
 - Enable logging! (log_path = /var/log/ansible.log)
 
-## Ansible Python Dependencies
+## 7. Ansible Python Dependencies
 
 ```bash
 #List all Python components
@@ -101,7 +101,7 @@ yum list intalled | grep python
 dpkg -l | grep python #On Debian/Ubuntu
 ```
 
-## The HOSTS file
+## 8. The HOSTS file
 
 - /etc/ansible/hosts
 
@@ -117,8 +117,9 @@ localhost
 192.168.204.130
 [ans-test@localhost ansible]$
 ```
+## 9. Overriding defaults
 
-## Overriding Default HOSTS File
+## 9.1 Overriding Default HOSTS File
 
 ```bash
 #Get list of Ansible environment
@@ -128,7 +129,7 @@ ansible all --list-hosts
 ansible myubuntu -i hosts -m ping
 ```
 
-## Overriding Default System Ansible.cfg File
+## 9.2 Overriding Default System Ansible.cfg File
 
 ```bash
 #Config file
@@ -146,7 +147,7 @@ export ANSIBLE_CONFIG=<path to new configs folder>
 4. /home/user_name/.ansible.cfg
 5. /etc/ansible/ansible.cfg
 
-## Overriding Default Roles Path
+## 9.3 Overriding Default Roles Path
 
 - **Ansible.cfg**
 ```
@@ -154,7 +155,7 @@ export ANSIBLE_CONFIG=<path to new configs folder>
 roles_path    = /etc/ansible/roles:<custom path to 'Roles' folder>
 ```
 
-## Configuring Your 'Ansible' Account
+## 10. Configuring Your 'Ansible' Account
 
 - **Sudoers setup for 'Ansible user'**
 ```bash
@@ -174,7 +175,7 @@ ask_sudo_pass = True
 ssh-copy-id localhost
 ```
 
-## Ansible Command Line
+## 11. Ansible Command Line
 
 ```bash
 ansible all --list-hosts
@@ -187,7 +188,7 @@ ansible appserver -s -m shell -a 'yum list installed | grep python'
 ansible all -s -m shell -a 'yum install telnet'
 ```
 
-## System Facts
+## 12. System Facts
 
 ```bash
 ansible local -s -m setup > /home/test/net-sys-administration/linux/configs/sysinfo.json
@@ -195,7 +196,7 @@ ansible local -s -m setup > /home/test/net-sys-administration/linux/configs/sysi
 ansible local -s -m setup -a 'filter=*ipv4*
 ```
 
-## Common Values for Playbooks
+## 13. Common Values for Playbooks
 
 ```bash
 ansible local -m setup -a 'filter=ansible_architecture'
@@ -209,7 +210,7 @@ ansible local -m setup -a 'filter=ansible_processor'
 ansible local -m setup -a 'filter=ansible_memtotal_mb'
 ```
 
-## First Playbook
+## 14. First Playbook
 
 ```bash
 ansible local -s -m shell -a 'yum install lynx'
@@ -237,7 +238,7 @@ PLAY RECAP *********************************************************************
 192.168.204.130            : ok=2    changed=1    unreachable=0    failed=0
 ```
 
-## Inclusion Types
+## 15. Inclusion Types
 
 ```yaml
 - hosts: appserver
@@ -255,7 +256,9 @@ control_server: localhost
 web_root: /var/www/html/
 ```
 
-## Target Selection
+## 16. Playbook Sections
+
+## 16.1 Target Selection
 
 ```yaml
 --- # My First YAML Playbook for Ansible
@@ -266,7 +269,7 @@ web_root: /var/www/html/
   gather_facts: no
 ```
 
-## Variable Section
+## 16.2 Variable Section
 
 ```yaml
 vars:
@@ -279,7 +282,7 @@ vars:
       prompt: web domain
 ```
 
-## Task Section
+## 16.3 Task Section
 
 ```yaml
 tasks:
@@ -287,4 +290,21 @@ tasks:
       action: yum name=lynx state=installed
     - name: Check for Telnet Client
       action: yum name=telnet state=absent
+```
+
+## 16.4 Handler Section
+
+```yaml
+- name: Install Apache Web Server
+      action: yum name=httpd state=installed
+      notify: Restart nginx
+  handlers:
+    - name: Restart nginx
+      action: service name=nginx state=restarted
+```
+
+## 17. Outlining Your Playbook
+
+```yaml
+
 ```
