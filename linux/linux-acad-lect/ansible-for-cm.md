@@ -254,3 +254,37 @@ PLAY RECAP *********************************************************************
 control_server: localhost
 web_root: /var/www/html/
 ```
+
+## Target Selection
+
+```yaml
+--- # My First YAML Playbook for Ansible
+- hosts: appserver
+  user: ans-test
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+```
+
+## Variable Section
+
+```yaml
+vars:
+    playbook_version: 0.1b
+  vars_files:
+    - conf/copyright.yml
+    - conf/webdefaults.yml
+  vars_prompt:
+    - name: web_domain
+      prompt: web domain
+```
+
+## Task Section
+
+```yaml
+tasks:
+    - name: Install Lynx Web Browser
+      action: yum name=lynx state=installed
+    - name: Check for Telnet Client
+      action: yum name=telnet state=absent
+```
