@@ -305,6 +305,83 @@ tasks:
 
 ## 17. Outlining Your Playbook
 
-```yaml
+- /configs/webserver.txt
+- /configs/webserver.original
 
+## 18. Optimizing Your Playbook
+
+- /configs/webserver.yml
+
+## 19. Taking Playbook for Dry Run
+
+```bash
+ansible-playbook <playbook_name> --check
 ```
+
+## 20. Asychronous Polling
+
+```yaml
+tasks:
+    - name: Install Lynx Web Browser
+      action: yum name=lynx state=installed
+      async: 300
+      poll: 3
+```
+
+- async: - ansible wait the command to complete (milisecinds)
+- poll: - how often to check for command completion (seconds)
+
+## 21. Simple Variable Substitution
+
+- {{ variable_name }} - use variable
+
+```yaml
+tasks:
+    - name: Install Some package
+      action: yum name={{ pkg_name }} state=installed
+```
+
+## 22. Lookups
+
+- Use environment variable in lookups
+
+```yaml
+--- # LOOKUP PLAYBOOK EXAMPLE
+- hosts: appserver
+  user: ans-test
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+   - debug: msg="{{ lookup('env', 'HOME') }} is the value listed"
+```
+
+## 23. RunOnce
+
+```yaml
+--- # RUN ONCE PLAYBOOK EXAMPLE
+- hosts: all
+  user: ans-test
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Run the uptime command on all hosts and log it
+    raw: /usr/bin/uptime >> /home/ans-test/uptime.log
+  - name: List the /var directory and log it
+    raw: ls -al /var >> /home/ans-test/dir.lost
+    run_once: true
+```
+
+## 24. Local Actions
+
+```yaml
+--- # LOCAL ACTION PLAYBOOK
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - name: Install Telnet Client
+    yum: pkg=telnet state=present
+```
+
+
