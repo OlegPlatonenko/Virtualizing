@@ -5,12 +5,11 @@
   gather_facts: no
   tasks:
   - name: date/time stamp for when the laybook start
-    command: /usr/bin/date
-    register: timestamp_start
-  - debug: var=timestamp_start  
+    raw: /usr/bin/date > /home/ans-test/playbook_run.log
   - name: install the apache web server
     yum: pkg=httpd state=latest
-    notify: start HTTPD
+  - name: start the web service (nginx)
+    service: name=nginx state=restarted
   - name: verify that the web service is running
     command: systemctl status nginx
     register: result
@@ -20,13 +19,6 @@
   - name: install client software - lynx
     yum: pkg=lynx state=latest
   - name: log all the packages installed on the system
-    command: yum list installed
-    register: installed_result
-  - debug: var=installed_result  
+    raw: yum list installed >> /home/ans-test/playbook_run.log
   - name: date/time stamp for when the playbook ends
-    command: /usr/bin/date
-    register: timestamp_end
-  - debug: var=timestamp_end
-  handlers:
-  - name: start HTTPD
-    service: name=nginx state=restarted
+    raw: /usr/bin/date >> /home/ans-test/playbook_run.log
