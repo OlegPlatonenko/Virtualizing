@@ -159,3 +159,37 @@ tune2fs -e <continue/panic/remount-ro> <partition>
 #xfs utilities
 yum install xfsprogs
 ```
+
+## 5. Control the Mounting and Unmounting of FS
+
+- **Mount points**
+- /media - for CD, DVD, USB
+- /mnt - for Drives
+
+```bash
+#Mount info
+mount
+cat /etc/mtab
+cat /proc/mounts
+
+#Mount FS
+mount -t <FS type> <partition> <device>
+mount -t ext4 /dev/xvdf1 /mnt/part1
+
+#Define UUID
+ll /dev/disk/by-uuid
+blkid
+
+#fstab file
+/dev/mapper/centos-root /                       xfs     defaults        0 0
+
+0 - do not dump a FS as a file
+0 - order in what FS will be checked
+
+#Unmount partition
+umount <partition_point>
+
+#Define who is using a partition
+fuser -m <partition_point>
+```
+
