@@ -193,3 +193,62 @@ umount <partition_point>
 fuser -m <partition_point>
 ```
 
+## Manage Disk Quotas
+
+```bash
+#When partition is used for user quotas, two parameters need to be added to fstab
+UUID=5a5686c5-4938-4ca2-b125-72d0aaffeade   /mnt/part1   ext4 defaults,usrquota, grpquota 1 2
+
+#Set 777 permission to partition
+chmod 777 part1
+
+#Running quotacheck task
+quotacheck -avugc
+
+- a - all partitions
+- v - verbose
+- u - users
+- g - groups
+- c - create quota file
+
+#Editing quota
+edquota -u myuser 
+
+#Quota status
+quotaon -p /mnt/part1
+
+#Turn quota ON
+quotaon -uagv
+
+#Quota report
+repquota -a
+
+#ON quotas after system start
+#add command
+quotaon -uagv
+#to
+/etc/rc.d/rc.local
+```
+
+## Manage File Permissions and Ownership
+
+```bash
+chmod 766 file_name
+chmod u+x file_name
+chmod u-x file_name
+
+#Change permission not for directory but for all files inside
+chmod g+w Desktop/ -R
+
+#!!!!Default permissions
+file: 666
+directory: 777
+
+#umask is set in 'bashrc' file
+```
+
+- Permission hierarchy
+
+1. Owner
+2. Group
+3. User (Everyone else)
