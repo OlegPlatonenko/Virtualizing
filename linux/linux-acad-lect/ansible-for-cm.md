@@ -384,4 +384,33 @@ tasks:
     yum: pkg=telnet state=present
 ```
 
+## 25. Loops
+
+```yaml
+  tasks:
+  - name: Add a list of users
+    user: name={{ item }} state=present      
+    with_items:
+    - user1
+    - user2
+    - user3
+```
+
+## 26. Conditionals
+
+```yaml
+tasks:
+  - name: Install Apache Appropriate to the Distribution Type
+    command: apt-get -y install apache2
+    when: ansible_os_family == "Debian"
+  - name: Install Apache Appropriate to the Distribution Type (RedHat/CentOS)
+    command: yum -y install httpd
+    when: ansible_os_family == "RedHat"
+```
+
+## 27. Until
+
+```yaml
+
+
 
