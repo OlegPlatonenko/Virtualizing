@@ -411,6 +411,51 @@ tasks:
 ## 27. Until
 
 ```yaml
+tasks:
+  - name: Installing Apache Web server
+    yum: pkg=httpd state=latest
+  - name: Verify Service Status
+    shell: systemctl status httpd
+    register: result
+    until: result.stdout.find("active (running)") != -1
+    retries: 5
+    delay: 5
+  - debug: var=result
+```
+
+## 28. Notify
+
+```yaml
+tasks:
+  - name: Install HTTPD Server
+    action: yum pkg=httpd state=installed
+    notify: Restart HTTPD
+  handlers:
+  - name: Restart HTTPD
+    action: service name=httpd state=restarted
+```
+
+## 29. Vault
+
+```bash
+#Create encrypted file
+ansible-vault create secure.yml
+
+#Edit encrypyted file
+ansible-vault edit secure.yml
+
+#Change password
+ansible-vault rekey secure.yml
+
+#Unencrypt file
+ansible-vault decrypt secure.yml
+
+#Encrypt file
+ansible-vault encrypt accounts.yml 
+
+#Run vault file
+ansible-playbook waitfor.yml --ask-vault-pass
+```
 
 
 
