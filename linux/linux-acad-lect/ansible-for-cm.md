@@ -457,5 +457,35 @@ ansible-vault encrypt accounts.yml
 ansible-playbook waitfor.yml --ask-vault-pass
 ```
 
+## 30. Prompt - Interactive Playbook
+
+```yaml
+vars_prompt:
+  - name: pkgtoinstall
+    prompt: Install Which Package?
+    default: telnet
+    private: no
+  tasks:
+  - name: Install indicated package
+    yum: pkg={{ pkgtoinstall }} state=latest
+```
+
+## 31. Basic Include Statements
+
+```yaml
+#plays/packages.yml
+- name: Install telnet
+  yum: pkg=telnet state=latest
+- name: Install lynx
+  yum: pkg=lynx state=latest
+```
+
+```yaml
+tasks:
+  - include: plays/packages.yml
+```
+
+
+
 
 
