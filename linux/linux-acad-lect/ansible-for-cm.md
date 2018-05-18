@@ -487,6 +487,37 @@ tasks:
 
 ## 32. Tags
 
+```yaml
+--- # TAG FUNCTIONALITY EXAMPLE
+- hosts: appserver
+  user: ans-test
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Install the telnet and lynx packages
+    yum: pkg={{ item }} state=latest
+    with_items:
+    - telnet
+    - lynx
+    tags:
+    - packages
+  - name: Verify telnet was installed
+    raw: yum list installed | grep telnet > /home/ans-test/pkg.log
+    tags:
+    - verification
+  - name: Verify lynx was installed
+    raw: yum list installed | grep lynx > /home/ans-test/pkg.log
+    tags:
+    - always
+```
+```bash
+ansible-playbook tags.yml --tags "verification"
+ansible-playbook tags.yml --skip-tags "packages"
+```
+
+## 33. Basic Error Handling
+
 
 
 
