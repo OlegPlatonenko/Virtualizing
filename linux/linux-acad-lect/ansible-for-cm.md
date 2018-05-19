@@ -518,7 +518,55 @@ ansible-playbook tags.yml --skip-tags "packages"
 
 ## 33. Basic Error Handling
 
+```yaml
+tasks:
+  - name: Execute a command that will fail
+    command: /bin/false
+    ignore_errors: yes
+  - name: Install telnet client
+    yum: package=telnet state=latest
+```
 
+## 34. Breaking Your Playbook Into Discrete Plays
+
+```yaml
+vars_files:
+  - variables/variables.yml
+  tasks:
+  - include: packages/packages.yml
+  - include: commands/commands.yml
+  handlers:
+  - include: handler/handler.yml
+```
+
+## 35. Starting At Task or Stepping Through All Tasks
+
+```bash
+#Start from some step
+ansible-playbook startat.yml --start-at-task='Install lynx'
+
+#Ask for each task
+ansible-playbook startat.yml --step
+
+```
+```yaml
+--- # START AT PLAYBOOK EXAMPLE
+- hosts: appserver
+  user: ans-test
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Install telnet
+    yum: pkg=telnet state=latest
+  - name: Install lynx
+    yum: pkg=lynx state=latest
+  - name: List HOME
+    command: ls -al /home/ans-test
+    register: result
+  - debug: var=result
+
+```
 
 
 
