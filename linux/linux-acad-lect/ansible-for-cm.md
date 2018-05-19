@@ -565,6 +565,28 @@ ansible-playbook startat.yml --step
     command: ls -al /home/ans-test
     register: result
   - debug: var=result
+```
+
+## 36. Passing Variables Into Playbooks at the Command Line
+
+```bash
+ansible-playbook FromCommandLine.yml --extra-vars "hosts=appserver user=ans-test pkg=telnet"
+```
+```yaml
+--- # VARIABLES FROM COMMAND LINE EXAMPLE
+- hosts: '{{ hosts }}'
+  user: '{{ user }}'
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Install package
+    yum: pkg={{ pkg }} state=latest
+```
+
+## 37. Using Jinja2 Templates
+
+```yaml
 
 ```
 
