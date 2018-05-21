@@ -584,10 +584,71 @@ ansible-playbook FromCommandLine.yml --extra-vars "hosts=appserver user=ans-test
     yum: pkg={{ pkg }} state=latest
 ```
 
-## 37. Using Jinja2 Templates
+## 37. Creating and using Jinja2 Templates File
+
+```html
+<Connectivity>
+ ConnectionType {{ connectionType }}
+</Connectivity>
+
+<Account Information>
+ Username {{ userName }}
+ Password {{ userPassword }}
+</Account Information>
+
+<System Information>
+ Distribution Type {{ ansible_os_family }}
+</System Information>
+```
 
 ```yaml
+--- # Testing J2 Template Module
+- hosts: appserver, apacheweb
+  connection: ssh
+  user: ans-test
+  sudo: yes
+  gather_facts: yes
+  vars:
+    userName: ans-test
+    userPassword: P@ssw0rd
+    connectionType: SFTP
+  tasks:
+  - name: Install the configuration file customized for the system
+    template: src=test.conf.j2 dest=/home/ans-test/test.conf owner=ans-test group=ans-test mode=750
+```
 
+## 38. LocalAction
+
+```yaml
+--- # LOCAL ACTION DEMO
+- hosts: appserver
+  user: ans-test
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Ping appserver before install run
+    local_action: command ping -c 4 192.168.204.129
+  - name: Install Lynx on remote server
+    yum: pkg=lynx state=latest
+```
+
+## 39. DelegateTo
+
+```yaml
+--- # DELEGATE TO FUCTION DEMO
+- hosts: appserver
+  user: ans-test
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  vars:
+  tasks:
+  - name: Run a remote ping on the appserver
+    command: ping -c 4 192.168.204.130 > /home/ans-test/ping.out
+    delegate_to: 127.0.0.1
+  - name: Install a package
+    yum: pkg=lynx state=latest
 ```
 
 
