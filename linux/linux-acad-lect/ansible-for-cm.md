@@ -274,12 +274,12 @@ web_root: /var/www/html/
 ```yaml
 vars:
     playbook_version: 0.1b
-  vars_files:
-    - conf/copyright.yml
-    - conf/webdefaults.yml
-  vars_prompt:
-    - name: web_domain
-      prompt: web domain
+vars_files:
+  - conf/copyright.yml
+  - conf/webdefaults.yml
+vars_prompt:
+- name: web_domain
+  prompt: web domain
 ```
 
 ## 16.3 Task Section
@@ -465,7 +465,7 @@ vars_prompt:
     prompt: Install Which Package?
     default: telnet
     private: no
-  tasks:
+tasks:
   - name: Install indicated package
     yum: pkg={{ pkgtoinstall }} state=latest
 ```
