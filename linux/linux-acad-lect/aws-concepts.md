@@ -3,7 +3,7 @@
 ## AWS Features
 
 - High Availability
-- Fault Toletant
+- Fault Toletance
 - Scalability
 - Elasticity
 
