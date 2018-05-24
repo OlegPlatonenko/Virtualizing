@@ -9,16 +9,24 @@
 
 ## AWS Components
 
-- AWS = VPC (Virtual Private Cloud) + Storage
+- AWS = VPC (Virtual Private Cloud) + S3 (Storage)
 - VPC = EC2 (Computer Power) + RDS (Database)
 
-## EC2
+## 1. EC2
 
 - **EC2** - Elastic Cloud Computing
 
-## RDS
+**Common use:**
+1. Web Hosting
+
+## 2. RDS
 
 **Common use:**
 1. Customer account info
 2. Inventory catalog
 
+## 3. S3
+
+**Common use:**
+1. MassStorage
+2. Long-Term Storage
