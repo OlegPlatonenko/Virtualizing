@@ -18,6 +18,8 @@
 
 **Common use:**
 1. Web Hosting
+2. Encode
+3. Transcode
 
 ## 2. RDS
 
