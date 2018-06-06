@@ -60,7 +60,7 @@ gcloud container clusters create guestbook --num-nodes 3 - create a cluster
 To deploy NGINX, run:
 kubectl run nginx --image=nginx --replicas=3
 
-kubectl get pods -owide - status of deployment
+kubectl get pods -o wide - status of deployment
 
 kubectl expose deployment nginx --port=80 --target-port=80 --type=LoadBalancer - expose NGINX cluster as external service
 kubectl get service nginx - get services list
