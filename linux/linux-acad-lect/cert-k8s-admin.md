@@ -113,3 +113,39 @@ Kubernetes services:
 
 - Services --> Deployments
 - Particular port or IP address
+
+## Designing a Kubernetes Cluster
+
+- Minikube
+- Kubeadm
+
+## Node health and status
+
+```bash
+#Get cluster overview
+kubectl get nodes
+
+#Get pods running on paticular node
+kubectl describe node <node-name>
+kubectl get pods --all-namespaces -o wide
+
+#CPU, memory, disk info
+kubectl describe node <node-name>
+
+#Get pods running in aprticular namespace
+kubectl get pods -n <namespace-name>
+```
+
+## Securing Cluster Communication
+
+- default encryption communication in k8s is TLS
+- k8s has an integrated Role-Based Acess Control (RBAC)
+
+- Secure etcd (database) is very important!
+
+## Make Kubernetes Highly Available
+
+- Reliable nodes that will form a cluster
+- Set a redundant and reliable storage with multinode etcd
+- Replicated and load balanced k8s API servers
+- Master-elected k8s scheduler and controller manager daemons
