@@ -222,7 +222,7 @@ systemctl isolate <target name>
 systemctl list-units --type=target
 ```
 
-### TArgets hierarchy
+### Targets hierarchy
 
 ```
 sysinit.target

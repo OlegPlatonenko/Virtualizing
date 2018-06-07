@@ -189,7 +189,7 @@ dpkg-reconfigure <package_name>
 ## 5. RedHat Package Management <a name="RPM"></a>
 
 - **YUM** - Package Manager
-- **RPM** - Package Manager installator
+- **RPM** - Package Installator
 
 ### Config file and directory
 
@@ -539,7 +539,7 @@ tar -tvf <file_name>
 - t - show content
 
 #Extract content
-rat -xvf <path_to_archive> <folder_path>
+tar -xvf <path_to_archive> <folder_path>
 
 #Compression
 tar -cvzf <file_name> <directory_to_archive>
