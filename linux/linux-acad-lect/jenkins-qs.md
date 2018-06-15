@@ -47,6 +47,8 @@ systemctl restart nginx jenkins
 ```
 ```bash
 #Set /bin/bash as default shell for 'jenkins' user
+```
+
 
 
 
