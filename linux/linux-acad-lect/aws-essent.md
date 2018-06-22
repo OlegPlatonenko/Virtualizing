@@ -19,6 +19,7 @@
 - [5. RDS & DynamoDB](#RDS)
 - [6. Simple Notification Service (SNS) Basics](#SNS)
 - [7. Cloud Watch Basics](#CW)
+- [8. Elastic Load Balancer (ELB) Basics](#ELB)
 
 ## 1. Identity and Access Management <a name="IAM"></a>
 
@@ -173,3 +174,7 @@ SNS Components
 ## 7. Cloud Watch Basics <a name="CW"></a>
 
 CloudWatch is a service that allows you to monitor various elements of AWS account
+
+## 8. Elastic Load Balancer (ELB) Basics <a name="CW"></a>
+
+An ELB evently distributes traffic between EC2 instances that are associated with it
