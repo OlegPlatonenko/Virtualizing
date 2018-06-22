@@ -11,6 +11,11 @@
     - [e) Availability Zone](#AVZ)
 - [3. Simple Storage Service (S3)](#S3)
 - [4. Elastic Compute Cloud (EC2)](#EC2)
+    - [a) Amazon Machine Image (AMI)](#AMI)
+    - [b) Instance Types](#IT)
+    - [c) Elastic Block Store (EBS) Volumes](#EBS)
+    - [d) Security Groups](#SG)
+    - [e) IP Addressing](#IP) 
 
 ## 1. Identity and Access Management <a name="IAM"></a>
 
@@ -87,3 +92,42 @@ Storage class represents the "classification" assigned to each Object in S3
 - IP Addressing (Network Card)
 - Security Groups (Firewall)
 - RAM
+
+### a) Amazon Machine Image (AMI) <a name="AMI"></a>
+
+- Operating System
+- Software PAckages
+- Required Settings
+
+### b) Instance Types <a name="IT"></a>
+
+Instance Types Components
+- Family
+- Type
+- vCPUs
+- Memory
+- Instance Storage
+- EBS-Optimized
+- Network-Performance
+
+### c) Elastic Block Store (EBS) Volumes <a name="EBS"></a>
+
+Storage Volume for EC2 instance
+
+**IOPS** = Input/Output Operations per Second
+
+A **snapshot** is an "image" of an EBS volume that can be stored as a backup of the volume or used to create a duplicate.
+
+### d) Security Groups <a name="SG"></a>
+
+When you create a new SG, all **inboud** traffic is denied and all **outbound** traffic is allowed by default.
+
+There are no **deny** rules - only **allow** rules
+
+**!!! Best practice is to allow ONLY traffic that is required**
+
+### e) IP Addressing <a name="IP"></a>
+
+Providing EC2 instance with public IP address
+
+Public IP addresses are required to the instance to communicate with the Internet
