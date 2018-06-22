@@ -15,7 +15,10 @@
     - [b) Instance Types](#IT)
     - [c) Elastic Block Store (EBS) Volumes](#EBS)
     - [d) Security Groups](#SG)
-    - [e) IP Addressing](#IP) 
+    - [e) IP Addressing](#IP)
+- [5. RDS & DynamoDB](#RDS)
+- [6. Simple Notification Service (SNS) Basics](#SNS)
+- [7. Cloud Watch Basics](#CW)
 
 ## 1. Identity and Access Management <a name="IAM"></a>
 
@@ -131,3 +134,42 @@ There are no **deny** rules - only **allow** rules
 Providing EC2 instance with public IP address
 
 Public IP addresses are required to the instance to communicate with the Internet
+
+## 5. RDS & DynamoDB <a name="RDS"></a>
+
+- Relational (SQL)
+- Non-Relational (noSQL)
+
+**Relational Database Service (RDS)** 
+
+SQL Options
+- Amazon Aurora
+- MySQl
+- MariaDB
+- PostgradeSQl
+- Oracle
+- Microsoft SQLServer
+
+**DynamoDB**
+
+DynamoDB can replace
+- MongoDB
+- Cassandra DB
+- Oracle NoSQL
+
+**SQL** - stores data in tables, typically used for very structured data, such as contact lists
+
+**NoSQL** - stores related data in JSON-like, name-value documents, typically used for non-structured data such as catalog documents
+
+## 6. Simple Notification Service (SNS) Basics <a name="SNS"></a>
+
+An AWS service that allows to automate the sending of email or text message notifications, based on events that happend in AWS account
+
+SNS Components
+- Topics
+- Subscriptions
+- Publishers
+
+## 7. Cloud Watch Basics <a name="CW"></a>
+
+CloudWatch is a service that allows you to monitor various elements of AWS account
