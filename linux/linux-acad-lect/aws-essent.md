@@ -20,6 +20,9 @@
 - [6. Simple Notification Service (SNS) Basics](#SNS)
 - [7. Cloud Watch Basics](#CW)
 - [8. Elastic Load Balancer (ELB) Basics](#ELB)
+- [9. Auto Scaling](#AS)
+- [10. Route 53](#R53)
+- [11. AWS Lambda](#AWSL)
 
 ## 1. Identity and Access Management <a name="IAM"></a>
 
@@ -178,3 +181,24 @@ CloudWatch is a service that allows you to monitor various elements of AWS accou
 ## 8. Elastic Load Balancer (ELB) Basics <a name="CW"></a>
 
 An ELB evently distributes traffic between EC2 instances that are associated with it
+
+## 9. Auto Scaling <a name="AS"></a>
+
+Auto scaling automates the process of adding (scaling up) or removing (scaling down) EC2 instances based on traffic demand for application.
+
+Components:
+- Launch Configuration (EC2 template)
+- Auto Scaling Group (rules and settings)
+
+## 10. Route 53 <a name="R53"></a>
+
+Rounte 53 is where you configure and manage web domains for websites or applications you host on AWS
+
+Main functions:
+- Domain registration
+- DNS service
+- Health checking
+
+## 11. AWS Lambda <a name="AWSL"></a>
+
+Lambda is a serverless computing. It is the next generation of cloud computing that will replace EC2 instances (for the most part).
