@@ -15,6 +15,7 @@ AWS physical Structure
 - [1. Terminology](#TERM)
 - [2. Identity and Access Management](#IAM)
 - [3. Virtual Private Cloud](#VPC)
+- [4. Elastic Cloud Computing (EC2)](#EC2)
 
 ## 1. Terminology <a name="TERM"></a>
 
@@ -126,3 +127,6 @@ When you create a *VPC*, it spans all of the *Availability Zones* in the region.
 - NACL rules support *ALLOW/DENY* rules
 - Security Groups are responsible for instances
 - SG rules support only *ALLOW* rules
+
+## 4. Elastic Cloud Computing (EC2) <a name="EC2"></a>
+
