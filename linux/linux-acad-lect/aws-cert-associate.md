@@ -120,3 +120,9 @@ When you create a *VPC*, it spans all of the *Availability Zones* in the region.
 - ACL's operate at the network/subnet level
 - They support *allow* and *deny* rules for traffic traveling into or out of subnet
 - They are stateless: so return traffic must be allowed through an outbound rule
+
+## !!! Important
+- NACLs are responsible for subnets
+- NACL rules support *ALLOW/DENY* rules
+- Security Groups are responsible for instances
+- SG rules support only *ALLOW* rules
